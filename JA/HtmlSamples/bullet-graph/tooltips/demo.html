@@ -22,8 +22,8 @@
     </script>
 <script id="actualValueTooltipTemplate1" type="text/x-jquery-tmpl">
 		<div class='ui-bulletgraph-actualValue-tooltip'>
-            <div>Name: ${item.name}</div>
-            <div>Start Value: ${item.startValue}</div>
+            <div style="color:aqua">Name: ${item.name}</div>
+            <div style="color:red">Start Value: ${item.startValue}</div>
             <div>End Value: ${item.value}</div>
         </div>
     </script>
@@ -33,47 +33,43 @@
         </div>
     </script>
 <script id="rangeTooltipTemplate2" type="text/x-jquery-tmpl">
-		<div style='background-color:#ffb0b0; padding:2px; '>
+		<div style='background-color:#4b88f7; padding:2px; '>
                 <font color='${itemBrush}' >
-                    Name: ${item.name} <br />
-                    Start Value: ${item.name}<br />
-                    End Value: ${item.endValue}
+                    ${item.name} <br />
+                    Begins: ${item.startValue}%<br />
+                    Ends: ${item.endValue}%
                 </font>
 		</div>
     </script>
 <script id="actualValueTooltipTemplate2" type="text/x-jquery-tmpl">
-		<div  style="color:red; font-size:200%">
-			<div>Name: ${item.name}</div>
-            <div>Start Value: ${item.startValue}</div>
-            <div>End Value: ${item.value}</div>
+		<div  style="background-color:white; color:red; font-size:120%; padding:2px;">
+			${item.name} <br />
+            from:  ${item.startValue}% to: ${item.value}%
 		</div>
     </script>
 <script id="targetValueTooltipTemplate2" type="text/x-jquery-tmpl">
-        <div style="background-color:white; padding:5px; >
-            <div style="font-size:80%; font-weight:600; " > 
-                Target Value  
-            </div>
-            <div style="font-size:150%; font-weight:900; " > 
-                ${item.value}  
-            </div>
-            
+        <div style="font-size:120%; font-weight:900; background-color:white; padding:2px;" >
+            Target <br />
+            Value  <br />
+            ${item.value}%  
         </div>
+        
     </script>
 
 <table>
         <tr>
             <td>
-                <div style="width: 100px; float: left; margin-top: 5px; font-weight: bold">$$(Default ToolTips)</div>
+                <div style="width: 100px; float: left; margin-top: 5px; font-weight: bold">$$(DefaultToolTips)</div>
                 <div id="bulletgraph_default" style="float: left"></div>
             </td>
             <td rowspan="2">
-                <div style="width: 100px; float: right; margin-top: 5px; margin-left: 25px; font-weight: bold">$$(Semi-Templated ToolTips)</div>
+                <div style="width: 100px; float: right; margin-top: 5px; margin-left: 25px; font-weight: bold">$$(SemiTemplatedToolTips)</div>
                 <div id="bulletgraph_semiTemplated" style="float: right; margin-left: 25px;"></div>
             </td>
         </tr>
         <tr>
             <td>
-                <div style="width: 100px; float: left; margin-top: 45px; font-weight: bold">$$(Templated ToolTips)</div>
+                <div style="width: 100px; float: left; margin-top: 45px; font-weight: bold">$$(TemplatedToolTips)</div>
                 <div id="bulletgraph_templated" style="float: left; margin-top: 40px"></div>
             </td>
         </tr>

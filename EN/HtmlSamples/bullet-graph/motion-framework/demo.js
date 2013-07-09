@@ -19,7 +19,9 @@ $(function () {
                     maximumValue: 200,
                     targetValueBrush: "white",
                     actualValueBrush: "white",
-                    majorTickmarkBrush: "white"
+                    majorTickmarkBrush: "white",
+                    tickBrush: "#C1C1C1",
+                    fontBrush: "#C1C1C1"
                 });
 
                 $bulletGraph.igBulletGraph("option", "ranges", [{ name: "range1", remove: true }]);
@@ -49,7 +51,6 @@ $(function () {
                         endValue: 200,
                         brush: "#48892D",
                         outline: "#48892D"
-
                     }
                 ]);
             }
@@ -61,8 +62,8 @@ $(function () {
                     interval: 50,
                     minimumValue: 50,
                     maximumValue: 100,
-                    targetValueBrush: "#EDDD39",
-                    actualValueBrush: "#EDDD39"
+                    targetValueBrush: "#fff7a3",
+                    actualValueBrush: "#fff7a3"
                 });
 
                 $bulletGraph.igBulletGraph("option", "ranges", [{ name: "range1", remove: true }]);
@@ -76,13 +77,15 @@ $(function () {
                         name: 'range1',
                         startValue: 0,
                         endValue: 60,
-                        brush: "#527211"
+                        brush: "#527211",
+                        outline: "#527211"
                     },
                     {
                         name: 'range2',
                         startValue: 60,
                         endValue: 100,
-                        brush: "#ABD652"
+                        brush: "#ABD652",
+                        outline: "#ABD652"
                     }
                 ]);
             }
@@ -131,7 +134,7 @@ $(function () {
                     {
                         name: 'range5',
                         startValue: 700,
-                        endValue: 900
+                        endValue: 1000
                     }
                 ]);
             }

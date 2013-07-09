@@ -39,9 +39,6 @@ $(function () {
                 $("#barcode").igQRCodeBarcode("option", "eciHeaderDisplayMode", val);
             });
 
-            var temp = $("#barcode").igQRCodeBarcode("option", "data");
-            $("#dataInput").val(temp);
-
             $("#dataInput").keydown(function () {
                 //check for Enter key
                 if (event.keyCode==13) {

@@ -3,6 +3,7 @@ $(function () {
                 height: "60px",
                 width: "200px",
                 
+                
                 showTooltip: true,
 
                 ranges: [
@@ -60,6 +61,7 @@ $(function () {
                         endValue: 100
                     }
                 ],
+                actualValueName: 'progress',
                 actualValue: 85,
                 targetValue: 77,
                 interval: 10,
@@ -68,7 +70,7 @@ $(function () {
 
             $("#bulletgraph_templated").igBulletGraph({
                 height: "60px",
-                width: "200px",                
+                width: "200px",
 
                 showTooltip: true,
                 rangeTooltipTemplate: 'rangeTooltipTemplate2',
@@ -78,19 +80,19 @@ $(function () {
                 ranges: [
                     {
                         brush: '#ff7878',
-                        name: 'range1',
+                        name: 'Increment 1',
                         startValue: 0,
                         endValue: 50
                     },
                     {
                         brush: '#f8fe76',
-                        name: 'range2',
+                        name: 'Increment 2',
                         startValue: 50,
                         endValue: 80
                     },
                     {
                         brush: 'b2ff6f',
-                        name: 'range3',
+                        name: 'Increment 3',
                         startValue: 80,
                         endValue: 100
                     }
@@ -98,29 +100,34 @@ $(function () {
 
                 actualValues: [
                    {
-                       brush: '#ffb0b0',
+                       //brush: 'ffb6b6',
+                       brush: 'red',
                        name: 'Steve',
-                       startValue: 0,
-                       endValue: 50
+                       startValue: 10,
+                       value: 37
                    },
                    {
-                       brush: '#ffb0b0',
+                       //brush: 'fffec1',
+                       brush: 'orange',
                        name: 'Jim',
-                       startValue: 50,
-                       endValue: 80
+                       startValue: 37,
+                       value: 66
                    },
                    {
-                       brush: 'ffb0b0',
+                       //brush: 'bcffab',
+                       brush: 'green',
                        name: 'Bob',
-                       startValue: 80,
-                       endValue: 100
+                       startValue: 66,
+                       value: 83
                    }
                 ],
-
+                formatLabel: function (evt, ui) {
+                    ui.label = ui.value + "%";
+                },
                 targetValue: 90,
-                labelInterval: 10,
-                actualValue: 20,
-                actualValueName: "Preparation",
+                labelInterval: 20,
+                actualValue: 20, 
+                actualValueName: "Research/Preparation",
                 transitionDuration: 500
             }); 
         });

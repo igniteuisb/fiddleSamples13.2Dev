@@ -3,8 +3,9 @@ $(function () {
             var $bulletGraph = $("#bulletgraph");
 
             $bulletGraph.igBulletGraph({
-                height: "150px",
-                width: "700px",
+                //height: "150px",
+                //width: "700px",
+                width: "100%",
                 // The interval to use for the ticks.
                 interval: 10,
                 // Gets or sets the position at which to start rendering the major tickmarks as a value from 0 to 1, measured from the front/bottom of the gauge.
