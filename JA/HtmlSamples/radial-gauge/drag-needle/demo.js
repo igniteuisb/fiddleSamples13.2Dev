@@ -2,7 +2,6 @@ $(function () {
             $("#radialgauge").igRadialGauge({
                 height: "500px",
                 width: "500px",
-                transitionDuration: "1500"
             });
 
             var isDragging = false;
@@ -54,16 +53,4 @@ $(function () {
 						navigator.userAgent.match(/Windows Phone/i) ||
 						navigator.userAgent.match(/ZuneWP7/i) ? true : false;
             }
-
-            // Transiton Duration Slider
-            $("#transitionDurationSlider").slider({
-                min: 0,
-                max: 5,
-                step: 0.01,
-                value: 2,
-                slide: function (event, ui) {
-                    $("#radialgauge").igRadialGauge("option", "transitionDuration", ui.value * 1000);
-                    $("#transitionDurationLabel").text(ui.value);
-                }
-            });
         });

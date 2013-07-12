@@ -73,7 +73,7 @@ $(function () {
                 actualValueBrush: 'white',
                 formatLabel: function (evt, ui) {
                     if (ui.value==ui.actualMinimumValue) {
-                        ui.label = ui.value + " Min/Side";
+                        ui.label = ui.value + "\nMins/Side";
                     }                    
                 },
                 transitionDuration: 1000
