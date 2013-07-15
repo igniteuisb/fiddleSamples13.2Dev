@@ -8,16 +8,19 @@ $(function () {
                 transitionDuration: 500,
                 ranges: [
                     {
+                        brush:'#803E01',
                         name: 'bad',
                         startValue: 0,
                         endValue: 5200
                     },
                     {
+                        brush: '#BA5A05',
                         name: 'acceptable',
                         startValue: 5200,
                         endValue: 6400
                     },
                     {
+                        brush: '#FF7A04',
                         name: 'good',
                         startValue: 6400,
                         endValue: 10000
@@ -48,16 +51,19 @@ $(function () {
                 transitionDuration: 500,
                 ranges: [
                     {
+                        brush: '#566509',
                         name: 'bad',
                         startValue: 0,
                         endValue: 3400
                     },
                     {
+                        brush: '#7F950C',
                         name: 'acceptable',
                         startValue: 3400,
                         endValue: 4000
                     },
                     {
+                        brush: '#AABF31',
                         name: 'good',
                         startValue: 4000,
                         endValue: 10000
@@ -88,16 +94,19 @@ $(function () {
                 transitionDuration: 500,
                 ranges: [
                     {
+                        brush: '#566509',
                         name: 'bad',
                         startValue: 0,
                         endValue: 254
                     },
                     {
+                        brush: '#7F950C',
                         name: 'acceptable',
                         startValue: 254,
                         endValue: 300
                     },
                     {
+                        brush: '#AABF31',
                         name: 'good',
                         startValue: 300,
                         endValue: 500
@@ -128,16 +137,19 @@ $(function () {
                 transitionDuration: 500,
                 ranges: [
                     {
+                        brush: '#11364D',
                         name: 'bad',
                         startValue: 0,
                         endValue: 60
                     },
                     {
+                        brush: '#164F6D',
                         name: 'acceptable',
                         startValue: 60,
                         endValue: 70
                     },
                     {
+                        brush: '#20789F',
                         name: 'good',
                         startValue: 70,
                         endValue: 100
