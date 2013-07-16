@@ -4,17 +4,17 @@ $(function () {
                     width: "400px",
                     height: "400px",
                     dataSource: dataSource,
-                    title: "$$(Chart_title_us_fao)",
-                    subTitle: "$$(Chart_subtitle_us_fao)",
+                    title: "U.S. Agricultural Production Per Year",
+                    subTitle: "Data from 1961-2007",
                     axes: [{
                         name: "xAxis",
                         type: "numericX",
                         interval: 10,
-                        title: "$$(XAxis_title_us_fao)",
+                        title: "Year",
                     }, {
                         name: "yAxis",
                         type: "numericY",
-                        title: "$$(YAxis_title_us_fao)",
+                        title: "Gross Agricultural Production (Billion USD)",
                         formatLabel: function (val) {
                             var bVal = (val / 1000),
                             rounded = Math.round(bVal * 100) / 100;
@@ -40,17 +40,17 @@ $(function () {
                     width: "400px",
                     height: "400px",
                     dataSource: dataSource,
-                    title: "$$(Chart_title_us_fao)",
-                    subTitle: "$$(Chart_subtitle_us_fao)",
+                    title: "U.S. Agricultural Production Per Year",
+                    subTitle: "Data from 1961-2007",
                     axes: [{
                         name: "xAxis",
                         type: "numericX",
                         interval: 10,
-                        title: "$$(XAxis_title_us_fao)",
+                        title: "Year",
                     }, {
                         name: "yAxis",
                         type: "numericY",
-                        title: "$$(YAxis_title_us_fao)",
+                        title: "Gross Agricultural Production (Billion USD)",
                         formatLabel: function (val) {
                             var bVal = (val / 1000),
                             rounded = Math.round(bVal * 100) / 100;
