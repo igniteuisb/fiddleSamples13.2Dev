@@ -27,7 +27,7 @@ $(function () {
             doGeneration();
 
             $("#chart").igDataChart({
-                width: "700px",
+                width: "100%",
                 height: "400px",
                 dataSource: currDataSource,
                 axes: [{

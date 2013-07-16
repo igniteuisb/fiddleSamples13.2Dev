@@ -34,7 +34,7 @@ $(function () {
             ds.dataBind();
 
             $("#chart").igDataChart({
-                width: "700px",
+                width: "100%",
                 height: "400px",
                 axes: [
                     {
