@@ -9,7 +9,7 @@ $(function () {
             ];
 
             $("#chart").igDataChart({
-                width: "300px",
+                width: "100%",
                 height: "200px",
                 dataSource: data,
                 axes: [
