@@ -73,7 +73,7 @@ $(function () {
                 actualValueBrush: 'white',
                 formatLabel: function (evt, ui) {
                     if (ui.value==ui.actualMinimumValue) {
-                        ui.label = ui.value + "\nMins/Side";
+                        ui.label = ui.value + "\n分/片面";
                     }                    
                 },
                 transitionDuration: 1000
