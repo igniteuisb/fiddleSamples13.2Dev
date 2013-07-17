@@ -3,9 +3,9 @@ $(function () {
             $("#bulletgraph_task3").igBulletGraph({
                 height: "60px",
                 width: "100%",
-                rangeTooltipTemplate: 'rangeTooltipTemplate1',
-                actualValueTooltipTemplate: 'actualValueTooltipTemplate1',
-                targetValueTooltipTemplate: 'targetValueTooltipTemplate1',
+                rangeToolTipTemplate: 'rangeToolTipTemplate1',
+                actualValueToolTipTemplate: 'actualValueToolTipTemplate1',
+                targetValueToolTipTemplate: 'targetValueToolTipTemplate1',
                 ranges: [
                     {
                         brush: 'rgba(251, 23, 65, 0.57)',
@@ -36,7 +36,7 @@ $(function () {
                 targetValueOutline: 'white',
                 targetValue: 90,
                 labelInterval: 20,
-                showTooltip: true,
+                showToolTip: true,
                 transitionDuration: 500
             });
 
@@ -73,7 +73,7 @@ $(function () {
                 targetValueOutline: 'white',
                 targetValue: 90,
                 labelInterval: 20,
-                showTooltip: true,
+                showToolTip: true,
                 transitionDuration: 500
             });
 
@@ -110,7 +110,7 @@ $(function () {
                 targetValueOutline: 'white',
                 targetValue: 90,
                 labelInterval: 20,
-                showTooltip: true,
+                showToolTip: true,
                 transitionDuration: 500
             });
 
@@ -118,9 +118,9 @@ $(function () {
                 height: "300px",
                 width: "100%",
                 orientation: "vertical",                
-                rangeTooltipTemplate: 'rangeTooltipTemplate2',
-                actualValueTooltipTemplate: 'actualValueTooltipTemplate2',
-                targetValueTooltipTemplate: 'targetValueTooltipTemplate2',
+                rangeToolTipTemplate: 'rangeToolTipTemplate2',
+                actualValueToolTipTemplate: 'actualValueToolTipTemplate2',
+                targetValueToolTipTemplate: 'targetValueToolTipTemplate2',
                 ranges: [
                     {
                         brush: 'rgba(251, 23, 65, 0.57)',
@@ -171,7 +171,7 @@ $(function () {
                 targetValueOutline: 'white',
                 targetValue: 90,
                 labelInterval: 20,
-                showTooltip: true,
+                showToolTip: true,
                 transitionDuration: 500
             });
         });
