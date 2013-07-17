@@ -36,22 +36,22 @@ $(function () {
             $("#chart").igDataChart({
                 width: "100%",
                 height: "400px",
-                title: "$$(Chart_title_countries_pop)",
-                subTitle: "$$(Chart_subtitle_countries_pop)",
+                title: "Population per Country",
+                subTitle: "Five largest projected populations for 2015",
                 axes: [
                     {
                         name: "NameAxis",
                         type: "categoryX",
                         label: "Name",
                         dataSource: ds, //$.ig.DataSource defined above
-                        title: "$$(CategoryAxis_title_countries_pop)"
+                        title: "Country"
                     },
                     {
                         name: "PopulationAxis",
                         type: "numericY",
                         minimumValue: 0,
                         maximumValue: 1400,
-                        title: "$$(NumericAxis_title_countries_pop)"
+                        title: "Projected Population (Millions of People)"
                     }
                 ],
                 series: [

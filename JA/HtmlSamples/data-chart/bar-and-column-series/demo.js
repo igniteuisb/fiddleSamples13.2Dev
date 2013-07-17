@@ -3,17 +3,17 @@ $(function () {
                 width: "98%",
                 height: "400px",
                 dataSource: lastFiveYears,
-                title: "$$(Chart_title_energy_production)",
-                subTitle: "$$(Chart_subtitle_energy_production)",
+                title: "Energy Production Per Country",
+                subTitle: "The top five Total Primary Energy producers",
                 axes: [{
                     name: "xAxis",
                     type: "categoryX",
                     label: "Year",
-                    title: "$$(CategoryAxis_title_energy_production)"
+                    title: "Year"
                 }, {
                     name: "yAxis",
                     type: "numericY",
-                    title: "$$(NumericAxis_title_energy_production)",
+                    title: "Total Energy Produced (Quadrillion Btu)",
                 }],
                 series: [{
                     name: "series1",
@@ -59,18 +59,18 @@ $(function () {
                 width: "98%",
                 height: "400px",
                 dataSource: lastFiveYears,
-                title: "$$(Chart_title_energy_production)",
-                subTitle: "$$(Chart_subtitle_energy_production)",
+                title: "Energy Production Per Country",
+                subTitle: "The top five Total Primary Energy producers",
                 legend: { element: "barLegend" },
                 axes: [{
                     name: "xAxis",
                     type: "numericX",
-                    title: "$$(NumericAxis_title_energy_production)"
+                    title: "Total Energy Produced (Quadrillion Btu)"
                 }, {
                     name: "yAxis",
                     type: "categoryY",
                     label: "Year",
-                    title: "$$(CategoryAxis_title_energy_production)"
+                    title: "Year"
                 }],
                 series: [{
                     name: "series1",
