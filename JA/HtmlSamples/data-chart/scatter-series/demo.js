@@ -4,17 +4,17 @@ $(function () {
                     width: "400px",
                     height: "400px",
                     dataSource: dataSource,
-                    title: "U.S. Agricultural Production Per Year",
-                    subTitle: "Data from 1961-2007",
+                    title: "年の米国農業生産",
+                    subTitle: "1961 年 - 2007 年のデータ",
                     axes: [{
                         name: "xAxis",
                         type: "numericX",
                         interval: 10,
-                        title: "Year",
+                        title: "年",
                     }, {
                         name: "yAxis",
                         type: "numericY",
-                        title: "Gross Agricultural Production (Billion USD)",
+                        title: "合計農業生産 (USD 10 億単位)",
                         formatLabel: function (val) {
                             var bVal = (val / 1000),
                             rounded = Math.round(bVal * 100) / 100;
@@ -40,17 +40,17 @@ $(function () {
                     width: "400px",
                     height: "400px",
                     dataSource: dataSource,
-                    title: "U.S. Agricultural Production Per Year",
-                    subTitle: "Data from 1961-2007",
+                    title: "年の米国農業生産",
+                    subTitle: "1961 年 - 2007 年のデータ",
                     axes: [{
                         name: "xAxis",
                         type: "numericX",
                         interval: 10,
-                        title: "Year",
+                        title: "年",
                     }, {
                         name: "yAxis",
                         type: "numericY",
-                        title: "Gross Agricultural Production (Billion USD)",
+                        title: "合計農業生産 (USD 10 億単位)",
                         formatLabel: function (val) {
                             var bVal = (val / 1000),
                             rounded = Math.round(bVal * 100) / 100;
