@@ -1,90 +1,112 @@
 $(function () {
-            var currData, currDataSource, doGeneration;
-
-            doGeneration = function () {
-                var num = 10, data = [];
-                for (var i = 0; i < num; i++) {
-                    var val1 = Math.round(Math.random() * 100);
-                    var val2 = Math.round(Math.random() * 100);
-                    var val3 = Math.round(Math.random() * 100);
-                    data[i] = { Label: i.toString(), Value1: val1, Value2: val2, Value3: val3 };
-                }
-                currData = data;
-                currDataSource = new $.ig.DataSource({ dataSource: currData });
-            }
-
-            doGeneration();
-
             $("#columnChart").igDataChart({
                 width: "98%",
                 height: "400px",
-                dataSource: currDataSource,
+                dataSource: lastFiveYears,
+                title: "$$(Chart_title_energy_production)",
+                subTitle: "$$(Chart_subtitle_energy_production)",
                 axes: [{
                     name: "xAxis",
                     type: "categoryX",
-                    label: "Label"
+                    label: "Year",
+                    title: "$$(CategoryAxis_title_energy_production)"
                 }, {
                     name: "yAxis",
-                    type: "numericY"
+                    type: "numericY",
+                    title: "$$(NumericAxis_title_energy_production)",
                 }],
                 series: [{
                     name: "series1",
-                    title: "BMW",
+                    title: "Canada",
                     type: "column",
                     xAxis: "xAxis",
                     yAxis: "yAxis",
-                    valueMemberPath: "Value1"
+                    valueMemberPath: "Canada"
                 }, {
                     name: "series2",
-                    title: "Audi",
+                    title: "Saudi Arabia",
                     type: "column",
                     xAxis: "xAxis",
                     yAxis: "yAxis",
-                    valueMemberPath: "Value2"
+                    valueMemberPath: "Saudi Arabia"
                 }, {
                     name: "series3",
-                    title: "Mazda",
+                    title: "Russia",
                     type: "column",
                     xAxis: "xAxis",
                     yAxis: "yAxis",
-                    valueMemberPath: "Value3"
+                    valueMemberPath: "Russia"
+                },
+                {
+                    name: "series4",
+                    title: "United States",
+                    type: "column",
+                    xAxis: "xAxis",
+                    yAxis: "yAxis",
+                    valueMemberPath: "United States"
+                },
+                {
+                    name: "series5",
+                    title: "China",
+                    type: "column",
+                    xAxis: "xAxis",
+                    yAxis: "yAxis",
+                    valueMemberPath: "China"
                 }]
             });
 
             $("#barChart").igDataChart({
                 width: "98%",
                 height: "400px",
-                dataSource: currDataSource,
+                dataSource: lastFiveYears,
+                title: "$$(Chart_title_energy_production)",
+                subTitle: "$$(Chart_subtitle_energy_production)",
                 legend: { element: "barLegend" },
                 axes: [{
                     name: "xAxis",
-                    type: "numericX"
+                    type: "numericX",
+                    title: "$$(NumericAxis_title_energy_production)"
                 }, {
                     name: "yAxis",
                     type: "categoryY",
-                    label: "Label"
+                    label: "Year",
+                    title: "$$(CategoryAxis_title_energy_production)"
                 }],
                 series: [{
                     name: "series1",
-                    title: "BMW",
+                    title: "Canada",
                     type: "bar",
                     xAxis: "xAxis",
                     yAxis: "yAxis",
-                    valueMemberPath: "Value1"
+                    valueMemberPath: "Canada"
                 }, {
                     name: "series2",
-                    title: "Audi",
+                    title: "Saudi Arabia",
                     type: "bar",
                     xAxis: "xAxis",
                     yAxis: "yAxis",
-                    valueMemberPath: "Value2"
+                    valueMemberPath: "Saudi Arabia"
                 }, {
                     name: "series3",
-                    title: "Mazda",
+                    title: "Russia",
                     type: "bar",
                     xAxis: "xAxis",
                     yAxis: "yAxis",
-                    valueMemberPath: "Value3"
+                    valueMemberPath: "Russia"
+                }, {
+                    name: "series4",
+                    title: "United States",
+                    type: "bar",
+                    xAxis: "xAxis",
+                    yAxis: "yAxis",
+                    valueMemberPath: "United States"
+                }, {
+                    name: "series5",
+                    title: "China",
+                    type: "bar",
+                    xAxis: "xAxis",
+                    yAxis: "yAxis",
+                    valueMemberPath: "China"
                 }]
             });
         });
