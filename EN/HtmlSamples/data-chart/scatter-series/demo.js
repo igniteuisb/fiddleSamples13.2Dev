@@ -14,7 +14,7 @@ $(function () {
                     }, {
                         name: "yAxis",
                         type: "numericY",
-                        title: "Gross Agricultural Production (Billion USD)",
+                        title: "Gross Agricultural Production (Billions of USD)",
                         formatLabel: function (val) {
                             var bVal = (val / 1000),
                             rounded = Math.round(bVal * 100) / 100;
@@ -50,7 +50,7 @@ $(function () {
                     }, {
                         name: "yAxis",
                         type: "numericY",
-                        title: "Gross Agricultural Production (Billion USD)",
+                        title: "Gross Agricultural Production (Billions of USD)",
                         formatLabel: function (val) {
                             var bVal = (val / 1000),
                             rounded = Math.round(bVal * 100) / 100;
