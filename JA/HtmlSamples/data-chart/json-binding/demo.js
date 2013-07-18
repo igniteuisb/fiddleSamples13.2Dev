@@ -11,21 +11,21 @@ $(function () {
             $("#chart").igDataChart({
                 width: "100%",
                 height: "400px",
-                title: "Population per Country",
-                subTitle: "Five largest projected populations for 2015",
+                title: "国別人口",
+                subTitle: "2015 年推計人口トップ 5",
                 dataSource: data,
                 axes: [
                     {
                         name: "NameAxis",
                         type: "categoryX",
-                        title: "Country",
+                        title: "国",
                         label: "CountryName"
                     },
                     {
                         name: "PopulationAxis",
                         type: "numericY",
                         minimumValue: 0,
-                        title: "Projected Population (Millions of People)",
+                        title: "予期人口 (百万人単位)",
                     }
                 ],
                 series: [

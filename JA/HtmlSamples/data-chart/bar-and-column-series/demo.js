@@ -3,17 +3,17 @@ $(function () {
                 width: "98%",
                 height: "400px",
                 dataSource: lastFiveYears,
-                title: "Energy Production Per Country",
-                subTitle: "The top five Total Primary Energy producers",
+                title: "国別エネルギー生産量",
+                subTitle: "総一次エネルギー生産国トップ 5 ",
                 axes: [{
                     name: "xAxis",
                     type: "categoryX",
                     label: "Year",
-                    title: "Year"
+                    title: "年"
                 }, {
                     name: "yAxis",
                     type: "numericY",
-                    title: "Total Energy Produced (Quadrillion Btu)",
+                    title: "生産された総エネルギー (BTU 40 億単位)",
                 }],
                 series: [{
                     name: "series1",
@@ -59,18 +59,18 @@ $(function () {
                 width: "98%",
                 height: "400px",
                 dataSource: lastFiveYears,
-                title: "Energy Production Per Country",
-                subTitle: "The top five Total Primary Energy producers",
+                title: "国別エネルギー生産量",
+                subTitle: "総一次エネルギー生産国トップ 5 ",
                 legend: { element: "barLegend" },
                 axes: [{
                     name: "xAxis",
                     type: "numericX",
-                    title: "Total Energy Produced (Quadrillion Btu)"
+                    title: "生産された総エネルギー (BTU 40 億単位)"
                 }, {
                     name: "yAxis",
                     type: "categoryY",
                     label: "Year",
-                    title: "Year"
+                    title: "年"
                 }],
                 series: [{
                     name: "series1",
