@@ -13,7 +13,7 @@ $(function () {
                 }, {
                     name: "yAxis",
                     type: "numericY",
-                    title: "Total Energy Produced (Quadrillion Btu)",
+                    title: "Energy Produced (Quadrillion Btu)",
                 }],
                 series: [{
                     name: "series1",
@@ -65,7 +65,7 @@ $(function () {
                 axes: [{
                     name: "xAxis",
                     type: "numericX",
-                    title: "Total Energy Produced (Quadrillion Btu)"
+                    title: "Energy Produced (Quadrillion Btu)"
                 }, {
                     name: "yAxis",
                     type: "categoryY",
