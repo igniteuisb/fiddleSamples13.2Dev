@@ -1,16 +1,20 @@
 $(function () {
             $("#priceChart").igDataChart({
                 width: "500px",
-                height: "300px",
+                height: "400px",
                 dataSource: data,
+                title: "$$(Chart_title_msft_stock)",
+                subTitle: "$$(Chart_subtitle_msft_stock)",
                 axes: [{
                     type: "categoryX",
-                    label: "DateString",
+                    label: "Date",
                     name: "xAxis",
-                    labelVisibility: "collapsed"
+                    interval: 10,
+                    title: "$$(CategoryAxis_title_date)"
                 }, {
                     type: "numericY",
-                    name: "yAxis"
+                    name: "yAxis",
+                    title: "$$(NumericAxis_title_price)"
                 }],
                 series: [{
                     type: "financial",
@@ -28,16 +32,19 @@ $(function () {
 
             $("#indicatorChart").igDataChart({
                 width: "500px",
-                height: "300px",
+                height: "400px",
                 dataSource: data,
+                title: "$$(Chart_title_financial_indicators)",
                 axes: [{
                     type: "categoryX",
-                    label: "DateString",
+                    label: "Date",
                     name: "xAxis",
-                    labelVisibility: "collapsed"
+                    interval: 10,
+                    title: "$$(CategoryAxis_title_date)"
                 }, {
                     type: "numericY",
-                    name: "yAxis"
+                    name: "yAxis",
+                    title: "$$(NumericAxis_title_price)"
                 }],
                 series: [{
                     type: "moneyFlowIndexIndicator",
