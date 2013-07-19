@@ -5,8 +5,8 @@ $(function () {
                     height: "400px",
                     dataSource: data,
                     legend: hasLegend ? { element: "radialLegend" } : null,
-                    title: "$$(Chart_title_temperature)",
-                    subTitle: "$$(Chart_subtitle_temperature)",
+                    title: "New York City vs. Philadelphia",
+                    subTitle: "A comparison of daily temperatures",
                     axes: [{
                         name: "angleAxis",
                         type: "categoryAngle",
@@ -23,7 +23,7 @@ $(function () {
                     }],
                     series: [{
                         name: "series1",
-                        title: '$$(Chart_lbl_philadelphia)',
+                        title: 'Philadelphia',
                         type: seriesType,
                         angleAxis: "angleAxis",
                         valueAxis: "radiusAxis",
@@ -32,7 +32,7 @@ $(function () {
                         markerType: "circle"
                     }, {
                         name: "series2",
-                        title: '$$(Chart_lbl_nyc)',
+                        title: 'New York City',
                         type: seriesType,
                         angleAxis: "angleAxis",
                         valueAxis: "radiusAxis",

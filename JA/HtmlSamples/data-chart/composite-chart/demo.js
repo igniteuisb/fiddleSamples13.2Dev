@@ -7,7 +7,7 @@ $(function () {
                 dataSource: everyThreeYears,
                 crosshairVisibility: Modernizr.touch ? "visible" : "collapsed",
                 title: "国別エネルギー生産量",
-                subTitle: "$$(Chart_subtitle_energy_production_three)",
+                subTitle: "The top three Total Primary Energy producers",
                 axes: [{
                     type: "categoryX",
                     name: "xAxis",
@@ -20,19 +20,19 @@ $(function () {
                     minimumValue: 0,
                     maximumValue: 100,
                     strokeThickness: 5,
-                    title: "生産された総エネルギー (BTU 40 億単位)"
+                    title: "生産されたエネルギー (BTU 40 億単位)"
                 }, {
                     type: "numericY",
                     name: "totalPower",
                     minimumValue: 50,
                     maximumValue: 250,
                     labelLocation: "outsideRight",
-                    title: "$$(NumericAxis_title_total_energy_production)",
+                    title: "Total Energy Produced (Quadrillion Btu)",
                 }],
                 series: [{
                     type: "column",
                     name: "China",
-                    title: "$$(Chart_Composite_China_DS)",
+                    title: "China",
                     xAxis: "xAxis",
                     yAxis: "prodPower",
                     valueMemberPath: "China",
@@ -42,7 +42,7 @@ $(function () {
                 }, {
                     type: "column",
                     name: "UnitedStates",
-                    title: "$$(Chart_Composite_US_DS)",
+                    title: "US",
                     xAxis: "xAxis",
                     yAxis: "prodPower",
                     valueMemberPath: "UnitedStates",
@@ -52,7 +52,7 @@ $(function () {
                 }, {
                     type: "column",
                     name: "Russia",
-                    title: "$$(Chart_Composite_Russia_DS)",
+                    title: "Russia",
                     xAxis: "xAxis",
                     yAxis: "prodPower",
                     valueMemberPath: "Russia",

@@ -3,18 +3,18 @@ $(function () {
                 width: "500px",
                 height: "400px",
                 dataSource: data,
-                title: "$$(Chart_title_msft_stock)",
-                subTitle: "$$(Chart_subtitle_msft_stock)",
+                title: "Microsoft Stock (MSFT)",
+                subTitle: "Data over two months",
                 axes: [{
                     type: "categoryX",
                     label: "Date",
                     name: "xAxis",
                     interval: 10,
-                    title: "$$(CategoryAxis_title_date)"
+                    title: "Date"
                 }, {
                     type: "numericY",
                     name: "yAxis",
-                    title: "$$(NumericAxis_title_price)"
+                    title: "Price"
                 }],
                 series: [{
                     type: "financial",
@@ -34,17 +34,17 @@ $(function () {
                 width: "500px",
                 height: "400px",
                 dataSource: data,
-                title: "$$(Chart_title_financial_indicators)",
+                title: "Financial Indicator Chart",
                 axes: [{
                     type: "categoryX",
                     label: "Date",
                     name: "xAxis",
                     interval: 10,
-                    title: "$$(CategoryAxis_title_date)"
+                    title: "Date"
                 }, {
                     type: "numericY",
                     name: "yAxis",
-                    title: "$$(NumericAxis_title_price)"
+                    title: "Price"
                 }],
                 series: [{
                     type: "moneyFlowIndexIndicator",

@@ -13,7 +13,7 @@ $(function () {
                 }, {
                     name: "yAxis",
                     type: "numericY",
-                    title: "生産された総エネルギー (BTU 40 億単位)",
+                    title: "生産されたエネルギー (BTU 40 億単位)",
                 }],
                 series: [{
                     name: "series1",
@@ -65,7 +65,7 @@ $(function () {
                 axes: [{
                     name: "xAxis",
                     type: "numericX",
-                    title: "生産された総エネルギー (BTU 40 億単位)"
+                    title: "生産されたエネルギー (BTU 40 億単位)"
                 }, {
                     name: "yAxis",
                     type: "categoryY",

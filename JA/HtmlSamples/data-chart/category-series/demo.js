@@ -3,20 +3,20 @@ $(function () {
                 width: "100%",
                 height: "400px",
                 dataSource: data,
-                title: "$$(Chart_title_ukfrance)",
-                subTitle: "$$(Chart_subtitle_ukfrance)",
+                title: "U.K. vs. France",
+                subTitle: "A comparison of populations over time",
                 axes: [{
                     name: "xAxis",
                     type: "categoryX",
                     label: "Date",
                     isInverted: "true",
                     interval: 2,
-                    title: "$$(CategoryAxis_title_ukfrance)"
+                    title: "Year"
                 },
                 {
                     name: "yAxis",
                     type: "numericY",
-                    title: "$$(NumericAxis_title_ukfrance)"
+                    title: "Population (Millions of People)"
                 }],
                 series: [{
                     name: "ukPop",
