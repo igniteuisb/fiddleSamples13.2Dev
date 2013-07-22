@@ -8,7 +8,7 @@ $(function () {
                 targetValueToolTipTemplate: 'targetValueToolTipTemplate1',
                 ranges: [
                     {
-                        brush: 'rgba(251, 23, 65, 0.57)',
+                        brush: '#f55',
                         name: 'bad',
                         startValue: 0,
                         endValue: 50
@@ -45,7 +45,7 @@ $(function () {
                 width: "100%", 
                 ranges: [
                     {
-                        brush: 'rgba(251, 23, 65, 0.57)',
+                        brush: '#f55',
                         name: 'bad',
                         startValue: 0,
                         endValue: 50
@@ -82,7 +82,7 @@ $(function () {
                 width: "100%",
                 ranges: [
                     {
-                        brush: 'rgba(251, 23, 65, 0.57)',
+                        brush: '#f55',
                         name: 'bad',
                         startValue: 0,
                         endValue: 50
@@ -123,7 +123,7 @@ $(function () {
                 targetValueToolTipTemplate: 'targetValueToolTipTemplate2',
                 ranges: [
                     {
-                        brush: 'rgba(251, 23, 65, 0.57)',
+                        brush: '#f55',
                         name: 'Task 1',
                         startValue: 0,
                         endValue: 50

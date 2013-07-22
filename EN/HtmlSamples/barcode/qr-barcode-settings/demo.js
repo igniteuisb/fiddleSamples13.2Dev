@@ -4,7 +4,7 @@ $(function () {
                 width: "100%",
                 stretch: 'uniform',
                 data: "http://www.infragistics.com/products/jquery/help"
-            });           
+            });
 
             $("#setButton").click(function () {
                 $("#barcode").igQRCodeBarcode("option", "data", $("#dataInput").val());
@@ -42,7 +42,7 @@ $(function () {
 
             $("#dataInput").keydown(function () {
                 //check for Enter key
-                if (event.keyCode==13) {
+                if (event.keyCode == 13) {
                     $("#barcode").igQRCodeBarcode("option", "data", $("#dataInput").val());
                 }
             });
