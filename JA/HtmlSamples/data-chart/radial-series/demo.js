@@ -5,8 +5,8 @@ $(function () {
                     height: "400px",
                     dataSource: data,
                     legend: hasLegend ? { element: "radialLegend" } : null,
-                    title: "New York City vs. Philadelphia",
-                    subTitle: "A comparison of daily temperatures",
+                    title: "ニューヨーク市 vs. フィラデルフィア",
+                    subTitle: "気温の比較",
                     axes: [{
                         name: "angleAxis",
                         type: "categoryAngle",
@@ -23,7 +23,7 @@ $(function () {
                     }],
                     series: [{
                         name: "series1",
-                        title: 'Philadelphia',
+                        title: 'フィラデルフィア',
                         type: seriesType,
                         angleAxis: "angleAxis",
                         valueAxis: "radiusAxis",
@@ -32,7 +32,7 @@ $(function () {
                         markerType: "circle"
                     }, {
                         name: "series2",
-                        title: 'New York City',
+                        title: 'ニューヨーク市',
                         type: seriesType,
                         angleAxis: "angleAxis",
                         valueAxis: "radiusAxis",

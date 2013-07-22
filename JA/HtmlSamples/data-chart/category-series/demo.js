@@ -3,20 +3,20 @@ $(function () {
                 width: "100%",
                 height: "400px",
                 dataSource: data,
-                title: "U.K. vs. France",
-                subTitle: "A comparison of populations over time",
+                title: "U.K. vs. フランス",
+                subTitle: "人口の比較 (年)",
                 axes: [{
                     name: "xAxis",
                     type: "categoryX",
                     label: "Date",
                     isInverted: "true",
                     interval: 2,
-                    title: "Year"
+                    title: "年"
                 },
                 {
                     name: "yAxis",
                     type: "numericY",
-                    title: "Population (Millions of People)"
+                    title: "人口 (百万人単位)"
                 }],
                 series: [{
                     name: "ukPop",

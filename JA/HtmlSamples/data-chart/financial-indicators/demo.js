@@ -3,18 +3,18 @@ $(function () {
                 width: "500px",
                 height: "400px",
                 dataSource: data,
-                title: "Microsoft Stock (MSFT)",
-                subTitle: "Data over two months",
+                title: "Microsoft 株 (MSFT)",
+                subTitle: "2 か月間のデータ",
                 axes: [{
                     type: "categoryX",
                     label: "Date",
                     name: "xAxis",
                     interval: 10,
-                    title: "Date"
+                    title: "日付"
                 }, {
                     type: "numericY",
                     name: "yAxis",
-                    title: "Price"
+                    title: "価格"
                 }],
                 series: [{
                     type: "financial",
@@ -34,17 +34,17 @@ $(function () {
                 width: "500px",
                 height: "400px",
                 dataSource: data,
-                title: "Financial Indicator Chart",
+                title: "財務指標チャート",
                 axes: [{
                     type: "categoryX",
                     label: "Date",
                     name: "xAxis",
                     interval: 10,
-                    title: "Date"
+                    title: "日付"
                 }, {
                     type: "numericY",
                     name: "yAxis",
-                    title: "Price"
+                    title: "価格"
                 }],
                 series: [{
                     type: "moneyFlowIndexIndicator",

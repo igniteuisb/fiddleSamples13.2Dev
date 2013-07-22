@@ -4,8 +4,8 @@ $(function () {
                     width: "400px",
                     height: "400px",
                     dataSource: data,
-                    title: "Wind Speed vs. Wind Direction",
-                    subTitle: "Los Angeles wind data over twelve hours",
+                    title: "風速 vs. 風向",
+                    subTitle: "ロサンゼルスの風データ (12 時間)",
                     axes: [{
                         name: "angleAxis",
                         type: "numericAngle"

@@ -7,7 +7,7 @@ $(function () {
                 dataSource: everyThreeYears,
                 crosshairVisibility: Modernizr.touch ? "visible" : "collapsed",
                 title: "国別エネルギー生産量",
-                subTitle: "The top three Total Primary Energy producers",
+                subTitle: "総一次エネルギー生産国トップ 3",
                 axes: [{
                     type: "categoryX",
                     name: "xAxis",
@@ -27,12 +27,12 @@ $(function () {
                     minimumValue: 50,
                     maximumValue: 250,
                     labelLocation: "outsideRight",
-                    title: "Total Energy Produced (Quadrillion Btu)",
+                    title: "生産された総エネルギー (BTU 40 億単位)",
                 }],
                 series: [{
                     type: "column",
                     name: "China",
-                    title: "China",
+                    title: "中国",
                     xAxis: "xAxis",
                     yAxis: "prodPower",
                     valueMemberPath: "China",
@@ -42,7 +42,7 @@ $(function () {
                 }, {
                     type: "column",
                     name: "UnitedStates",
-                    title: "US",
+                    title: "アメリカ",
                     xAxis: "xAxis",
                     yAxis: "prodPower",
                     valueMemberPath: "UnitedStates",
@@ -52,7 +52,7 @@ $(function () {
                 }, {
                     type: "column",
                     name: "Russia",
-                    title: "Russia",
+                    title: "ロシア",
                     xAxis: "xAxis",
                     yAxis: "prodPower",
                     valueMemberPath: "Russia",

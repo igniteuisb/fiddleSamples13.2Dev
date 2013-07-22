@@ -29,7 +29,7 @@
     </script>
 <script id="rangeToolTipTemplate2" type="text/x-jquery-tmpl">
 		<div style='background-color:#4b88f7; padding:2px; '>
-                <font color='${itemBrush}'  >
+                <font color='#f55'  >
                     ${item.name} <br />
                     Begins: ${item.startValue}%<br />
                     Ends: ${item.endValue}%
@@ -43,7 +43,7 @@
 		</div>
     </script>
 <script id="targetValueToolTipTemplate2" type="text/x-jquery-tmpl">
-        <div style="border: 1px solid black; font-size:120%; font-weight:900; background-color:white; padding:2px;" >
+        <div style="border: 1px solid black; font-size:120%; font-weight:900; background-color:#f55; padding:2px;" >
             Target <br />
             Value  <br />
             ${item.value}%  
@@ -72,3 +72,6 @@
             <div style="width: 80%" id="bulletGraph_backLogItem"></div>
         </div>
     </div>
+    <br />
+    <br />
+    As the backlog item composes of 3 tasks and the man-hours for them pile up, to form the whole time needed for the backlog item completion, so does the effort and the quality that is delivered.  As the 3 xamBulletGraphs for the different people’s tasks show the level of completion for each task, the rightmost vertical one clarifies, where any unsatisfactory result may be coming from.
