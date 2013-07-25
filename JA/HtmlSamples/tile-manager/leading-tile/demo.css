@@ -92,6 +92,10 @@ body {
             min-width: 470px;
         }
 
+        .outline {
+            min-width: 500px;
+        }
+
         .sample-footer {
             margin-top: 10px;
             height: 80px;
