@@ -8,19 +8,16 @@ $(function () {
                 targetValueToolTipTemplate: 'targetValueToolTipTemplate1',
                 ranges: [
                     {
-                        brush: '#f55',
                         name: 'bad',
                         startValue: 0,
                         endValue: 50
                     },
                     {
-                        brush: '#f8fe76',
                         name: 'acceptable',
                         startValue: 50,
                         endValue: 80
                     },
                     {
-                        brush: 'b2ff6f',
                         name: 'good',
                         startValue: 80,
                         endValue: 100
@@ -30,7 +27,7 @@ $(function () {
                     ui.label = ui.value + "%";
                 },
                 actualValueName: "Research/Preparation",
-                actualValueBrush: 'white',
+                actualValueBrush: 'green',
                 actualValue: 85,
                 targetValueBrush: 'white',
                 targetValueOutline: 'white',
@@ -45,19 +42,16 @@ $(function () {
                 width: "100%", 
                 ranges: [
                     {
-                        brush: '#f55',
                         name: 'bad',
                         startValue: 0,
                         endValue: 50
                     },
                     {
-                        brush: '#f8fe76',
                         name: 'acceptable',
                         startValue: 50,
                         endValue: 80
                     },
                     {
-                        brush: 'b2ff6f',
                         name: 'good',
                         startValue: 80,
                         endValue: 100
@@ -67,7 +61,7 @@ $(function () {
                     ui.label = ui.value + "%";
                 },
                 actualValueName: "Research/Preparation",
-                actualValueBrush: 'white',
+                actualValueBrush: 'orange',
                 actualValue: 96,
                 targetValueBrush: 'white',
                 targetValueOutline: 'white',
@@ -82,19 +76,16 @@ $(function () {
                 width: "100%",
                 ranges: [
                     {
-                        brush: '#f55',
                         name: 'bad',
                         startValue: 0,
                         endValue: 50
                     },
                     {
-                        brush: '#f8fe76',
                         name: 'acceptable',
                         startValue: 50,
                         endValue: 80
                     },
                     {
-                        brush: 'b2ff6f',
                         name: 'good',
                         startValue: 80,
                         endValue: 100
@@ -104,7 +95,7 @@ $(function () {
                     ui.label = ui.value + "%";
                 },
                 actualValueName: "Research/Preparation",
-                actualValueBrush: 'white',
+                actualValueBrush: 'red',
                 actualValue: 74,
                 targetValueBrush: 'white',
                 targetValueOutline: 'white',
