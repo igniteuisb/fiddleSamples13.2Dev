@@ -3,3 +3,9 @@
             width: 100%;
             height: 700px;
         }
+        #sampleContainer {
+            min-width: 470px;
+        }
+        .outline {
+            min-width: 500px;
+        }

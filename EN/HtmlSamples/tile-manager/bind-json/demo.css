@@ -17,3 +17,9 @@
         #dashboard .color {
             color: blue;
         }
+        #sampleContainer {
+            min-width: 470px;
+        }
+        .outline {
+            min-width: 500px;
+        }
