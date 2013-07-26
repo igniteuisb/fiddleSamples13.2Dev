@@ -12,7 +12,7 @@ $(function () {
         function createDefaultSelectorsGrid() {            
 
             $("#defaultRowSelectors").igGrid({
-                height: "380px",
+                height: "360px",
                 width: "98%",
                 autoGenerateColumns: false,
                 dataSource: northwindEmployees,
@@ -38,7 +38,7 @@ $(function () {
                     {
                         name: "RowSelectors",
                         enableRowNumbering: false,
-                        rowSelectorColumnWidth: "40px"
+                        rowSelectorColumnWidth: "50px"
                     },
                     {
                         name: "Selection",                        
@@ -50,7 +50,7 @@ $(function () {
         function createCboxSelectorsGrid() {
   
             $("#cbRowSelectors").igGrid({
-                height: "480px",
+                height: "360px",
                 width: "98%",
                 autoGenerateColumns: false,
                 dataSource: northwindEmployees,
@@ -77,7 +77,7 @@ $(function () {
                         name: "RowSelectors",
                         enableCheckBoxes: true,
                         enableRowNumbering: false,
-                        rowSelectorColumnWidth: "40px"
+                        rowSelectorColumnWidth: "50px"
                     },
                     {
                         name: "Selection",                        
@@ -114,7 +114,7 @@ $(function () {
                     {
                         name: "RowSelectors",                        
                         enableRowNumbering: true,
-                        rowSelectorColumnWidth: "40px"
+                        rowSelectorColumnWidth: "50px"
                     },
                     {
                         name: "Selection"
