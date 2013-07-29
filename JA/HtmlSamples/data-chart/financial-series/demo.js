@@ -2,8 +2,8 @@ $(function () {
             $("#candlestickChart").igDataChart({
                 width: "500px",
                 height: "500px",
-                title: "$$(Chart_title_financial_series)",
-                subTitle: "$$(Chart_subtitle_financial_series)",
+                title: "Microsoft (MSFT) vs. Adobe (ADBE)",
+                subTitle: "株価の比較",
                 axes: [{
                     name: "xAxis",
                     type: "categoryX",
@@ -63,8 +63,8 @@ $(function () {
             $("#ohlcChart").igDataChart({
                 width: "500px",
                 height: "500px",
-                title: "$$(Chart_title_financial_series)",
-                subTitle: "$$(Chart_subtitle_financial_series)",
+                title: "Microsoft (MSFT) vs. Adobe (ADBE)",
+                subTitle: "株価の比較",
                 axes: [{
                     name: "xAxis",
                     type: "categoryX",

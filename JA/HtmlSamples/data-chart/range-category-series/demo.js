@@ -10,12 +10,12 @@ $(function () {
                         name: "xAxis",
                         type: "categoryX",
                         label: "Time",
-                        title: "$$(CategoryAxis_title_time)"
+                        title: "時間"
                     },
                     {
                         name: "yAxis",
                         type: "numericY",
-                        title: "$$(NumericAxis_title_temperature)",
+                        title: "温度 (華氏)",
                     }],
                     series: [{
                         name: "series1",
