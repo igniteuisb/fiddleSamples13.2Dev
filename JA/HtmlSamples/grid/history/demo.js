@@ -1,12 +1,12 @@
 $(function () {
             var grid = $("#grid");
-            // Revert state from browser history
             window.History.Adapter.bind(window, 'statechange', function (e, args) {
-                var state = window.History.getState().data;
+                var state = window.History.getState().data,
+                    prevState = window.History;
 
                 switch (state.key) {
                     case "page": if (grid.igGridPaging("pageIndex") !== state.value - 1) grid.igGridPaging("pageIndex", state.value - 1); break;
-                    case "sort": if (true) grid.igGridSorting("sortColumn", state.value[0], state.value[1]); break;
+                    case "sort": if (grid.data('igGrid').dataSource.settings.sorting.expressions[0].fieldName !== state.value[0]) grid.igGridSorting("sortColumn", state.value[0], state.value[1]); break;
                     case "resize": grid.igGridResizing("resize", state.value[0], state.value[1]); break;
                     case "move": grid.igGridColumnMoving("groupByColumn", state.value); break;
                     case "group":
@@ -20,6 +20,7 @@ $(function () {
                             grid.igGridHiding("showColumn", state[0]);
                         }
                         break;
+                    case "filter": grid.igGridFiltering("filter", ([{ fieldName: state.value[0], expr: state.value[2], cond: state.value[1] }])); break;
                 }
             });
 
@@ -48,11 +49,12 @@ $(function () {
                             grid.igGridHiding("showColumn", value.split("_")[0]);
                         }
                         break;
+                    case "filter": grid.igGridFiltering("filter", [{ fieldName: value.split("_")[0], expr: value.split("_")[2], cond: value.split("_")[1] }]); break;
                 }
             }
 
-            $("#prev").click(function () { window.History.go(-1); });
-            $("#next").click(function () { window.History.go(1); });
+            $("#prev").click(function () { window.History.back(); });
+            $("#next").click(function () { window.History.forward(); });
             $("#copy").click(function () { window.prompt("Use this URL and send it", window.location); });
 
             function pushToBrowserHistory(state, title, url) {
@@ -91,16 +93,27 @@ $(function () {
                 primaryKey: "name",
                 width: '100%',
                 columns: [
-                    { headerText: "名前", key: "name", dataType: "string", width: "12%" },
-                    { headerText: "チーム", key: "team", dataType: "string", width: "15%" },
-                    { headerText: "年齢", key: "age", dataType: "number", width: "7%" },
-                    { headerText: "番号", key: "number", dataType: "number", width: "7%" },
-                    { headerText: "ポジション", key: "position", dataType: "string", width: "8%" },
-                    { headerText: "ゴール", key: "goals", dataType: "number", width: "10%" },
-                    { headerText: "アシスト", key: "assists", dataType: "number", width: "10%" },
-                    { headerText: "イエローカード", key: "yellow", dataType: "number", width: "10%" },
-                    { headerText: "レッドカード", key: "red", dataType: "number", width: "7%" },
-                    { headerText: "給与", key: "salary", format: "currency", width: "8%" }
+                    //{ headerText: "名前", key: "name", dataType: "string", width: "12%" },
+                    //{ headerText: "チーム", key: "team", dataType: "string", width: "15%" },
+                    //{ headerText: "年齢", key: "age", dataType: "number", width: "7%" },
+                    //{ headerText: "番号", key: "number", dataType: "number", width: "7%" },
+                    //{ headerText: "ポジション", key: "position", dataType: "string", width: "8%" },
+                    //{ headerText: "ゴール", key: "goals", dataType: "number", width: "10%" },
+                    //{ headerText: "アシスト", key: "assists", dataType: "number", width: "10%" },
+                    //{ headerText: "イエローカード", key: "yellow", dataType: "number", width: "10%" },
+                    //{ headerText: "レッドカード", key: "red", dataType: "number", width: "7%" },
+                    //{ headerText: "給与", key: "salary", format: "currency", width: "8%" }
+
+                    { headerText: "Name", key: "name", dataType: "string", width: "12%" },
+                    { headerText: "Team", key: "team", dataType: "string", width: "15%" },
+                    { headerText: "Age", key: "age", dataType: "number", width: "7%" },
+                    { headerText: "No.", key: "number", dataType: "number", width: "7%" },
+                    { headerText: "Pos.", key: "position", dataType: "string", width: "8%" },
+                    { headerText: "Goals", key: "goals", dataType: "number", width: "10%" },
+                    { headerText: "Assists", key: "assists", dataType: "number", width: "10%" },
+                    { headerText: "Yellow C.", key: "yellow", dataType: "number", width: "10%" },
+                    { headerText: "Red C.", key: "red", dataType: "number", width: "7%" },
+                    { headerText: "Salary", key: "salary", format: "currency", width: "8%" }
                 ],
                 autofitLastColumn: false,
                 autoGenerateColumns: false,
@@ -133,7 +146,11 @@ $(function () {
                         name: "Filtering",
                         type: "local",
                         dataFiltered: function (e, args) {
-                           
+                            var columnKey = args.columnKey,
+                                expr = args.owner.grid.dataSource.settings.filtering.expressions[0],
+                                title = "Filtering",
+                                state = { key: "filter", value: [columnKey, expr.cond, expr.expr] };
+                            pushToBrowserHistory(state, title, formURL("filter", [columnKey, expr.cond, expr.expr]));
                         }
                     },
                     {
@@ -182,9 +199,6 @@ $(function () {
                         }
                     }
                 ],
-                dataRendered: function(e, args) {
-                   
-                },
                 rendered: function (e, args) {
                     args.owner.element.find("tr td").css("text-align", "center");
                     args.owner.element.find("tr td:first-child").css("text-align", "left");
