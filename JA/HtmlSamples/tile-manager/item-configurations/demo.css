@@ -24,12 +24,6 @@
     background-color: transparent;
     background-image: none;
 }
-/*
-.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover {
-    background-color: #2686AE;
-    background: #2686ae url(images/gradient_2.png) repeat-x;
-    border: none;
-}*/
 
 .ui-igtile-inner-container {
     padding:5px;
@@ -69,82 +63,73 @@
 
 .ig-tile-minimize-button {
     padding:10px;
-    background-color: rgba(0,0,0,0.5);
-}
-
-.ui-icon.ig-tile-minimize-icon, 
-.ig-tile-minimize-button.ui-state-hover, 
-.ig-tile-minimize-button.ui-state-default {
-    background-color: rgba(0,0,0,0.0);
-    background-image: none;
-    border: none;
 }
 
 .ui-igtile-inner-container {
     color: #fff;
 }
 
-.ig-tile-minimize-icon {
-    background-position: 0px -240px!important;
+.ig-tile-minimize-button .ig-tile-minimize-icon {
+    background-position: 0px -240px;
 }
 
-.tile4 .ui-igtile-inner-container,
-.tile8 .ui-igtile-inner-container,
-.tile10 .ui-igtile-inner-container {
+.tile4.ui-igtile-inner-container,
+.tile8.ui-igtile-inner-container,
+.tile10.ui-igtile-inner-container {
     color: rgba(0, 0, 0, 0.75);
 }
 
 .tile4 .ig-tile-minimize-icon, 
 .tile8 .ig-tile-minimize-icon,
 .tile10 .ig-tile-minimize-icon {
-    background-position: 0px -209px!important;
+    background-position: 0px -209px;
 }
 
-.tile1 .ui-igtile-inner-container { /*iglightblue*/
+.tile1.ui-igtile-inner-container { /*iglightblue*/
     background-color: #44ACD6;
 }
 
 
-.tile2 .ui-igtile-inner-container { /*igdarkgray*/
+.tile2.ui-igtile-inner-container { /*igdarkgray*/
     background-color: #494949;
 }
 
-.tile3 .ui-igtile-inner-container { /*iglightgreen*/
+.tile3.ui-igtile-inner-container { /*iglightgreen*/
     background-color: #A4BA29;
 }
 
-.tile4 .ui-igtile-inner-container { /*iglightyellow*/
+.tile4.ui-igtile-inner-container { /*iglightyellow*/
     background-color: #FDBD48;
 }
 
-.tile5 .ui-igtile-inner-container { /*iglightpink*/
+.tile5.ui-igtile-inner-container { /*iglightpink*/
     background-color: #FF6A6F;
 }
 
-.tile7 .ui-igtile-inner-container { /*igdarkblue*/
+.tile7.ui-igtile-inner-container { /*igdarkblue*/
     background-color: #216E99;
 }
 
-.tile6 .ui-igtile-inner-container { /*iglightpurple*/
+.tile6.ui-igtile-inner-container { /*iglightpurple*/
     background-color: #9E73C1;
 }
 
-.tile8 .ui-igtile-inner-container { /*iglightgray*/
+.tile8.ui-igtile-inner-container { /*iglightgray*/
     background-color: #A8A8A8;
 }
 
-.tile9 .ui-igtile-inner-container { /*igdarkgreen*/
+.tile9.ui-igtile-inner-container { /*igdarkgreen*/
     background-color: #48892D;
 }
 
-.tile10 .ui-igtile-inner-container { /*igorange*/
+.tile10.ui-igtile-inner-container { /*igorange*/
     background-color: #F79036;
 }
 
-.tile11 .ui-igtile-inner-container { /*igdarkpink*/
+.tile11.ui-igtile-inner-container { /*igdarkpink*/
     background-color: #D3404B;
 }
 
-.tile12 .ui-igtile-inner-container { /*igdarkpurple*/
+.tile12.ui-igtile-inner-container { /*igdarkpurple*/
     background-color: #793BAC;
 }
