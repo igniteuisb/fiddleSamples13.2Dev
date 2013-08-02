@@ -1,7 +1,5 @@
-$(function () {           
-
+$(function () {
             /*----------------- Instantiation -------------------------*/
-
             createDefaultSelectorsGrid();
             createCboxSelectorsGrid();
             createRowNumberingGrid();
@@ -9,17 +7,15 @@ $(function () {
 
 
 
-        function createDefaultSelectorsGrid() {            
-
+        function createDefaultSelectorsGrid() {
             $("#defaultRowSelectors").igGrid({
-                height: "360px",
                 width: "98%",
                 autoGenerateColumns: false,
                 dataSource: northwindEmployees,
                 responseDataKey: "results",
                 dataSourceType: "json",
                 columns: [
-                    { headerText: "社員 ID", key: "ID", dataType: "number", width: "100px" },
+                    { headerText: "社員 ID", key: "ID", dataType: "number", width: "120px" },
                     { headerText: "名前", key: "Name", dataType: "string" },
                     { headerText: "役職", key: "Title", dataType: "string"},
                     { headerText: "電話", key: "Phone", dataType: "string" }
@@ -32,7 +28,7 @@ $(function () {
                             {
                                 columnKey: 'ID',
                                 classes: 'hidden-phone'
-                            }                           
+                            }
                         ]
                     },
                     {
@@ -41,23 +37,21 @@ $(function () {
                         rowSelectorColumnWidth: "50px"
                     },
                     {
-                        name: "Selection",                        
+                        name: "Selection"
                     }
                 ]
             });
         }
 
         function createCboxSelectorsGrid() {
-  
             $("#cbRowSelectors").igGrid({
-                height: "360px",
                 width: "98%",
                 autoGenerateColumns: false,
                 dataSource: northwindEmployees,
                 responseDataKey: "results",
                 dataSourceType: "json",
                 columns: [
-                    { headerText: "社員 ID", key: "ID", dataType: "number", width: "100px" },
+                    { headerText: "社員 ID", key: "ID", dataType: "number", width: "120px" },
                     { headerText: "名前", key: "Name", dataType: "string"},
                     { headerText: "役職", key: "Title", dataType: "string" },
                     { headerText: "電話", key: "Phone", dataType: "string" }
@@ -80,22 +74,21 @@ $(function () {
                         rowSelectorColumnWidth: "50px"
                     },
                     {
-                        name: "Selection",                        
+                        name: "Selection"
                     }
                 ]
             });
         }
 
         function createRowNumberingGrid() {
-
             $("#rowNumbering").igGrid({
-                height: "360px",
                 width: "98%",
                 autoGenerateColumns: false,
                 dataSource: northwindEmployees,
                 responseDataKey: "results",
                 dataSourceType: "json",
-                columns: [                    
+                columns: [
+                    { headerText: "社員 ID", key: "ID", dataType: "number", width: "120px" },
                     { headerText: "名前", key: "Name", dataType: "string" },
                     { headerText: "役職", key: "Title", dataType: "string" },
                     { headerText: "電話", key: "Phone", dataType: "string" }
@@ -112,13 +105,13 @@ $(function () {
                         ]
                     },
                     {
-                        name: "RowSelectors",                        
+                        name: "RowSelectors",
                         enableRowNumbering: true,
                         rowSelectorColumnWidth: "50px"
                     },
                     {
                         name: "Selection"
-                    }                    
+                    }
                 ]
             });
         }

@@ -1,20 +1,17 @@
-$(function () {    
-
+$(function () {
             createCellSelectionGrid();
             createRowSelectionGrid();
         });
 
-        function createCellSelectionGrid() {            
-
+        function createCellSelectionGrid() {
             $("#cellSelectionGrid").igGrid({
-                height: "380px",
                 width: "98%",
                 autoGenerateColumns: false,
                 dataSource: northwindEmployees,
                 responseDataKey: "results",
                 dataSourceType: "json",
                 columns: [
-                    { headerText: "社員 ID", key: "ID", dataType: "number", width: "100px" },
+                    { headerText: "社員 ID", key: "ID", dataType: "number", width: "120px" },
                     { headerText: "名前", key: "Name", dataType: "string" },
                     { headerText: "役職", key: "Title", dataType: "string"},
                     { headerText: "電話", key: "Phone", dataType: "string" }
@@ -27,7 +24,7 @@ $(function () {
                             {
                                 columnKey: 'ID',
                                 classes: 'hidden-phone'
-                            }                           
+                            }
                         ]
                     },
                     {
@@ -41,17 +38,15 @@ $(function () {
             });
         }
 
-        function createRowSelectionGrid() {           
-  
+        function createRowSelectionGrid() {
             $("#rowSelectionGrid").igGrid({
-                height: "380px",
                 width: "98%",
                 autoGenerateColumns: false,
                 dataSource: northwindEmployees,
                 responseDataKey: "results",
                 dataSourceType: "json",
                 columns: [
-                    { headerText: "社員 ID", key: "ID", dataType: "number", width: "100px" },
+                    { headerText: "社員 ID", key: "ID", dataType: "number", width: "120px" },
                     { headerText: "名前", key: "Name", dataType: "string"},
                     { headerText: "役職", key: "Title", dataType: "string" },
                     { headerText: "電話", key: "Phone", dataType: "string" }
@@ -66,7 +61,7 @@ $(function () {
                                 classes: 'hidden-phone'
                             }
                         ]
-                    },                    
+                    },
                     {
                         name: "Selection",
                         mode: 'row',
