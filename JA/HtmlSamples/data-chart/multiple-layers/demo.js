@@ -49,53 +49,13 @@ $(function () {
                         type: "crosshairLayer",
                         useInterpolation: false,
                         transitionDuration: 500
+                    },
+                    {
+                        name: "catItemHighlightLayer",
+                        title: "categoryItemHighlight",
+                        type: "categoryItemHighlightLayer",
+                        useInterpolation: false,
+                        transitionDuration: 500
                     }]
-            });
-
-            // Brush
-            $("#brush").on({
-                change: function (e) {
-                    var brushColor = $(this).val();
-                    $("#chart").igDataChart("option", "series", [{ name: "crosshairLayer", brush: brushColor }]);
-                }
-            });
-
-            // Thickness 
-            $("#thicknessSlider").slider({
-                min: 0,
-                max: 10,
-                value: 2,
-                slide: function (event, ui) {
-                    $("#chart").igDataChart("option", "series", [{ name: "crosshairLayer", thickness: ui.value }]);
-                    $("#thicknessLabel").text(ui.value);
-                }
-            });
-
-            // Opacity
-            $("#opacitySlider").slider({
-                min: 0,
-                max: 100,
-                value: 50,
-                slide: function (event, ui) {
-                    $("#chart").igDataChart("option", "series", [{ name: "crosshairLayer", opacity: ui.value }]);
-                    $("#opacityLabel").text(ui.value);
-                }
-            });
-
-            // Transiton Duration Slider
-            $("#transitionDurationSlider").slider({
-                min: 0,
-                max: 1000,
-                value: 500,
-                slide: function (event, ui) {
-                    $("#chart").igDataChart("option", "series", [{ name: "crosshairLayer", transitionDuration: ui.value }]);
-                    $("#transitionDurationLabel").text(ui.value);
-                }
-            });
-
-            // Use Interpolation
-            $("#useInterpolationCheckBox").click(function (e) {
-                var useInterpolationResult = $("#useInterpolationCheckBox").is(":checked") ? true : false;
-                $("#chart").igDataChart("option", "series", [{ name: "crosshairLayer", useInterpolation: useInterpolationResult }]);
             });
         });
