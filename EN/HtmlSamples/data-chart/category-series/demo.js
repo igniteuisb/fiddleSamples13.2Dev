@@ -16,7 +16,7 @@ $(function () {
                 {
                     name: "yAxis",
                     type: "numericY",
-                    title: "Population (Millions of People)"
+                    title: "$$(NumericAxis_title_ukfrance)"
                 }],
                 series: [{
                     name: "ukPop",
