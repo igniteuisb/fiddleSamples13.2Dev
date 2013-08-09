@@ -4,7 +4,7 @@ $(function () {
                 height: "60px",
                 width: "100%",
                 rangeToolTipTemplate: 'rangeToolTipTemplate1',
-                actualValueToolTipTemplate: 'actualValueToolTipTemplate1',
+                valueToolTipTemplate: 'valueToolTipTemplate1',
                 targetValueToolTipTemplate: 'targetValueToolTipTemplate1',
                 ranges: [
                     {
@@ -26,9 +26,9 @@ $(function () {
                 formatLabel: function (evt, ui) {
                     ui.label = ui.value + "%";
                 },
-                actualValueName: "Research/Preparation",
-                actualValueBrush: 'green',
-                actualValue: 85,
+                valueName: "Research/Preparation",
+                valueBrush: 'green',
+                value: 85,
                 targetValueBrush: 'white',
                 targetValueOutline: 'white',
                 targetValue: 90,
@@ -60,9 +60,9 @@ $(function () {
                 formatLabel: function (evt, ui) {
                     ui.label = ui.value + "%";
                 },
-                actualValueName: "Research/Preparation",
-                actualValueBrush: 'orange',
-                actualValue: 96,
+                valueName: "Research/Preparation",
+                valueBrush: 'orange',
+                value: 96,
                 targetValueBrush: 'white',
                 targetValueOutline: 'white',
                 targetValue: 90,
@@ -94,9 +94,9 @@ $(function () {
                 formatLabel: function (evt, ui) {
                     ui.label = ui.value + "%";
                 },
-                actualValueName: "Research/Preparation",
-                actualValueBrush: 'red',
-                actualValue: 74,
+                valueName: "Research/Preparation",
+                valueBrush: 'red',
+                value: 74,
                 targetValueBrush: 'white',
                 targetValueOutline: 'white',
                 targetValue: 90,
@@ -110,7 +110,7 @@ $(function () {
                 width: "100%",
                 orientation: "vertical",                
                 rangeToolTipTemplate: 'rangeToolTipTemplate2',
-                actualValueToolTipTemplate: 'actualValueToolTipTemplate2',
+                valueToolTipTemplate: 'valueToolTipTemplate2',
                 targetValueToolTipTemplate: 'targetValueToolTipTemplate2',
                 ranges: [
                     {
@@ -131,33 +131,13 @@ $(function () {
                         startValue: 80,
                         endValue: 100
                     }
-                ],
-                actualValues: [
-                   {
-                       brush: 'red',
-                       name: 'Steve',
-                       startValue: 10,
-                       value: 37
-                   },
-                   {
-                       brush: 'orange',
-                       name: 'Jim',
-                       startValue: 37,
-                       value: 66
-                   },
-                   {
-                       brush: 'green',
-                       name: 'Bob',
-                       startValue: 66,
-                       value: 83
-                   }
-                ],
+                ],                
                 formatLabel: function (evt, ui) {
                     ui.label = ui.value + "%";
                 },
-                actualValueName: "Research/Preparation",
-                actualValueBrush: 'white',
-                actualValue: 20,
+                valueName: "Research/Preparation",
+                valueBrush: 'white',
+                value: 20,
                 targetValueBrush: 'white',
                 targetValueOutline: 'white',
                 targetValue: 90,
