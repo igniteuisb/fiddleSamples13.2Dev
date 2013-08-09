@@ -16,7 +16,7 @@ $(function () {
                 {
                     name: "yAxis",
                     type: "numericY",
-                    title: "人口 (百万人単位)"
+                    title: "$$(NumericAxis_title_ukfrance)"
                 }],
                 series: [{
                     name: "ukPop",
