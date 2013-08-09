@@ -12,7 +12,7 @@ $(function () {
                 width: "100%",
                 height: "400px",
                 title: "Population per Country",
-                subTitle: "Five largest projected populations for 2015",
+                subTitle: "A comparison of population in 1995 and 2005",
                 dataSource: data,
                 axes: [
                     {
@@ -25,23 +25,86 @@ $(function () {
                         name: "PopulationAxis",
                         type: "numericY",
                         minimumValue: 0,
-                        title: "Projected Population (Millions of People)",
+                        title: "Population (Millions of People)",
                     }
                 ],
                 series: [
                     {
-                        name: "2015Population",
+                        name: "2005Population",
                         type: "column",
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
-                        valueMemberPath: "Pop2015"
+                        valueMemberPath: "Pop2005"
                     },
                     {
-                        name: "series3",
+                        name: "1995Population",
+                        type: "line",
+                        xAxis: "NameAxis",
+                        yAxis: "PopulationAxis",
+                        valueMemberPath: "Pop1995"
+                    },
+                    {
+                        name: "catHighlightLayer",
                         title: "categoryHighlight",
                         type: "categoryHighlightLayer",
                         useInterpolation: false,
                         transitionDuration: 500
                     }]
+            });
+
+            // Brush
+            $("#brush").on({
+                change: function (e) {
+                    var brushColor = $(this).val();
+                    $("#chart").igDataChart("option", "series", [{ name: "catHighlightLayer", brush: brushColor }]);
+                }
+            });
+
+            // Outline
+            $("#outline").on({
+                change: function (e) {
+                    var outlineColor = $(this).val();
+                    $("#chart").igDataChart("option", "series", [{ name: "catHighlightLayer", outline: outlineColor }]);
+                }
+            });
+
+            // Thickness 
+            $("#thicknessSlider").slider({
+                min: 0,
+                max: 10,
+                value: 1,
+                slide: function (event, ui) {
+                    $("#chart").igDataChart("option", "series", [{ name: "catHighlightLayer", thickness: ui.value }]);
+                    $("#thicknessLabel").text(ui.value);
+                }
+            });
+
+            // Opacity
+            $("#opacitySlider").slider({
+                min: 0,
+                max: 1,
+                value: 1,
+                step: 0.01,
+                slide: function (event, ui) {
+                    $("#chart").igDataChart("option", "series", [{ name: "catHighlightLayer", opacity: ui.value }]);
+                    $("#opacityLabel").text(ui.value);
+                }
+            });
+
+            // Transiton Duration Slider
+            $("#transitionDurationSlider").slider({
+                min: 0,
+                max: 100,
+                value: 500,
+                slide: function (event, ui) {
+                    $("#chart").igDataChart("option", "series", [{ name: "catHighlightLayer", transitionDuration: ui.value }]);
+                    $("#transitionDurationLabel").text(ui.value);
+                }
+            });
+
+            // Use Interpolation
+            $("#useInterpolationCheckBox").click(function (e) {
+                var useInterpolationResult = $("#useInterpolationCheckBox").is(":checked") ? true : false;
+                $("#chart").igDataChart("option", "series", [{ name: "catHighlightLayer", useInterpolation: useInterpolationResult }]);
             });
         });
