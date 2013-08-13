@@ -34,68 +34,72 @@ $(function () {
                         type: "column",
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
-                        valueMemberPath: "Pop2005"
+                        valueMemberPath: "Pop2005",
+                        showTooltip: true,
+                        tooltipTemplate: "tooltipTemplate1"
                     },
                     {
                         name: "1995Population",
                         type: "line",
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
-                        valueMemberPath: "Pop1995"
+                        valueMemberPath: "Pop1995",
+                        showTooltip: true,
+                        tooltipTemplate: "tooltipTemplate2"
                     },
                     {
-                        name: "crosshairLayer",
-                        title: "crosshair",
-                        type: "crosshairLayer",
+                        name: "itemToolTipLayer",
+                        title: "itemToolTip",
+                        type: "itemToolTipLayer",
                         useInterpolation: false,
                         transitionDuration: 500
                     }]
             });
 
             // Brush
-            $("#brush").on({
-                change: function (e) {
-                    var brushColor = $(this).val();
-                    $("#chart").igDataChart("option", "series", [{ name: "crosshairLayer", brush: brushColor }]);
-                }
-            });
+            //$("#brush").on({
+            //    change: function (e) {
+            //        var brushColor = $(this).val();
+            //        $("#chart").igDataChart("option", "series", [{ name: "crosshairLayer", brush: brushColor }]);
+            //    }
+            //});
 
             // Thickness 
-            $("#thicknessSlider").slider({
-                min: 0,
-                max: 10,
-                value: 2,
-                slide: function (event, ui) {
-                    $("#chart").igDataChart("option", "series", [{ name: "crosshairLayer", thickness: ui.value }]);
-                    $("#thicknessLabel").text(ui.value);
-                }
-            });
+            //$("#thicknessSlider").slider({
+            //    min: 0,
+            //    max: 10,
+            //    value: 2,
+            //    slide: function (event, ui) {
+            //        $("#chart").igDataChart("option", "series", [{ name: "crosshairLayer", thickness: ui.value }]);
+            //        $("#thicknessLabel").text(ui.value);
+            //    }
+            //});
 
             // Opacity
-            $("#opacitySlider").slider({
-                min: 0,
-                max: 100,
-                value: 50,
-                slide: function (event, ui) {
-                    $("#chart").igDataChart("option", "series", [{ name: "crosshairLayer", opacity: ui.value }]);
-                    $("#opacityLabel").text(ui.value);
-                }
-            });
+            //$("#opacitySlider").slider({
+            //    min: 0,
+            //    max: 100,
+            //    value: 50,
+            //    slide: function (event, ui) {
+            //        $("#chart").igDataChart("option", "series", [{ name: "crosshairLayer", opacity: ui.value }]);
+            //        $("#opacityLabel").text(ui.value);
+            //    }
+            //});
 
             // Transiton Duration Slider
-            $("#transitionDurationSlider").slider({
-                min: 0,
-                max: 1000,
-                value: 500,
-                slide: function (event, ui) {
-                    $("#chart").igDataChart("option", "series", [{ name: "crosshairLayer", transitionDuration: ui.value }]);
-                    $("#transitionDurationLabel").text(ui.value);
-                }
-            });
+            //$("#transitionDurationSlider").slider({
+            //    min: 0,
+            //    max: 1000,
+            //    value: 500,
+            //    slide: function (event, ui) {
+            //        $("#chart").igDataChart("option", "series", [{ name: "crosshairLayer", transitionDuration: ui.value }]);
+            //        $("#transitionDurationLabel").text(ui.value);
+            //    }
+            //});
 
             // Use Interpolation
-            $("#useInterpolationCheckBox").click(function (e) {
-                var useInterpolationResult = $("#useInterpolationCheckBox").is(":checked") ? true : false;
-                $("#chart").igDataChart("option", "series", [{ name: "crosshairLayer", useInterpolation: useInterpolationResult }]);
-            });
+            //$("#useInterpolationCheckBox").click(function (e) {
+            //    var useInterpolationResult = $("#useInterpolationCheckBox").is(":checked") ? true : false;
+            //    $("#chart").igDataChart("option", "series", [{ name: "crosshairLayer", useInterpolation: useInterpolationResult }]);
+            //});
         });
