@@ -2,6 +2,7 @@ $(function () {
 
             $("#map").igMap({
                 width: "100%",
+                height: "350px",
                 crosshairVisibility: "visible",
                 verticalZoomable: true,
                 horizontalZoomable: true,
