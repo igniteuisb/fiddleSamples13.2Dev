@@ -59,7 +59,7 @@ $(function () {
                        name: 'Very well done',
                        startValue: 7,
                        endValue: 10,
-                       brush: '#black'
+                       brush: 'black'
                    },
                 ],
                 showToolTip: true,

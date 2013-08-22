@@ -1,138 +1,154 @@
 $(function () {
-            $("#lineargaugeKMH1").igLinearGauge({
-                height: "100px",
-                width: "100%",
-                minorTickCount: 1 ,                
-                tickEndExtent: 0,
-                tickStartExtent: .1,
-                minorTickEndExtent: 0,
-                minorTickStartExtent: .1,
-                
-                fontBrush: "white",
-                interval:20,
-                maximumValue:200,
-                subtitle:"km/h",
-                backingBrush: {
-                    type: 'linearGradient',
-                    startPoint: { x: 0, y: 0 },
-                    endPoint: { x: 1, y: 1 },
-                    colorStops: [
-                     {
-                         color: 'black',
-                         offset: 0
-                     },
-                     {
-                         color: 'silver',
-                         offset: .25
-                     },
-                     {
-                         color: 'black',
-                         offset: .5
-                     },
-                     {
-                         color: 'silver',
-                         offset: .75
-                     },
-                     {
-                         color: 'black',
-                         offset: 1
-                     },
 
-                    ]
-                },
-            });
+            var $linearGauge = $("#lineargauge");
 
-            $("#lineargaugeKMH2").igLinearGauge({
-                height: "110px",
+            $linearGauge.igLinearGauge({
                 width: "100%",
-                backingBrush:"transparent",
-                fontBrush:"white",
-                minorTickCount:1 , 
-                tickEndExtent:.6,
-                tickStartExtent:.5,
-                minorTickEndExtent:.6,
-                minorTickStartExtent:.5,
-                labelExtent:.7,
-                interval:20,
-                maximumValue:120 ,
-                scaleEndExtent:.9,
-                subtitle:"&#160;m/h",
-                value:78,
-                needleBrush:"red",
-                needleShape:"needle",
-            });
-
-            $("#lineargaugeRPM").igLinearGauge({
-                height: "110px",
-                width: "100%",
-                title:"RPM",
-                subtitle:"1x1000",
-                maximumValue: 8 ,
-                interval: 1,
-                value: 5.5,
-                needleBrush: "red",
-                needleShape: "Triangle",
-                tickBrush:"white",
-                fontBrush:"white",
-                minorTickCount: 0,
-                
-                labelExtent: .55,
-                tickStartExtent: .8,
-                tickEndExtent: .9,
+                height: "80px",
+                transitionDuration: 500,
                 ranges: [
                     {
-                        name: "ok",
-                        outerStartExtent: .3,
-                        outerEndExtent: .3,
-                        innerStartExtent: 0.2,
-                        innerEndExtent: -.05,
+                        brush: '#803E01',
+                        name: 'bad',
                         startValue: 0,
-                        endValue: 6,
-                        brush: "green",
-
+                        endValue: 5200
                     },
                     {
-                        name: "change",
-                        outerStartExtent: .3,
-                        outerEndExtent: .3,
-                        innerStartExtent: -.05,
-                        innerEndExtent: -.15,
-                        startValue: 6,
-                        endValue: 8,
-                        brush: "red",
-
+                        brush: '#BA5A05',
+                        name: 'acceptable',
+                        startValue: 5200,
+                        endValue: 6400
+                    },
+                    {
+                        brush: '#FF7A04',
+                        name: 'good',
+                        startValue: 6400,
+                        endValue: 10000
                     }
                 ],
-
-                backingBrush: {
-                    type: 'linearGradient',
-                    startPoint: { x: 0, y: 0 },
-                    endPoint: { x: 1, y: 1 },
-                    colorStops: [
-                     {
-                         color: 'black',
-                         offset: 0
-                     },
-                     {
-                         color: 'silver',
-                         offset: .25
-                     },
-                     {
-                         color: 'black',
-                         offset: .5
-                     },
-                     {
-                         color: 'silver',
-                         offset: .75
-                     },
-                     {
-                         color: 'black',
-                         offset: 1
-                     },
-
-                    ]
-                },
+                minimumValue: 0,
+                maximumValue: 10000,
+                value: 6000,                 
+                needleShape:"rectangle",
+                needleBrush:"orange",
+                needleOutline:"#803e01",
+                needleStrokeThickness:2, 
             });
 
-           
+            var $linearGauge2 = $("#lineargauge2");
+
+            $linearGauge2.igLinearGauge({
+                width: "100%",
+                height: "80px",
+                transitionDuration: 500,
+                ranges: [
+                    {
+                        brush: '#566509',
+                        name: 'bad',
+                        startValue: 0,
+                        endValue: 3400
+                    },
+                    {
+                        brush: '#7F950C',
+                        name: 'acceptable',
+                        startValue: 3400,
+                        endValue: 4000
+                    },
+                    {
+                        brush: '#AABF31',
+                        name: 'good',
+                        startValue: 4000,
+                        endValue: 10000
+                    }
+                ],
+                minimumValue: 0,
+                maximumValue: 10000,
+                value: 5000,
+                needleShape: "trapezoid",
+                needleBrush: "#fff7a3",
+                needleOutline:"#566509",
+                needleStrokeThickness:2                
+            });
+
+
+            var $linearGauge3 = $("#lineargauge3");
+
+            $linearGauge3.igLinearGauge({
+                width: "100%",
+                height: "80px",
+                transitionDuration: 500,
+                ranges: [
+                    {
+                        brush: '#566509',
+                        name: 'bad',
+                        startValue: 0,
+                        endValue: 254
+                    },
+                    {
+                        brush: '#7F950C',
+                        name: 'acceptable',
+                        startValue: 254,
+                        endValue: 300
+                    },
+                    {
+                        brush: '#AABF31',
+                        name: 'good',
+                        startValue: 300,
+                        endValue: 500
+                    }
+                ],
+                minimumValue: 0,
+                maximumValue: 500,
+                value: 350,
+                needleShape:"triangle",
+                needleBrush:"#fff7a3",
+                needleOutline:"#566509",
+                needleStrokeThickness:2
+            });
+
+
+            var $linearGauge4 = $("#lineargauge4");
+
+            $linearGauge4.igLinearGauge({
+                width: "100%",
+                height: "80px",
+                transitionDuration: 500,
+                ranges: [
+                    {
+                        brush: '#11364D',
+                        name: 'bad',
+                        startValue: 0,
+                        endValue: 60
+                    },
+                    {
+                        brush: '#164F6D',
+                        name: 'acceptable',
+                        startValue: 60,
+                        endValue: 70
+                    },
+                    {
+                        brush: '#20789F',
+                        name: 'good',
+                        startValue: 70,
+                        endValue: 100
+                    }
+                ],
+                minimumValue: 0,
+                maximumValue: 100,
+                value: 50,
+                needleShape:"custom" ,
+                needleBrush:"#99d4fd",
+                needleOutline:"#11364d",
+                needleInnerExtent: 0.3, 
+                needleOuterExtent: .7,
+                needleOuterPointExtent: .9,
+                needleInnerPointExtent: 0.3,
+                needleInnerPointWidth: 0,
+                needleOuterPointWidth: .3, 
+                needleInnerBaseWidth: 0.5, 
+                needleOuterBaseWidth: 0.07,
+                formatLabel: function (evt, ui) {
+                    ui.label = ui.value + "%";
+                }
+            });
         });
