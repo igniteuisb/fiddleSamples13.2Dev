@@ -24,12 +24,14 @@ var data = [
                         $(this).igLinearGauge({
                             height: "80px",
                             width: "450px",
-                            backingBrush: 'transparent',
-                            backingOutline: 'transparent',
+                            backingBrush: "transparent",
+                            backingOutline: "transparent",
                             minimumValue: item.min,
                             maximumValue: item.max,
                             targetValue: item.target,
                             value: item.value,
+                            needleBrush: "white",
+                            needleOutline: "#2582a9",
                             interval: 150,
                             minorTickCount: 4,
                             ranges: $.map(item.ranges, function (el, index) {

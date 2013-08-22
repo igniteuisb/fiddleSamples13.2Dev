@@ -1,41 +1,15 @@
 $(function () {
-var canvas = document.getElementById('myCanvas');
-            var context = canvas.getContext('2d');
-            var centerX = 0;
-            var centerY = 0;
-            var radius = 50;
-            // save state
-            context.save();
-            // translate context
-            context.translate(canvas.width / 4, canvas.height / 2);
-            // scale context horizontally
-            context.scale(1, 1);
-            // draw circle which will be stretched into an oval
-            context.beginPath();
-            context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-            // restore to original state
-            context.restore();
-            // apply styling
-            context.fillStyle = 'red';
-            context.fill();
-            context.lineWidth = 5;
-            context.strokeStyle = 'silver';
-            context.stroke();
-         
-        $(function () {
             $("#lineargauge").igLinearGauge({
                 height: "100px",
                 width: "100%",
-                fontBrush:"red",
-                subtitle: "F",
+                fontBrush:"red", 
                 transitionDuration: 1000
 
             });
 
             $("#lineargaugef").igLinearGauge({
                 height: "110px",
-                width: "100%",
-                subtitle: "F&deg",
+                width: "100%", 
 
                 tickBrush: "white",
                 minorTickBrush: "white",
@@ -66,9 +40,7 @@ var canvas = document.getElementById('myCanvas');
 
             $("#lineargaugec").igLinearGauge({
                 height: "110px",
-                width: "100%",
-                subtitle: "C&deg",
-                subtitleBrush: "white",
+                width: "100%",  
                 tickBrush: "white",
                 minorTickBrush: "white",
                 fontBrush: "white",
@@ -87,7 +59,7 @@ var canvas = document.getElementById('myCanvas');
 
                 value: 30,
 
-                needleBrush: "aqua",
+                needleBrush: "lightblue",
                 needleInnerExtent: 0.13,
                 needleOuterExtent: 0.63,
 
@@ -100,8 +72,7 @@ var canvas = document.getElementById('myCanvas');
 
             $("#lineargaugeBase").igLinearGauge({
                 height: "110px",
-                width: "100%",
-                subtitle: "F&deg",
+                width: "100%", 
                  
                 backingInnerExtent: 0.3,
                 backingOuterExtent: 0.65,
@@ -147,8 +118,7 @@ var canvas = document.getElementById('myCanvas');
             });
             $("#lineargaugeLabelsOnly").igLinearGauge({
                 height: "110px",
-                width: "100%",
-                subtitle: "F&deg",
+                width: "100%", 
 
                 ticksPostInitial: 45,
                 minimumValue: 34,
@@ -157,8 +127,7 @@ var canvas = document.getElementById('myCanvas');
                 backingBrush: "transparent",
                 scaleBrush: "transparent",
                 background: "transparent",
-                 
-                subtitle: "C&#186;",
+                  
                 interval: 1,
                 backingOutline: "transparent",
                 formatLabel: function (evt, ui) {
@@ -187,4 +156,3 @@ var canvas = document.getElementById('myCanvas');
                 
             });
         });
-});
