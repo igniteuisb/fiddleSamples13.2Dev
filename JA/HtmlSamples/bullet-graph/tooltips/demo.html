@@ -8,41 +8,59 @@
 <link href="http://igniteuisamples.ja.dev.infragistics.local/13-2/css/apiviewer.css" rel="stylesheet" type="text/css"></link>
 <script src="http://igniteuisamples.dev.infragistics.local/13-2/IgniteUI/js/i18n/infragistics-ja.js"></script>
 
-<script id="rangeToolTipTemplate1" type="text/x-jquery-tmpl">
+<script id="rangeToolTipTemplate2" type="text/x-jquery-tmpl">
 		<div class='ui-bulletgraph-range-tooltip'  >
-            <div >Name: ${item.name}</div>
-            <div >Start Value: ${item.startValue}</div>
-            <div >End Value: ${item.endValue}</div>
+           ${item.name} : ${item.startValue}% - ${item.endValue}%
+        </div>
+    </script>
+<script id="valueToolTipTemplate2" type="text/x-jquery-tmpl">
+		<div class='ui-bulletgraph-value-tooltip'>            
+            ${item.name} : ${item.value}% 
+        </div>
+    </script>
+<script id="targetValueToolTipTemplate2" type="text/x-jquery-tmpl">
+        <div class='ui-bulletgraph-targetValue-tooltip'>
+            ${item.value}%
+        </div>
+    </script>
+<script id="rangeToolTipTemplate1" type="text/x-jquery-tmpl">
+		<div class='ui-bulletgraph-range-tooltip'  > 
+            <font color='${itemBrush}'>
+                ${item.name} : ${item.startValue}% - ${item.endValue}%
+            </font> 
         </div>
     </script>
 <script id="valueToolTipTemplate1" type="text/x-jquery-tmpl">
-		<div class='ui-bulletgraph-value-tooltip'>
-            <div >Name: ${item.name}</div>
-            <div >Start Value: ${item.startValue}</div>
-            <div>End Value: ${item.value}</div>
+		<div class='ui-bulletgraph-value-tooltip'  >
+            <font color='${itemBrush}'>
+                ${item.name} : ${item.value}%
+            </font>
         </div>
     </script>
 <script id="targetValueToolTipTemplate1" type="text/x-jquery-tmpl">
-        <div class='ui-bulletgraph-targetValue-tooltip'>
-            <div>Value: ${item.value}</div>
+        <div class='ui-bulletgraph-targetValue-tooltip' >
+            <font color='${itemBrush}'>
+                ${item.value}%
+            </font>
         </div>
     </script>
-<script id="rangeToolTipTemplate2" type="text/x-jquery-tmpl">
+<script id="rangeToolTipTemplateNew" type="text/x-jquery-tmpl">
 		<div style='background-color:#4b88f7; padding:2px; '>
-                <font color='#f55'  >
-                    ${item.name} <br />
-                    Begins: ${item.startValue}%<br />
-                    Ends: ${item.endValue}%
-                </font>
+            <font color='white'  >
+                ${item.name} <br />
+                $$(TaskBegins): ${item.startValue}%<br />
+                $$(TaskEnds): ${item.endValue}%
+            </font>
 		</div>
     </script>
-<script id="valueToolTipTemplate2" type="text/x-jquery-tmpl">
+<script id="valueToolTipTemplateNew" type="text/x-jquery-tmpl">
         <div  style="background-color:white; border: 1px solid black; color:red; font-size:120%; padding:2px;">
-			${item.name} <br />
-            from:  ${item.startValue}% to: ${item.value}%
+            Task 3:32% <br />
+            Task 2:35% <br />
+            Task 1:21% <br />
 		</div>
     </script>
-<script id="targetValueToolTipTemplate2" type="text/x-jquery-tmpl">
+<script id="targetValueToolTipTemplateNew" type="text/x-jquery-tmpl">
         <div style="border: 1px solid black; font-size:120%; font-weight:900; background-color:#f55; padding:2px;" >
             Target <br />
             Value  <br />
@@ -50,28 +68,28 @@
         </div>
     </script>
 
-<h3>バックログ項目</h3>
-    <div style="min-width:100px; font-size: 80%">
-        <div style="width:70%; float: left">
-            <div>
-                <div style="width: 70%; margin-top: 5px; font-weight: bold">本島:タスク 3 - 20%</div>
-                <div id="bulletgraph_task3"></div>
+<div>
+        <h3>BackLog Item</h3>
+        <div style="min-width:100px; width:100%; font-size: 80%; float:left">
+            <div style="width:70%; float: left">
+                <div>
+                    <div style="width: 70%; margin-top: 5px; font-weight: bold">Task 3</div>
+                    <div id="bulletgraph_task3"></div>
+                </div>
+                <div>
+                    <div style="width: 70%; margin-top: 5px; font-weight: bold">Task 2</div>
+                    <div id="bulletgraph_task2" style="margin-top: 40px"></div>
+                </div>
+                <div>
+                    <div style="width: 70%; margin-top: 5px; font-weight: bold">Task 1</div>
+                    <div id="bulletgraph_task1" style="margin-top: 40px"></div>
+                </div>
             </div>
-            <div>
-                <div style="width: 70%; margin-top: 5px; font-weight: bold">佐々木:タスク 2 - 30%</div>
-                <div id="bulletgraph_task2" style="margin-top: 40px"></div>
-            </div>
-            <div>
-                <div style="width: 70%; margin-top: 5px; font-weight: bold">原田:タスク 1 - 50%</div>
-                <div id="bulletgraph_task1" style="margin-top: 40px"></div>
-            </div>
-        </div>
 
-        <div style="width:20%; float: left">
-            <div style="width: 100px; font-weight: bold">バックログ項目の合計進行状況</div>
-            <div style="width: 80%" id="bulletGraph_backLogItem"></div>
+            <div style="width:30%; max-width:150px; float: left">
+                <div style="width: 100px; font-weight: bold">Total BackLog Item Progress</div>
+                <div style="width: 80%" id="bulletGraph_backLogItem"></div>
+            </div>
         </div>
+        <div style="float:left">As the backlog item composes of 3 tasks and the man-hours for them pile up to form the whole time needed for the backlog item completion, so does the effort and the quality that is delivered.  As the xamBulletGraphs for the different people’s tasks show the level of completion for each task, the right most vertical one clarifies where any unsatisfactory result may be coming from.</div>
     </div>
-    <br />
-    <br />
-    各バックログ項目には、 3 つのタスクおよびバックログ項目を完了するための全期間を構成するタスクの工数、それによってもたらされる品質や成果が含まれます。各タスクは xamBulletGraph で表示されます。タスクの進行状況を表示します。右の垂直方向ブレット グラフはチームの進行状況を表示します。

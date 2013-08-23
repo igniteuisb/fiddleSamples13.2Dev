@@ -3,6 +3,78 @@ $(function () {
             $("#bulletgraph_task3").igBulletGraph({
                 height: "60px",
                 width: "100%",
+                showToolTip: true,
+                ranges: [
+                    {
+                        name: 'bad',
+                        startValue: 0,
+                        endValue: 50
+                    },
+                    {
+                        name: 'acceptable',
+                        startValue: 50,
+                        endValue: 80
+                    },
+                    {
+                        name: 'good',
+                        startValue: 80,
+                        endValue: 100
+                    }
+                ],
+                formatLabel: function (evt, ui) {
+                    ui.label = ui.value + "%";
+                },
+                valueName: "Task 3",
+                valueBrush: 'green',
+                value: 85,
+                targetValueBrush: 'white',
+                targetValueOutline: 'white',
+                targetValue: 90,
+                labelInterval: 20,
+                transitionDuration: 500
+            });
+
+            $("#bulletgraph_task2").igBulletGraph({
+                height: "60px",
+                width: "100%",
+                showToolTip: true,
+                rangeToolTipTemplate: 'rangeToolTipTemplate2',
+                valueToolTipTemplate: 'valueToolTipTemplate2',
+                targetValueToolTipTemplate: 'targetValueToolTipTemplate2',
+                ranges: [
+                     {
+                         name: 'bad',
+                         startValue: 0,
+                         endValue: 50
+                     },
+                     {
+                         name: 'acceptable',
+                         startValue: 50,
+                         endValue: 80
+                     },
+                     {
+                         name: 'good',
+                         startValue: 80,
+                         endValue: 100
+                     }
+                ],
+                formatLabel: function (evt, ui) {
+                    ui.label = ui.value + "%";
+                },
+                valueName: "Task 2",
+                valueBrush: 'orange',
+                value: 96,
+                targetValueBrush: 'white',
+                targetValueOutline: 'white',
+                targetValue: 90,
+                labelInterval: 20,
+                transitionDuration: 500
+            });
+
+            $("#bulletgraph_task1").igBulletGraph({
+                height: "60px",
+                width: "100%",
+                showToolTip: true,
                 rangeToolTipTemplate: 'rangeToolTipTemplate1',
                 valueToolTipTemplate: 'valueToolTipTemplate1',
                 targetValueToolTipTemplate: 'targetValueToolTipTemplate1',
@@ -26,92 +98,23 @@ $(function () {
                 formatLabel: function (evt, ui) {
                     ui.label = ui.value + "%";
                 },
-                valueName: "Research/Preparation",
-                valueBrush: 'green',
-                value: 85,
-                targetValueBrush: 'white',
-                targetValueOutline: 'white',
-                targetValue: 90,
-                labelInterval: 20,
-                showToolTip: true,
-                transitionDuration: 500
-            });
-
-            $("#bulletgraph_task2").igBulletGraph({
-                height: "60px",
-                width: "100%", 
-                ranges: [
-                    {
-                        name: 'bad',
-                        startValue: 0,
-                        endValue: 50
-                    },
-                    {
-                        name: 'acceptable',
-                        startValue: 50,
-                        endValue: 80
-                    },
-                    {
-                        name: 'good',
-                        startValue: 80,
-                        endValue: 100
-                    }
-                ],
-                formatLabel: function (evt, ui) {
-                    ui.label = ui.value + "%";
-                },
-                valueName: "Research/Preparation",
-                valueBrush: 'orange',
-                value: 96,
-                targetValueBrush: 'white',
-                targetValueOutline: 'white',
-                targetValue: 90,
-                labelInterval: 20,
-                showToolTip: true,
-                transitionDuration: 500
-            });
-
-            $("#bulletgraph_task1").igBulletGraph({
-                height: "60px",
-                width: "100%",
-                ranges: [
-                    {
-                        name: 'bad',
-                        startValue: 0,
-                        endValue: 50
-                    },
-                    {
-                        name: 'acceptable',
-                        startValue: 50,
-                        endValue: 80
-                    },
-                    {
-                        name: 'good',
-                        startValue: 80,
-                        endValue: 100
-                    }
-                ],
-                formatLabel: function (evt, ui) {
-                    ui.label = ui.value + "%";
-                },
-                valueName: "Research/Preparation",
+                valueName: "Task 2",
                 valueBrush: 'red',
                 value: 74,
                 targetValueBrush: 'white',
                 targetValueOutline: 'white',
                 targetValue: 90,
                 labelInterval: 20,
-                showToolTip: true,
-                transitionDuration: 500
+                transitionDuration: 500                
             });
 
             $("#bulletGraph_backLogItem").igBulletGraph({
                 height: "300px",
                 width: "100%",
                 orientation: "vertical",                
-                rangeToolTipTemplate: 'rangeToolTipTemplate2',
-                valueToolTipTemplate: 'valueToolTipTemplate2',
-                targetValueToolTipTemplate: 'targetValueToolTipTemplate2',
+                rangeToolTipTemplate: 'rangeToolTipTemplateNew',
+                valueToolTipTemplate: 'valueToolTipTemplateNew',
+                targetValueToolTipTemplate: 'targetValueToolTipTemplateNew',
                 ranges: [
                     {
                         brush: '#f55',
@@ -134,10 +137,9 @@ $(function () {
                 ],                
                 formatLabel: function (evt, ui) {
                     ui.label = ui.value + "%";
-                },
-                valueName: "Research/Preparation",
+                }, 
                 valueBrush: 'white',
-                value: 20,
+                value: 83,
                 targetValueBrush: 'white',
                 targetValueOutline: 'white',
                 targetValue: 90,
