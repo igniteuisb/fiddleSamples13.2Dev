@@ -6,17 +6,17 @@ $(function () {
                 showToolTip: true,
                 ranges: [
                     {
-                        name: 'bad',
+                        name: '悪い',
                         startValue: 0,
                         endValue: 50
                     },
                     {
-                        name: 'acceptable',
+                        name: '普通 ',
                         startValue: 50,
                         endValue: 80
                     },
                     {
-                        name: 'good',
+                        name: '良い',
                         startValue: 80,
                         endValue: 100
                     }
@@ -24,7 +24,7 @@ $(function () {
                 formatLabel: function (evt, ui) {
                     ui.label = ui.value + "%";
                 },
-                valueName: "Task 3",
+                valueName: "タスク 3",
                 valueBrush: 'green',
                 value: 85,
                 targetValueBrush: 'white',
@@ -43,17 +43,17 @@ $(function () {
                 targetValueToolTipTemplate: 'targetValueToolTipTemplate2',
                 ranges: [
                      {
-                         name: 'bad',
+                         name: '悪い',
                          startValue: 0,
                          endValue: 50
                      },
                      {
-                         name: 'acceptable',
+                         name: '普通 ',
                          startValue: 50,
                          endValue: 80
                      },
                      {
-                         name: 'good',
+                         name: '良い',
                          startValue: 80,
                          endValue: 100
                      }
@@ -61,7 +61,7 @@ $(function () {
                 formatLabel: function (evt, ui) {
                     ui.label = ui.value + "%";
                 },
-                valueName: "Task 2",
+                valueName: "タスク 2",
                 valueBrush: 'orange',
                 value: 96,
                 targetValueBrush: 'white',
@@ -80,17 +80,17 @@ $(function () {
                 targetValueToolTipTemplate: 'targetValueToolTipTemplate1',
                 ranges: [
                     {
-                        name: 'bad',
+                        name: '悪い',
                         startValue: 0,
                         endValue: 50
                     },
                     {
-                        name: 'acceptable',
+                        name: '普通 ',
                         startValue: 50,
                         endValue: 80
                     },
                     {
-                        name: 'good',
+                        name: '良い',
                         startValue: 80,
                         endValue: 100
                     }
@@ -98,7 +98,7 @@ $(function () {
                 formatLabel: function (evt, ui) {
                     ui.label = ui.value + "%";
                 },
-                valueName: "Task 2",
+                valueName: "タスク 2",
                 valueBrush: 'red',
                 value: 74,
                 targetValueBrush: 'white',
@@ -118,19 +118,19 @@ $(function () {
                 ranges: [
                     {
                         brush: '#f55',
-                        name: 'Task 1',
+                        name: 'タスク 1',
                         startValue: 0,
                         endValue: 50
                     },
                     {
                         brush: '#f8fe76',
-                        name: 'Task 2',
+                        name: 'タスク 2',
                         startValue: 50,
                         endValue: 80
                     },
                     {
                         brush: 'b2ff6f',
-                        name: 'Task 3',
+                        name: 'タスク 3',
                         startValue: 80,
                         endValue: 100
                     }
