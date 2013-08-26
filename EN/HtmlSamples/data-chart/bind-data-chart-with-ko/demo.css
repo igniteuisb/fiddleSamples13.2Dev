@@ -7,6 +7,7 @@
         .editor-container .labels { display: block; font-size: 13px; padding-bottom: 5px; }
         .slider-container { padding: 10px 20px 10px 30px; margin: 10px 5px; }
         .slider-title, .eidtors-title { font-size: 13px; padding: 3px 0 20px 2px; }
+        #slider1 { background-position-y: -4px; }
         .year-profit { float: right; margin-left: 5px; font-weight: bold; border: none; }
         .eidtors-title { padding: 0 0 3px 2px; }
         .number-container { float: right; font-size: 30px; width: 200px; text-align: right; }
@@ -21,7 +22,7 @@
             position: relative;
             width: 100%;
         }
-        #legendLineChart { position: absolute; top: 120px; border: none; background-color: transparent; font-weight: bold;}
+        #legendLineChart { position: absolute; top: 120px; left: 40px; border: none; background-color: transparent; font-weight: bold;}
 
         /* Polar chart container and legend */
         .sample-polar-chart-holder {
@@ -49,6 +50,9 @@
                 float: left;
                 margin-top: 10px;
             }
+                .sample-polar-chart-holder > div:first-of-type { 
+                    width: 99% !important;
+                }
 
             #legendBarColumnChart { left: 80%; }
         }
