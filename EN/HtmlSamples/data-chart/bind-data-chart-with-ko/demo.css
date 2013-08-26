@@ -40,7 +40,7 @@
             float: left;
             margin-top: 10px;
         }
-        #legendBarColumnChart { position: absolute; top: 135px; left: 85%; border: none; background-color: transparent; font-weight: bold; }
+        #legendBarColumnChart { position: absolute; top: 135px; left: 55px; border: none; background-color: transparent; font-weight: bold; }
 
         @media screen and (max-width: 600px) {
             /* Polar chart container and legend under 600px */
