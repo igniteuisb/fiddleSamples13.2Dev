@@ -9,7 +9,7 @@ var alternate = true;
 						'http://dl.infragistics.com/pg/2011-1/web/shared/videoplayer/videos/Infragistics_Presentation_lowRes_1.theora.ogv'
                 ],
                 width: "100%",
-                posterUrl: 'http://igniteuisamples.dev.infragistics.local/13-2/images/samples/video-player/ig-pres.png',
+                posterUrl: 'http://dev.igniteui.local/13-2/images/samples/video-player/ig-pres.png',
                 fullscreen: false,
                 browserControls: false,
                 autohide: true,
@@ -17,7 +17,7 @@ var alternate = true;
                 autohideDelay: 2000,
                 title: 'Infragistics Presentation',
                 banners: [{
-                    imageUrl: 'http://igniteuisamples.dev.infragistics.local/13-2/images/samples/video-player/banner.png',
+                    imageUrl: 'http://dev.igniteui.local/13-2/images/samples/video-player/banner.png',
                     link: 'http://quince.infragistics.com/',
                     times: [5, 20, 60],
                     visible: false,
