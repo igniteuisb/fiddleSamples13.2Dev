@@ -32,6 +32,8 @@ $(function () {
                     {
                         name: "2005Population",
                         type: "column",
+                        isHighlightingEnabled: true,
+                        isTransitionInEnabled: true,
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
                         valueMemberPath: "Pop2005"
@@ -39,6 +41,8 @@ $(function () {
                     {
                         name: "1995Population",
                         type: "line",
+                        isHighlightingEnabled: true,
+                        isTransitionInEnabled: true,
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
                         valueMemberPath: "Pop1995"

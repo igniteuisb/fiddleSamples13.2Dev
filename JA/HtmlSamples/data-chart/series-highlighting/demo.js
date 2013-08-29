@@ -53,7 +53,6 @@ $(function () {
                 if (seriesType == "area" ||
                     seriesType == "splineArea" ||
                     seriesType == "column" ||
-                    seriesType == "waterfall" ||
                     seriesType == "stepArea") {
                     thickness = 1;
                 }
@@ -84,5 +83,17 @@ $(function () {
                     tooltipTemplate: "tooltipTemplate2",
                     thickness: thickness
                 }]);
+            });
+            
+            // Transiton Duration Slider
+            $("#transitionDurationSlider").slider({
+                min: 0,
+                max: 5,
+                step: 0.01,
+                value: 2,
+                slide: function (event, ui) {
+                    $("#chart").igDataChart("option", "highlightingTransitionDuration", ui.value * 1000 );
+                    $("#transitionDurationLabel").text(ui.value);
+                }
             });
         });
