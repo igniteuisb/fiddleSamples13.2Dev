@@ -32,6 +32,7 @@ $(function () {
                     {
                         name: "2005Population",
                         type: "column",
+                        isTransitionInEnabled: true,
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
                         valueMemberPath: "Pop2005"
@@ -39,6 +40,7 @@ $(function () {
                     {
                         name: "1995Population",
                         type: "line",
+                        isTransitionInEnabled: true,
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
                         valueMemberPath: "Pop1995"
