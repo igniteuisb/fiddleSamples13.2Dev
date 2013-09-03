@@ -13,10 +13,7 @@
 <link href="http://dev.igniteui.local/13-2/IgniteUI/css/structure/modules/infragistics.ui.chart.new.css" rel="stylesheet"></link>
 <script src="http://dev.igniteui.local/13-2/IgniteUI/js/i18n/infragistics-ja.js"></script>
 
-<div class="sample-header">
-        <h1>日の経費/売上シミュレーション</h1>
-    </div>
-    <div class="main-container">
+<div class="main-container">
         <div class="combo-container">
             <label for="combo1">現在の項目を選択</label>
             <div class="clear"></div>
@@ -50,6 +47,7 @@
                 dataSource: data,
                 width: chartWidth,
                 height: chartHeight,
+                title: "$$(ExpenseRevenuePerDay)",
                 legend: { element: "legendLineChart" },
                 axes: [{
                     name: "xAxis",
@@ -97,6 +95,7 @@
                 dataSource: data,
                 width: chartWidth,
                 height: chartHeight,
+                title: "$$(ExpenseRevenuePerDay)",
                 legend: { element: "legendBarColumnChart" },
                 axes: [{
                     name: "xAxis",

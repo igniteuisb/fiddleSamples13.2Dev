@@ -44,6 +44,7 @@ var currData, currDataSource, doGeneration, startTime = null;
 	        $("#chart").igDataChart({
 	            width: "100%",
 	            height: "500px",
+	            title: "$$(RandomData)",
 	            axes: [{
 	                name: "xAxis",
 	                type: "categoryX",
