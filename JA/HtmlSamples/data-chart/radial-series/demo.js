@@ -25,7 +25,6 @@ $(function () {
                         name: "series1",
                         title: 'フィラデルフィア',
                         type: seriesType,
-                        isTransitionInEnabled: true,
                         angleAxis: "angleAxis",
                         valueAxis: "radiusAxis",
                         valueMemberPath: "PhiladelphiaTemp",
