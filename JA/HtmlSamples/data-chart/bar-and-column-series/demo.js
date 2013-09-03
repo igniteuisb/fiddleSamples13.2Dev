@@ -3,6 +3,7 @@ $(function () {
                 width: "98%",
                 height: "400px",
                 dataSource: lastFiveYears,
+                legend: { element: "columnLegend" },
                 title: "国別エネルギー生産量",
                 subtitle: "総一次エネルギー生産国トップ 5 ",
                 axes: [{
