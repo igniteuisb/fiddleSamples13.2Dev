@@ -3,6 +3,7 @@ $(function () {
                 width: "98%",
                 height: "400px",
                 dataSource: lastFiveYears,
+                legend: { element: "columnLegend" },
                 title: "Energy Production Per Country",
                 subtitle: "The top five Total Primary Energy producers",
                 axes: [{

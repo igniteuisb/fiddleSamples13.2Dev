@@ -3,6 +3,7 @@ $(function () {
                 width: "100%",
                 height: "400px",
                 dataSource: data,
+                legend: { element: "lineLegend" },
                 title: "U.K. vs. France",
                 subtitle: "A comparison of populations over time",
                 axes: [{
@@ -21,6 +22,7 @@ $(function () {
                 series: [{
                     name: "ukPop",
                     type: "line",
+                    title: "UK",
                     isHighlightingEnabled: true,
                     isTransitionInEnabled: true,
                     xAxis: "xAxis",
@@ -32,6 +34,7 @@ $(function () {
                 }, {
                     name: "frPop",
                     type: "line",
+                    title: "France",
                     isTransitionInEnabled: true,
                     isHighlightingEnabled: true,
                     xAxis: "xAxis",
@@ -62,6 +65,7 @@ $(function () {
                 $("#chart").igDataChart("option", "series", [{ name: "frPop", remove: true }]);
                 $("#chart").igDataChart("option", "series", [{
                     name: "ukPop",
+                    title: "UK",
                     type: $(this).val(),
                     isTransitionInEnabled: true,
                     xAxis: "xAxis",
@@ -74,6 +78,7 @@ $(function () {
                 }]);
                 $("#chart").igDataChart("option", "series", [{
                     name: "frPop",
+                    title: "France",
                     type: $(this).val(),
                     xAxis: "xAxis",
                     yAxis: "yAxis",
