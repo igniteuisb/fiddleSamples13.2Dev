@@ -142,8 +142,8 @@ $(function () {
                         return;
                     }
                     if (ui.value == 37)
-                    {
-                        ui.label = "feeling\n  bad";
+                    {                        
+                        ui.label = "feeling bad";
                         return;
                     }             
                     if (ui.value == 41  )
@@ -153,6 +153,8 @@ $(function () {
                     }             
                     ui.label = "";                    
                 }
+
+
                 
             });
         });
