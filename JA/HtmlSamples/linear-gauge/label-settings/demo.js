@@ -133,22 +133,22 @@ $(function () {
                 formatLabel: function (evt, ui) {
                     if (ui.value == 36)
                     {
-                        ui.label = "ok";
+                        ui.label = "元気";
                         return;
                     }
                     if (ui.value==34 ||ui.value== 39 )
                     {
-                        ui.label = "sick";
+                        ui.label = "病気";
                         return;
                     }
                     if (ui.value == 37)
                     {                        
-                        ui.label = "feeling bad";
+                        ui.label = "気持ち悪い";
                         return;
                     }             
                     if (ui.value == 41  )
                     {
-                        ui.label = "very sick";
+                        ui.label = "非常に病気";
                         return;
                     }             
                     ui.label = "";                    
