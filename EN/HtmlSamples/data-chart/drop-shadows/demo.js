@@ -71,7 +71,7 @@ $(function () {
                     interval: 5,
                     minimumValue: 45,
                     titleAngle: -90,
-                    title: "Population (Millions of People)"
+                    title: "Millions of People"
                 }],
                 series: [{
                     isDropShadowEnabled: true,
