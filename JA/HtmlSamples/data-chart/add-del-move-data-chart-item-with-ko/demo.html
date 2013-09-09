@@ -53,7 +53,9 @@
                     name: "xAxis",
                     type: "categoryX",
                     label: "label",
-                    interval: 1
+                    interval: 1,
+                    tickLength: 5,
+                    labelTopMargin: 5
                 }, {
                     name: "yAxis",
                     type: "numericY",
@@ -101,13 +103,14 @@
                     name: "xAxis",
                     type: "categoryX",
                     label: "label",
-                    interval: 1
+                    interval: 1,
+                    tickLength: 5,
+                    labelTopMargin: 0
                 }, {
                     name: "yAxis",
                     type: "numericY",
                     minimumValue: minChartValue,
                     maximumValue: maxChartValue
-
                 }],
                 series: [{
                     name: "column1",

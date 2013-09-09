@@ -10,6 +10,7 @@ $(function () {
                     label: "Date",
                     name: "xAxis",
                     interval: 10,
+                    tickLength: 5,
                     title: "日付"
                 }, {
                     type: "numericY",
@@ -41,6 +42,7 @@ $(function () {
                     label: "Date",
                     name: "xAxis",
                     interval: 10,
+                    tickLength: 5,
                     title: "日付"
                 }, {
                     type: "numericY",
