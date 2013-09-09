@@ -10,7 +10,6 @@ $(function () {
                     dataSource: data,
                     label: "Date",
                     title: "Date",
-                    tickLength: 5,
                     labelTopMargin: 5,
                     interval: 10
                 }, {

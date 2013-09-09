@@ -14,7 +14,6 @@ $(function () {
                         label: "Year",
                         title: "Year",
                         gap: 1,
-                        tickLength: 5,
                         labelMargin: 0
                     }, {
                         name: "Volume",

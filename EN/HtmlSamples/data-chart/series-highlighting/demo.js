@@ -12,7 +12,6 @@ $(function () {
                     label: "Date",
                     isInverted: true,
                     interval: 2,
-                    tickLength: 5,
                     title: "Year"
                 },
                 {

@@ -10,7 +10,6 @@ $(function () {
                     name: "xAxis",
                     type: "categoryX",
                     label: "Date",
-                    isInverted: true,
                     interval: 2,
                     title: "Year"
                 },

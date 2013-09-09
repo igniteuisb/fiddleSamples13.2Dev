@@ -48,7 +48,6 @@ var currData, currDataSource, doGeneration, startTime = null;
 	            axes: [{
 	                name: "xAxis",
 	                type: "categoryX",
-	                tickLength: 5,
 	                label: "Label"
 	            }, {
                     name: "yAxis",
