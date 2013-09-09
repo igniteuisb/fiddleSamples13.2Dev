@@ -12,7 +12,7 @@ $(function () {
                 width: "100%",
                 height: "400px",
                 title: "国別人口",
-                subtitle: "$$(Chart_subtitle_countries_2005)",
+                subtitle: "Population from 2005",
                 dataSource: data,
                 axes: [
                     {
