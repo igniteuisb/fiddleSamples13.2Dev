@@ -10,7 +10,6 @@ $(function () {
                     name: "xAxis",
                     type: "categoryX",
                     label: "Year",
-                    tickLength: 5,
                     labelTopMargin: 5,
                     title: "年"
                 }, {
@@ -83,7 +82,6 @@ $(function () {
                     name: "yAxis",
                     type: "categoryY",
                     label: "Year",
-                    tickLength: 5,
                     title: "年"
                 }],
                 series: [{
