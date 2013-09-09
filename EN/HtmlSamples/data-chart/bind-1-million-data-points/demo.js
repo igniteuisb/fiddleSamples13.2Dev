@@ -48,6 +48,7 @@ var currData, currDataSource, doGeneration, startTime = null;
 	            axes: [{
 	                name: "xAxis",
 	                type: "categoryX",
+	                tickLength: 5,
 	                label: "Label"
 	            }, {
                     name: "yAxis",
@@ -61,7 +62,6 @@ var currData, currDataSource, doGeneration, startTime = null;
 	                yAxis: "yAxis",
 	                valueMemberPath: "Value",
 	                showTooltip: true,
-	                tooltipTemplate: "tooltipTemplate"
 	            }],
 	            horizontalZoomable: true,
 	            verticalZoomable: true,

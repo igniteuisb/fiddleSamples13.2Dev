@@ -29,7 +29,6 @@ $(function () {
                     yAxis: "yAxis",
                     valueMemberPath: "ukPopulation",
                     showTooltip: true,
-                    tooltipTemplate: "tooltipTemplate1",
                     thickness: 5
                 }, {
                     name: "frPop",
@@ -41,7 +40,6 @@ $(function () {
                     yAxis: "yAxis",
                     valueMemberPath: "francePopulation",
                     showTooltip: true,
-                    tooltipTemplate: "tooltipTemplate2",
                     thickness: 5
                 }],
                 horizontalZoomable: true,
@@ -76,7 +74,6 @@ $(function () {
                     valueMemberPath: "ukPopulation",
                     isHighlightingEnabled: true,
                     showTooltip: true,
-                    tooltipTemplate: "tooltipTemplate1",
                     thickness: thickness,
                     transitionInMode: transMode,
                     transitionInSpeedType: transType,
@@ -92,7 +89,6 @@ $(function () {
                     isHighlightingEnabled: true,
                     isTransitionInEnabled: true,
                     showTooltip: true,
-                    tooltipTemplate: "tooltipTemplate2",
                     thickness: thickness,
                     transitionInMode: transMode,
                     transitionInSpeedType: transType,
@@ -128,7 +124,6 @@ $(function () {
                     valueMemberPath: "ukPopulation",
                     isHighlightingEnabled: true,
                     showTooltip: true,
-                    tooltipTemplate: "tooltipTemplate1",
                     thickness: thickness,
                     transitionInMode: transMode,
                     transitionInSpeedType: transType,
@@ -144,7 +139,6 @@ $(function () {
                     isHighlightingEnabled: true,
                     isTransitionInEnabled: true,
                     showTooltip: true,
-                    tooltipTemplate: "tooltipTemplate2",
                     thickness: thickness,
                     transitionInMode: transMode,
                     transitionInSpeedType: transType,

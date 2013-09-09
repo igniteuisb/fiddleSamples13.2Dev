@@ -12,6 +12,7 @@ $(function () {
                     label: "Date",
                     isInverted: true,
                     interval: 2,
+                    tickLength: 5,
                     title: "Year"
                 },
                 {
@@ -29,7 +30,6 @@ $(function () {
                     yAxis: "yAxis",
                     valueMemberPath: "ukPopulation",
                     showTooltip: true,
-                    tooltipTemplate: "tooltipTemplate1",
                     thickness: 5
                 }, {
                     name: "frPop",
@@ -41,7 +41,6 @@ $(function () {
                     yAxis: "yAxis",
                     valueMemberPath: "francePopulation",
                     showTooltip: true,
-                    tooltipTemplate: "tooltipTemplate2",
                     thickness: 5
                 }],
                 horizontalZoomable: true,
@@ -72,7 +71,6 @@ $(function () {
                     valueMemberPath: "ukPopulation",
                     isHighlightingEnabled: true,
                     showTooltip: true,
-                    tooltipTemplate: "tooltipTemplate1",
                     thickness: thickness
                 }]);
                 $("#chart").igDataChart("option", "series", [{
@@ -85,7 +83,6 @@ $(function () {
                     isHighlightingEnabled: true,
                     isTransitionInEnabled: true,
                     showTooltip: true,
-                    tooltipTemplate: "tooltipTemplate2",
                     thickness: thickness
                 }]);
             });

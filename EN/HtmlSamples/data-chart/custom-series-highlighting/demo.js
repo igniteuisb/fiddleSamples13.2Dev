@@ -39,7 +39,6 @@ $(function () {
                   yAxis: "PopulationAxis",
                   valueMemberPath: "Pop2005",
                   showTooltip: true,
-                  tooltipTemplate: "tooltipTemplate1",
                   isCustomCategoryStyleAllowed: true,
                   isAssigningCategoryStyleAssigned: true
                 }],
