@@ -1,0 +1,116 @@
+<script src="http://jp.dev.igniteui.local/13-2/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.min.js"></script>
+<script src="http://dev.igniteui.local/13-2/IgniteUI/js/infragistics.core.js"></script>
+<script src="http://dev.igniteui.local/13-2/IgniteUI/js/infragistics.lob.js"></script>
+<script src="http://dev.igniteui.local/13-2/IgniteUI/js/infragistics.dv.js"></script>
+<script src="http://jp.dev.igniteui.local/13-2/js-data/financial-indicators"></script>
+<script src="http://jp.dev.igniteui.local/13-2/js-data/financial-data"></script>
+<link href="http://dev.igniteui.local/13-2/IgniteUI/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://dev.igniteui.local/13-2/IgniteUI/css/structure/infragistics.css" rel="stylesheet"></link>
+<link href="http://dev.igniteui.local/13-2/IgniteUI/css/structure/modules/infragistics.ui.chart.new.css" rel="stylesheet"></link>
+<script src="http://dev.igniteui.local/13-2/IgniteUI/js/i18n/infragistics-ja.js"></script>
+
+<div class="selectionOptions">
+        シリーズ タイプ:
+        <select id="seriesType">
+            <option value="absoluteVolumeOscillatorIndicator" selected="selected">$$(absoluteVolumeOscillatorIndicator)</option>
+            <option value="averageTrueRangeIndicator">$$(averageTrueRangeIndicator)</option>
+            <option value="accumulationDistributionIndicator">$$(accumulationDistributionIndicator)</option>
+            <option value="averageDirectionalIndexIndicator">$$(averageDirectionalIndexIndicator)</option>
+            <option value="bollingerBandsOverlay">$$(bollingerBandsOverlay)</option>
+            <option value="bollingerBandWidthIndicator">$$(bollingerBandWidthIndicator)</option>
+            <option value="chaikinOscillatorIndicator">$$(chaikinOscillatorIndicator)</option>
+            <option value="chaikinVolatilityIndicator">$$(chaikinVolatilityIndicator)</option>
+            <option value="commodityChannelIndexIndicator">$$(commodityChannelIndexIndicator)</option>
+            <option value="detrendedPriceOscillatorIndicator">$$(detrendedPriceOscillatorIndicator)</option>
+            <option value="easeOfMovementIndicator">$$(easeOfMovementIndicator)</option>
+            <option value="fastStochasticOscillatorIndicator">$$(fastStochasticOscillatorIndicator)</option>
+            <option value="forceIndexIndicator">$$(forceIndexIndicator)</option>
+            <option value="fullStochasticOscillatorIndicator">$$(fullStochasticOscillatorIndicator)</option>
+            <option value="marketFacilitationIndexIndicator">$$(marketFacilitationIndexIndicator)</option>
+            <option value="massIndexIndicator">$$(massIndexIndicator)</option>
+            <option value="medianPriceIndicator">$$(medianPriceIndicator)</option>
+            <option value="moneyFlowIndexIndicator">$$(moneyFlowIndexIndicator)</option>
+            <option value="movingAverageConvergenceDivergenceIndicator">$$(movingAverageConvergenceDivergenceIndicator)</option>
+            <option value="negativeVolumeIndexIndicator">$$(negativeVolumeIndexIndicator)</option>
+            <option value="onBalanceVolumeIndicator">$$(onBalanceVolumeIndicator)</option>
+            <option value="percentagePriceOscillatorIndicator">$$(percentagePriceOscillatorIndicator)</option>
+            <option value="percentageVolumeOscillatorIndicator">$$(percentageVolumeOscillatorIndicator)</option>
+            <option value="positiveVolumeIndexIndicator">$$(positiveVolumeIndexIndicator)</option>
+            <option value="priceChannelOverlay">$$(priceChannelOverlay)</option>
+            <option value="priceVolumeTrendIndicator">$$(priceVolumeTrendIndicator)</option>
+            <option value="rateOfChangeAndMomentumIndicator">$$(rateOfChangeAndMomentumIndicator)</option>
+            <option value="relativeStrengthIndexIndicator">$$(relativeStrengthIndexIndicator)</option>
+            <option value="slowStochasticOscillatorIndicator">$$(slowStochasticOscillatorIndicator)</option>
+            <option value="standardDeviationIndicator">$$(standardDeviationIndicator)</option>
+            <option value="stochRSIIndicator">$$(stochRSIIndicator)</option>
+            <option value="trixIndicator">$$(trixIndicator)</option>
+            <option value="typicalPriceIndicator">$$(typicalPriceIndicator)</option>
+            <option value="ultimateOscillatorIndicator">$$(ultimateOscillatorIndicator)</option>
+            <option value="weightedCloseIndicator">$$(weightedCloseIndicator)</option>
+            <option value="williamsPercentRIndicator">$$(williamsPercentRIndicator)</option>
+        </select>
+    </div>
+    <div id="chart" class="chartElement"></div>
+    <div>
+        <fieldset id="chartOptions">
+            <legend>チャート オプション</legend>
+            	
+            <div class="optionContainer">
+                トランジション タイプ
+                <br />
+                <select id="transitionInTypeSlider">
+                    <option value="auto" selected="selected">auto</option>
+                    <option value="fromZero">fromZero</option>
+                    <option value="accordionFromLeft">accordionFromLeft</option>
+                    <option value="accordionFromRight">accordionFromRight</option>
+                    <option value="accordionFromTop">accordionFromTop</option>
+                    <option value="accordionFromBottom">accordionFromBottom</option>
+                    <option value="expand">expand</option>
+                    <option value="sweepFromLeft">sweepFromLeft</option>
+                    <option value="sweepFromRight">sweepFromRight</option>
+                    <option value="sweepFromTop">sweepFromTop</option>
+                    <option value="sweepFromBottom">sweepFromBottom</option>
+                    <option value="sweepFromCenter">sweepFromCenter</option>
+                    <option value="accordionFromCategoryAxisMinimum">accordionFromCategoryAxisMinimum</option>
+                    <option value="accordionFromCategoryAxisMaximum">accordionFromCategoryAxisMaximum</option>
+                    <option value="accordionFromValueAxisMinimum">accordionFromValueAxisMinimum</option>
+                    <option value="accordionFromValueAxisMaximum">accordionFromValueAxisMaximum</option>
+                    <option value="sweepFromCategoryAxisMinimum">sweepFromCategoryAxisMinimum</option>
+                    <option value="sweepFromCategoryAxisMaximum">sweepFromCategoryAxisMaximum</option>
+                    <option value="sweepFromValueAxisMinimum">sweepFromValueAxisMinimum</option>
+                    <option value="sweepFromValueAxisMaximum">sweepFromValueAxisMaximum</option>
+                </select>
+            </div>
+            
+            <div class="optionContainer">
+                スピード タイプ
+                <br />
+                <select id="transitionInSpeedTypeSlider">
+                    <option value="auto" selected="selected">auto</option>
+                    <option value="normal">normal</option>
+                    <option value="valueScaled">valueScaled</option>
+                    <option value="indexScaled">indexScaled</option>
+                    <option value="random">random</option>
+                </select>
+            </div>
+            
+            <div class="optionContainer">
+                イージング関数
+                <br />
+                <select id="transitionEasingFunctionSlider">
+                    <option value="linear" selected="selected">linear</option>
+                    <option value="cubic">cubic</option>
+                </select>
+            </div>
+            
+           
+        </fieldset>
+    </div>
+
+    <div class="selectionOptions" style="display: inline-block">
+        <label>株価のデータ ソース:
+            <a href="http://www.quandl.com/" target="_blank">Quandl</a>
+        </label>
+    </div>
