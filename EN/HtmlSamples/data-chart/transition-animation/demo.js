@@ -64,7 +64,7 @@ $(function () {
                 transEasingFunc = $("#transitionEasingFunctionSlider").val();
 
                 var thickness = 5,
-                    seriesType = $("#seriesType").val();
+                seriesType = $("#seriesType").val();
 
                 if (seriesType == "area" ||
                     seriesType == "splineArea" ||
@@ -76,7 +76,7 @@ $(function () {
                 $("#chart").igDataChart("option", "series", [{ name: "2005Population", remove: true }]);
                 $("#chart").igDataChart("option", "series", [{ name: "1995Population", remove: true }]);
                 $("#chart").igDataChart("option", "series", [{
-                    type: $("#seriesType").val(),
+                    type: seriesType,
                     name: "2005Population",
                     title: "2005",
                     xAxis: "NameAxis",
@@ -90,7 +90,7 @@ $(function () {
                     transitionEasingFunction: transEasingFunc
                 }]);
                 $("#chart").igDataChart("option", "series", [{
-                    type: $("#seriesType").val(),
+                    type: seriesType,
                     name: "1995Population",
                     title: "1995",
                     xAxis: "NameAxis",
