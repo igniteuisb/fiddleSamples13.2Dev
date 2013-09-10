@@ -8,7 +8,6 @@ $(function () {
                     type: "categoryX",
                     label: "Date",
                     name: "xAxis",
-                    interval: 10,
                     title: "Date"
                 }, {
                     type: "numericY",
@@ -31,14 +30,13 @@ $(function () {
                     transitionInMode: "accordionFromValueAxisMaximum"
                 }]
             });
-        });
+        
 
         function redrawChart() {
             transMode = $("#transitionInTypeSlider").val();
             transType = $("#transitionInSpeedTypeSlider").val();
             transEasingFunc = $("#transitionEasingFunctionSlider").val();
             seriesType = $("#seriesType").val();
-            
             $("#chart").igDataChart("option", "series", [{name: "indicatorSeries",remove: true}]);
 
             $("#chart").igDataChart("option", "series", [{
@@ -74,4 +72,5 @@ $(function () {
 
         $("#transitionEasingFunctionSlider").change(function (e) {
             redrawChart();
+        });
         });
