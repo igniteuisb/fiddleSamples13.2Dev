@@ -34,7 +34,7 @@ $(function () {
                     isTransitionInEnabled: true,
                     xAxis: "xAxis",
                     yAxis: "yAxis",
-                    valueMemberPath: "Saudi Arabia"
+                    valueMemberPath: "SaudiArabia"
                 }, {
                     name: "series3",
                     title: "Russia",
@@ -53,7 +53,7 @@ $(function () {
                     isTransitionInEnabled: true,
                     xAxis: "xAxis",
                     yAxis: "yAxis",
-                    valueMemberPath: "United States"
+                    valueMemberPath: "UnitedStates"
                 },
                 {
                     name: "series5",
@@ -101,7 +101,7 @@ $(function () {
                     isTransitionInEnabled: true,
                     xAxis: "xAxis",
                     yAxis: "yAxis",
-                    valueMemberPath: "Saudi Arabia"
+                    valueMemberPath: "SaudiArabia"
                 }, {
                     name: "series3",
                     title: "Russia",
@@ -119,7 +119,7 @@ $(function () {
                     isTransitionInEnabled: true,
                     xAxis: "xAxis",
                     yAxis: "yAxis",
-                    valueMemberPath: "United States"
+                    valueMemberPath: "UnitedStates"
                 }, {
                     name: "series5",
                     title: "China",

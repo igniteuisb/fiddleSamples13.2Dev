@@ -42,7 +42,7 @@ $(function () {
                             isTransitionInEnabled: true,
                             showTooltip: true,
                             tooltipTemplate: "United States",
-                            valueMemberPath: "United States"
+                            valueMemberPath: "UnitedStates"
                         }, {
                             name: "Russia",
                             title: "Russia",
@@ -58,7 +58,7 @@ $(function () {
                             tooltipTemplate: "Saudi Arabia",
                             type: "stackedFragment",
                             isTransitionInEnabled: true,
-                            valueMemberPath: "Saudi Arabia"
+                            valueMemberPath: "SaudiArabia"
                         }, {
                             name: "Canada",
                             title: "Canada",
@@ -120,7 +120,7 @@ $(function () {
                                 type: "stackedFragment",
                                 showTooltip: true,
                                 tooltipTemplate: "United States",
-                                valueMemberPath: "United States"
+                                valueMemberPath: "UnitedStates"
                             }, {
                                 name: "Russia",
                                 title: "Russia",
@@ -134,7 +134,7 @@ $(function () {
                                 showTooltip: true,
                                 tooltipTemplate: "Saudi Arabia",
                                 type: "stackedFragment",
-                                valueMemberPath: "Saudi Arabia"
+                                valueMemberPath: "SaudiArabia"
                             }, {
                                 name: "Canada",
                                 title: "Canada",
