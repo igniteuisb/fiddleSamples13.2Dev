@@ -55,7 +55,7 @@ $(function () {
                     }, {
                         showTooltip: true,
                         name: "Saudi Arabia",
-                        title: "Saudi Arabia",
+                        title: "サウジアラビア",
                         type: "column",
                         valueMemberPath: "SaudiArabia",
                         xAxis: "Year",
@@ -64,7 +64,7 @@ $(function () {
                     }, {
                         showTooltip: true,
                         name: "Canada",
-                        title: "Canada",
+                        title: "カナダ",
                         type: "column",
                         valueMemberPath: "Canada",
                         xAxis: "Year",
