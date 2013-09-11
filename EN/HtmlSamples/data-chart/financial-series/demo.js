@@ -10,7 +10,6 @@ $(function () {
                     dataSource: data,
                     label: "Date",
                     title: "Date",
-                    labelTopMargin: 5,
                     interval: 10
                 }, {
                     name: "yAxis",
@@ -72,8 +71,6 @@ $(function () {
                     dataSource: data,
                     label: "Date",
                     interval: 10,
-                    tickLength: 5,
-                    labelTopMargin: 5,
                     title: "Date",
                 }, {
                     name: "yAxis",

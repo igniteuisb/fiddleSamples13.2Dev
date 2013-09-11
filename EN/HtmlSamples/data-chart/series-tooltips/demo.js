@@ -11,13 +11,10 @@ $(function () {
                     label: "Year",
                     title: "Year",
                     gap: 0.8,
-                    tickLength: 5,
-                    labelMargin: 5
                 }, {
                     name: "Volume",
                     type: "numericY",
-                    title: "Energy Produced (Quadrillion Btu)",
-                    titleAngle: -90
+                    title: "Energy Produced (Quadrillion Btu)"
                 }],
                 series: [{
                     // showTooltip: true enables the default tooltips

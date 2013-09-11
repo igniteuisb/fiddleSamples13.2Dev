@@ -14,7 +14,6 @@ $(function () {
                     name: "yAxis",
                     type: "numericY",
                     title: "Gross Agricultural Production (Billions of USD)",
-                    titleAngle: -90,
                     maximumValue: 200000,
 
                     formatLabel: function (val) {
@@ -61,8 +60,6 @@ $(function () {
                     label: "Date",
                     isInverted: true,
                     interval: 2,
-                    tickLength: 5,
-                    labelTopMargin: 5,
                     title: "Year"
                 },
                 {
@@ -70,7 +67,6 @@ $(function () {
                     type: "numericY",
                     interval: 5,
                     minimumValue: 45,
-                    titleAngle: -90,
                     title: "Millions of People"
                 }],
                 series: [{
