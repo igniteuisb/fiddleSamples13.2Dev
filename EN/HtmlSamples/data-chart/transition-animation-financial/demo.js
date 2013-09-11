@@ -37,25 +37,47 @@ $(function () {
             transType = $("#transitionInSpeedTypeSlider").val();
             transEasingFunc = $("#transitionEasingFunctionSlider").val();
             seriesType = $("#seriesType").val();
+            
             $("#chart").igDataChart("option", "series", [{name: "indicatorSeries",remove: true}]);
 
-            $("#chart").igDataChart("option", "series", [{
-                type: seriesType,
-                isTransitionInEnabled: true,
-                closeMemberPath: "Close",
-                highMemberPath: "High",
-                lowMemberPath: "Low",
-                openMemberPath: "Open",
-                volumeMemberPath: "Volume",
-                xAxis: "xAxis",
-                yAxis: "yAxis",
-                name: "indicatorSeries",
-                title: "Financial Indicator Data",
-                transitionInDuration: 1500,
-                transitionInMode: transMode,
-                transitionInType: transType,
-                transitionEasingFunction: transEasingFunc
-            }]);
+            if (seriesType == "ohlc" || seriesType == "candlestick") {
+                $("#chart").igDataChart("option", "series", [{
+                    type: "financial",
+                    isTransitionInEnabled: true,
+                    closeMemberPath: "Close",
+                    highMemberPath: "High",
+                    lowMemberPath: "Low",
+                    openMemberPath: "Open",
+                    volumeMemberPath: "Volume",
+                    xAxis: "xAxis",
+                    yAxis: "yAxis",
+                    name: "indicatorSeries",
+                    title: "Financial Indicator Data",
+                    transitionInDuration: 1500,
+                    transitionInMode: transMode,
+                    transitionInType: transType,
+                    transitionEasingFunction: transEasingFunc,
+                    displayType: seriesType
+                }]);
+            } else {
+                $("#chart").igDataChart("option", "series", [{
+                    type: seriesType,
+                    isTransitionInEnabled: true,
+                    closeMemberPath: "Close",
+                    highMemberPath: "High",
+                    lowMemberPath: "Low",
+                    openMemberPath: "Open",
+                    volumeMemberPath: "Volume",
+                    xAxis: "xAxis",
+                    yAxis: "yAxis",
+                    name: "indicatorSeries",
+                    title: "Financial Indicator Data",
+                    transitionInDuration: 1500,
+                    transitionInMode: transMode,
+                    transitionInType: transType,
+                    transitionEasingFunction: transEasingFunc
+                }]);
+            }
         };
         
         $("#seriesType").change(function (e) {
