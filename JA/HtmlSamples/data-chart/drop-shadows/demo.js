@@ -26,7 +26,7 @@ $(function () {
                     isDropShadowEnabled: true,
                     useSingleShadow: false,
                     shadowColor: "#666666",
-                    title: "asdfasdf",
+                    title: "(Year, Production), Population",
                     name: "bubble",
                     type: "bubble",
                     xAxis: "xAxis",

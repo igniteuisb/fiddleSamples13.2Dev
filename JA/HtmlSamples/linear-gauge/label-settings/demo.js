@@ -77,7 +77,7 @@ $(function () {
                 formatLabel: function (evt, ui) {
                     if (ui.value == 36)
                     {
-                        ui.label = "元気";
+                        ui.label = "正常";
                         return;
                     }
                     if (ui.value==34 ||ui.value== 39 )
@@ -87,12 +87,12 @@ $(function () {
                     }
                     if (ui.value == 37)
                     {                        
-                        ui.label = "気持ち悪い";
+                        ui.label = "やや高め";
                         return;
                     }             
                     if (ui.value == 41  )
                     {
-                        ui.label = "非常に病気";
+                        ui.label = "高温";
                         return;
                     }             
                     ui.label = "";                    

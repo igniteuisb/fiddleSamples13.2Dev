@@ -76,8 +76,7 @@ $(function () {
                 $("#chart").igDataChart("option", "series", [{ name: "2005Population", remove: true }]);
                 $("#chart").igDataChart("option", "series", [{ name: "1995Population", remove: true }]);
                 if (seriesType == "rangeColumn" || seriesType == "rangeArea") {
-                    alert(seriesType);
-                    $("#chart").igDataChart("option", "series", [{
+                   $("#chart").igDataChart("option", "series", [{
                         type: seriesType,
                         name: "2005Population",
                         title: "2005",
@@ -93,35 +92,6 @@ $(function () {
                         transitionEasingFunction: transEasingFunc
                     }]);
                     
-                    //series: [{
-                    //    name: "series1",
-                    //    title: "$$(Chart_lbl_testSeries)",
-                    //    type: seriesType,
-                    //    isHighlightingEnabled: true,
-                    //    isTransitionInEnabled: true,
-                    //    xAxis: "xAxis",
-                    //    yAxis: "yAxis",
-                    //    lowMemberPath: "NewYorkCityTemp",
-                    //    highMemberPath: "PhiladelphiaTemp",
-                    //    showTooltip: true,
-                    //    tooltipTemplate: "tooltipTemplate"
-                    //}],
-                    
-                    //$("#chart").igDataChart("option", "series", [{
-                    //    type: seriesType,
-                    //    name: "1995Population",
-                    //    title: "1995",
-                    //    highMemberPath: "Pop1995",
-                    //    lowMemberPath: "Pop1995",
-                    //    xAxis: "NameAxis",
-                    //    yAxis: "PopulationAxis",
-                    //    isTransitionInEnabled: true,
-                    //    isHighlightingEnabled: true,
-                    //    thickness: thickness,
-                    //    transitionInMode: transMode,
-                    //    transitionInSpeedType: transType,
-                    //    transitionEasingFunction: transEasingFunc
-                    //}]);
                 } else {
                     $("#chart").igDataChart("option", "series", [{
                         type: seriesType,
