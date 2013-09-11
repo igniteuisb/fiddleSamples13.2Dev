@@ -11,13 +11,10 @@ $(function () {
                     label: "Year",
                     title: "年",
                     gap: 0.8,
-                    tickLength: 5,
-                    labelMargin: 5
                 }, {
                     name: "Volume",
                     type: "numericY",
-                    title: "生産されたエネルギー (BTU 40 億単位)",
-                    titleAngle: -90
+                    title: "生産されたエネルギー (BTU 40 億単位)"
                 }],
                 series: [{
                     // showTooltip: true enables the default tooltips

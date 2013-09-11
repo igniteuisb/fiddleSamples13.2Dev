@@ -92,8 +92,6 @@ $(function () {
                         label: "Year",
                         title: "年",
                         gap: 1,
-                        tickLength: 5,
-                        labelMargin: 5
                     },
                         {
                             name: "Volume",
