@@ -1,11 +1,11 @@
 $(function () {
             var grid = $("#grid"),
-                manualStateChange;
+                manualStateChange = false;
             if (window.History && window.History.Adapter) {
                 window.History.Adapter.bind(window, 'statechange', function (e, args) {
                     var state = window.History.getState().data,
                         prevState = window.History.savedStates.data;
-                    if (manualStateChange == true) {
+                    if (state.manualStateChange == true && manualStateChange == true) {
                         switch (state.key) {
                             case "page": grid.igGridPaging("pageIndex", state.value - 1); break;
                             case "sort": grid.igGridSorting("sortColumn", state.value[0], state.value[1]); break;
@@ -70,6 +70,7 @@ $(function () {
 
             function pushToBrowserHistory(state, title, url) {
                 manualStateChange = false;
+                $(state).extend({ "manualStateChange" : false });
                 window.History? window.History.pushState(state, title, url): "";
             }
 
