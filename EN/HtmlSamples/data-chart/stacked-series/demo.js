@@ -2,19 +2,18 @@ $(function () {
             function generateCategoryYChart(chartType) {
 
                 var selector = "#" + chartType;
+
                 $(selector).igDataChart({
                     dataSource: lastFiveYears,
                     height: "400px",
                     width: "400px",
                     title: "Energy Production Per Country",
-                    subtitle: "The top five Total Primary Energy producers",
+                    subTitle: "The top five Total Primary Energy producers",
                     axes: [{
                         name: "Year",
                         type: "categoryY",
                         label: "Year",
-                        title: "Year",
-                        gap: 1,
-                        labelMargin: 0
+                        title: "Year"
                     }, {
                         name: "Volume",
                         type: "numericX",
@@ -25,13 +24,10 @@ $(function () {
                         type: chartType,
                         xAxis: "Volume",
                         yAxis: "Year",
-                        outline: "transparent",
-                        radius: 0,
                         series: [{
                             name: "China",
                             title: "China",
                             type: "stackedFragment",
-                            isTransitionInEnabled: true,
                             showTooltip: true,
                             tooltipTemplate: "China",
                             valueMemberPath: "China"
@@ -39,17 +35,15 @@ $(function () {
                             name: "United States",
                             title: "United States",
                             type: "stackedFragment",
-                            isTransitionInEnabled: true,
                             showTooltip: true,
                             tooltipTemplate: "United States",
-                            valueMemberPath: "UnitedStates"
+                            valueMemberPath: "United States"
                         }, {
                             name: "Russia",
                             title: "Russia",
                             showTooltip: true,
                             tooltipTemplate: "Russia",
                             type: "stackedFragment",
-                            isTransitionInEnabled: true,
                             valueMemberPath: "Russia"
                         }, {
                             name: "Saudi Arabia",
@@ -57,15 +51,13 @@ $(function () {
                             showTooltip: true,
                             tooltipTemplate: "Saudi Arabia",
                             type: "stackedFragment",
-                            isTransitionInEnabled: true,
-                            valueMemberPath: "SaudiArabia"
+                            valueMemberPath: "Saudi Arabia"
                         }, {
                             name: "Canada",
                             title: "Canada",
                             showTooltip: true,
                             tooltipTemplate: "Canada",
                             type: "stackedFragment",
-                            isTransitionInEnabled: true,
                             valueMemberPath: "Canada"
                         }]
                     }],
@@ -78,78 +70,66 @@ $(function () {
             function generateCategoryXChart(chartType) {
 
                 var selector = "#" + chartType;
-                var isColumnChart = chartType.contains("Column");
 
                 $(selector).igDataChart({
                     dataSource: lastFiveYears,
                     height: "400px",
                     width: "400px",
                     title: "Energy Production Per Country",
-                    subtitle: "The top five Total Primary Energy producers",
+                    subTitle: "The top five Total Primary Energy producers",
                     axes: [{
                         name: "Year",
                         type: "categoryX",
                         label: "Year",
-                        title: "Year",
-                        gap: 1,
+                        title: "Year"
                     },
-                        {
-                            name: "Volume",
-                            type: "numericY",
-                            title: "Energy Produced (Quadrillion Btu)"
-                        }],
-                    series: [function () { // a self executing function to create the series initialization object
-                        var seriesObj = {
-                            name: "parent",
-                            xAxis: "Year",
-                            yAxis: "Volume",
-                            type: chartType,
-                            outline: "transparent",
-                            series: [{
-                                name: "China",
-                                title: "China",
-                                type: "stackedFragment",
-                                showTooltip: true,
-                                tooltipTemplate: "China",
-                                valueMemberPath: "China"
-                            }, {
-                                name: "United States",
-                                title: "United States",
-                                type: "stackedFragment",
-                                showTooltip: true,
-                                tooltipTemplate: "United States",
-                                valueMemberPath: "UnitedStates"
-                            }, {
-                                name: "Russia",
-                                title: "Russia",
-                                showTooltip: true,
-                                tooltipTemplate: "Russia",
-                                type: "stackedFragment",
-                                valueMemberPath: "Russia"
-                            }, {
-                                name: "Saudi Arabia",
-                                title: "Saudi Arabia",
-                                showTooltip: true,
-                                tooltipTemplate: "Saudi Arabia",
-                                type: "stackedFragment",
-                                valueMemberPath: "SaudiArabia"
-                            }, {
-                                name: "Canada",
-                                title: "Canada",
-                                showTooltip: true,
-                                tooltipTemplate: "Canada",
-                                type: "stackedFragment",
-                                valueMemberPath: "Canada"
-                            }]
-                        };
-                        if (isColumnChart) { //for column charts set the radius to 0
-                            seriesObj.radius = 0;
-                        }
-                        return seriesObj;
-                    }()],
-                    horizontalZoomable: true,
-                    verticalZoomable: true,
-                    windowResponse: "immediate"
+                    {
+                        name: "Volume",
+                        type: "numericY",
+                        title: "Energy Produced (Quadrillion Btu)"
+                    }],
+                    series: [{
+                        name: "parent",
+                        xAxis: "Year",
+                        yAxis: "Volume",
+                        type: chartType,
+                        series: [{
+                            name: "China",
+                            title: "China",
+                            type: "stackedFragment",
+                            showTooltip: true,
+                            tooltipTemplate: "China",
+                            valueMemberPath: "China"
+                        }, {
+                            name: "United States",
+                            title: "United States",
+                            type: "stackedFragment",
+                            showTooltip: true,
+                            tooltipTemplate: "United States",
+                            valueMemberPath: "United States"
+                        }, {
+                            name: "Russia",
+                            title: "Russia",
+                            showTooltip: true,
+                            tooltipTemplate: "Russia",
+                            type: "stackedFragment",
+                            valueMemberPath: "Russia"
+                        }, {
+                            name: "Saudi Arabia",
+                            title: "Saudi Arabia",
+                            showTooltip: true,
+                            tooltipTemplate: "Saudi Arabia",
+                            type: "stackedFragment",
+                            valueMemberPath: "Saudi Arabia"
+                        }, {
+                            name: "Canada",
+                            title: "Canada",
+                            showTooltip: true,
+                            tooltipTemplate: "Canada",
+                            type: "stackedFragment",
+                            valueMemberPath: "Canada"
+                        }]
+                    }]
                 });
             };
 

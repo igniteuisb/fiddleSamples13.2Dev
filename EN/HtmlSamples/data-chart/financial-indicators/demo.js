@@ -4,7 +4,7 @@ $(function () {
                 height: "400px",
                 dataSource: data,
                 title: "Microsoft Stock (MSFT)",
-                subtitle: "Data over two months",
+                subTitle: "Data over two months",
                 axes: [{
                     type: "categoryX",
                     label: "Date",
@@ -18,7 +18,6 @@ $(function () {
                 }],
                 series: [{
                     type: "financial",
-                    isTransitionInEnabled: true,
                     closeMemberPath: "Close",
                     highMemberPath: "High",
                     lowMemberPath: "Low",
@@ -49,7 +48,6 @@ $(function () {
                 }],
                 series: [{
                     type: "moneyFlowIndexIndicator",
-                    isTransitionInEnabled: true,
                     closeMemberPath: "Close",
                     highMemberPath: "High",
                     lowMemberPath: "Low",

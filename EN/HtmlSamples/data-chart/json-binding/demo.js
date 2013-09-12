@@ -12,7 +12,7 @@ $(function () {
                 width: "100%",
                 height: "400px",
                 title: "Population per Country",
-                subtitle: "Five largest projected populations for 2015",
+                subTitle: "Five largest projected populations for 2015",
                 dataSource: data,
                 axes: [
                     {
@@ -32,8 +32,6 @@ $(function () {
                     {
                         name: "2015Population",
                         type: "column",
-                        isHighlightingEnabled: true,
-                        isTransitionInEnabled: true,
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
                         valueMemberPath: "Pop2015"

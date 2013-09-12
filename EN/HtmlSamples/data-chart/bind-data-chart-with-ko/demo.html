@@ -11,7 +11,6 @@
 <script src="http://dev.igniteui.local/13-2/IgniteUI/js/extensions/infragistics.ui.datachart.knockout-extensions.js"></script>
 <link href="http://dev.igniteui.local/13-2/IgniteUI/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://dev.igniteui.local/13-2/IgniteUI/css/structure/infragistics.css" rel="stylesheet"></link>
-<link href="http://dev.igniteui.local/13-2/IgniteUI/css/structure/modules/infragistics.ui.chart.new.css" rel="stylesheet"></link>
 
 <div class="main-container">
         <div class="editor-container">
@@ -82,9 +81,8 @@
             <div class="sample-line-chart-holder">
                 <div id="lineChart" data-bind='igDataChart: {
                     dataSource: data,
-                    width: "99%",
+                    width: "100%",
                     height: 200,
-                    title: "Yearly Profit",
                     leftMargin: 5,
                     legend: { element: "legendLineChart" },
                     axes: [{
@@ -99,15 +97,14 @@
                         type: "numericY",
                         interval: 10,
                         minimumValue: -50,
-                        maximumValue: 50
+                        maximumValue: 50,
+                        labelExtent: 30
 
                     }],
                     series: [{
                         name: "line1",
                         title: "Revenue",
                         type: "line",
-                        isHighlightingEnabled: true,
-                        isTransitionInEnabled: true,
                         thickness: chartThickness,
                         xAxis: "xAxis",
                         yAxis: "yAxis",
@@ -119,8 +116,6 @@
                         name: "line2",
                         title: "Expenses",
                         type: "line",
-                        isHighlightingEnabled: true,
-                        isTransitionInEnabled: true,
                         thickness: chartThickness,
                         xAxis: "xAxis",
                         yAxis: "yAxis",
@@ -131,8 +126,6 @@
                         name: "line3",
                         title: "Profit",
                         type: "line",
-                        isHighlightingEnabled: true,
-                        isTransitionInEnabled: true,
                         thickness: chartThickness,
                         xAxis: "xAxis",
                         yAxis: "yAxis",
@@ -146,10 +139,9 @@
             </div>
             <div class="sample-polar-chart-holder">
                 <div id="polarSplineChartRevenue" data-bind='igDataChart: {
-                    width: "97%",
+                    width: "100%",
                     height: 275,
                     dataSource: data,
-                    title: "Revenue",
                     legend: { element: "legendPolarChartRevenue" },
                     axes: [{
                         name: "angleAxis",
@@ -178,10 +170,9 @@
             </div>
             <div class="sample-polar-chart-holder">
                 <div id="polarSplineChartExpenses" data-bind='igDataChart: {
-                    width: "97%",
+                    width: "100%",
                     height: 275,
                     dataSource: data,
-                    title: "Expenses",
                     legend: { element: "legendPolarChartExpenses" },
                     axes: [{
                         name: "angleAxis",
@@ -210,9 +201,8 @@
             </div>
             <div class="sample-polar-chart-holder">
                 <div id="polarSplineChartProfit" data-bind='igDataChart: {
-                    width: "97%",
+                    width: "100%",
                     height: 275,
-                    title: "Profit",
                     dataSource: data,
                     legend: { element: "legendPolarChartProfit" },
                     axes: [{
@@ -243,9 +233,8 @@
             <div class="sample-bar-chart-holder">
                 <div id="barColumnChart" data-bind='igDataChart: {
                     dataSource: data,
-                    width: "99%",
+                    width: "100%",
                     height: 220,
-                    title: "Yearly Profit",
                     leftMargin: 5,
                     legend: { element: "legendBarColumnChart" },
                     axes: [{
@@ -263,8 +252,6 @@
                     series: [{
                         name: "column1",
                         type: "column",
-                        isHighlightingEnabled: true,
-                        isTransitionInEnabled: true,
                         title: "Revenue",
                         thickness: chartThickness,
                         xAxis: "xAxis",
@@ -277,8 +264,6 @@
                     {
                         name: "column2",
                         type: "column",
-                        isHighlightingEnabled: true,
-                        isTransitionInEnabled: true,
                         title: "Expenses",
                         thickness: chartThickness,
                         xAxis: "xAxis",
@@ -290,8 +275,6 @@
                     }, {
                         name: "column3",
                         type: "column",
-                        isHighlightingEnabled: true,
-                        isTransitionInEnabled: true,
                         title: "Profit",
                         thickness: chartThickness,
                         xAxis: "xAxis",

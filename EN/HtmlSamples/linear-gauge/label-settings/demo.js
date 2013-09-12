@@ -1,17 +1,74 @@
 $(function () {
             $("#lineargauge").igLinearGauge({
-                height: "60px",
+                height: "100px",
                 width: "100%",
-                fontBrush: "red",
-                needleBrush: "red",
-                value: 81,
-                backingBrush: "#fafafa",
-                backingOutline: "#ebebeb",
+                fontBrush:"red", 
                 transitionDuration: 1000
 
             });
 
-            
+            $("#lineargaugef").igLinearGauge({
+                height: "110px",
+                width: "100%", 
+
+                tickBrush: "white",
+                minorTickBrush: "white",
+                fontBrush: "white",
+
+                minimumValue: -20,
+                maximumValue: 120,
+                interval: 10,
+
+                minorTickCount: 10,
+                minorTickStartExtent: 0.1,
+                minorTickEndExtent: 0.3,
+                minorTickStrokethickness: 0.5,
+
+                tickStartExtent: 0,
+                tickEndExtent: 0.3,
+
+                scaleStartExtent: 0.064,
+                scaleEndExtent: 0.938,
+
+                backingInnerExtent: 0.25,
+                backingOuterExtent: 0.75,
+
+                backingBrush: "black",
+
+                transitionDuration: 1000
+            });
+
+            $("#lineargaugec").igLinearGauge({
+                height: "110px",
+                width: "100%",  
+                tickBrush: "white",
+                minorTickBrush: "white",
+                fontBrush: "white",
+
+                minimumValue: -30,
+                maximumValue: 50,
+                interval: 10,
+
+                minorTickCount: 10,
+                minorTickStartExtent: 0.5,
+                minorTickEndExtent: 0.7,
+                minorTickStrokethickness: 0.5,
+
+                tickStartExtent: 0.5,
+                tickEndExtent: 0.8,
+
+                value: 30,
+
+                needleBrush: "lightblue",
+                needleInnerExtent: 0.13,
+                needleOuterExtent: 0.63,
+
+                backingBrush: "transparent",
+                backingOutline: "transparent",
+                labelExtent: 0.8,
+
+                transitionDuration: 1000
+            });
 
             $("#lineargaugeBase").igLinearGauge({
                 height: "110px",
@@ -22,9 +79,6 @@ $(function () {
                 labelsPostInitial: 1,
                 interval: 1,
                 value: 39.4,
-                needleBrush: "white",
-                needleOutline: "darkred",
-                
                 needleInnerExtent: 0.1,
                 needleOuterExtent: 0.5,
                 minimumValue: 34,
@@ -62,7 +116,6 @@ $(function () {
                 },
 
             });
-
             $("#lineargaugeLabelsOnly").igLinearGauge({
                 height: "110px",
                 width: "100%", 
@@ -70,10 +123,13 @@ $(function () {
                 ticksPostInitial: 45,
                 minimumValue: 34,
                 maximumValue: 45,                              
-                labelExtent: 0.8,
-                backingBrush: "#fafafa",
-                backingOutline: "#ebebeb",
-                interval: 1, 
+                labelExtent: 0.8 ,                                  
+                backingBrush: "transparent",
+                scaleBrush: "transparent",
+                background: "transparent",
+                  
+                interval: 1,
+                backingOutline: "transparent",
                 formatLabel: function (evt, ui) {
                     if (ui.value == 36)
                     {
@@ -86,8 +142,8 @@ $(function () {
                         return;
                     }
                     if (ui.value == 37)
-                    {                        
-                        ui.label = "feeling bad";
+                    {
+                        ui.label = "feeling\n  bad";
                         return;
                     }             
                     if (ui.value == 41  )
@@ -96,70 +152,7 @@ $(function () {
                         return;
                     }             
                     ui.label = "";                    
-                }                
-            });
-
-
-            $("#lineargaugef").igLinearGauge({
-                height: "110px",
-                width: "100%",
-
-                tickBrush: "white",
-                minorTickBrush: "white",
-                fontBrush: "white",
-
-                minimumValue: -20,
-                maximumValue: 120,
-                interval: 10,
-
-                minorTickCount: 10,
-                minorTickStartExtent: 0.1,
-                minorTickEndExtent: 0.25,
-                minorTickStrokethickness: 0.5,
-
-                tickStartExtent: 0,
-                tickEndExtent: 0.25,
-
-                scaleStartExtent: 0.064,
-                scaleEndExtent: 0.938,
-
-                backingInnerExtent: 0.28,
-                backingOuterExtent: 0.73,
-
-                backingBrush: "black",
-
-                transitionDuration: 1000
-            });
-
-            $("#lineargaugec").igLinearGauge({
-                height: "110px",
-                width: "100%",
-                tickBrush: "white",
-                minorTickBrush: "white",
-                fontBrush: "white",
-
-                minimumValue: -30,
-                maximumValue: 50,
-                interval: 10,
-
-                minorTickCount: 10,
-                minorTickStartExtent: 0.5,
-                minorTickEndExtent: 0.65,
-                minorTickStrokethickness: 0.5,
-
-                tickStartExtent: 0.5,
-                tickEndExtent: 0.75,
-
-                value: 30,
-                needleBrush: "#345F9C",
-                needleOutline: "#37B0E4",
-                needleInnerExtent: 0.2,
-                needleOuterExtent: 0.43,
-
-                backingBrush: "transparent",
-                backingOutline: "transparent",
-                labelExtent: 0.8,
-
-                transitionDuration: 1000
+                }
+                
             });
         });

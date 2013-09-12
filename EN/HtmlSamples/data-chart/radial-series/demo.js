@@ -6,7 +6,7 @@ $(function () {
                     dataSource: data,
                     legend: hasLegend ? { element: "radialLegend" } : null,
                     title: "New York City vs. Philadelphia",
-                    subtitle: "A comparison of daily temperatures",
+                    subTitle: "A comparison of daily temperatures",
                     axes: [{
                         name: "angleAxis",
                         type: "categoryAngle",
@@ -34,7 +34,6 @@ $(function () {
                         name: "series2",
                         title: 'New York City',
                         type: seriesType,
-                        isTransitionInEnabled: true,
                         angleAxis: "angleAxis",
                         valueAxis: "radiusAxis",
                         valueMemberPath: "NewYorkCityTemp",
