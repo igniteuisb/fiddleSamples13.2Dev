@@ -1,31 +1,33 @@
 $(function () {
             var grid = $("#grid"),
                 manualStateChange;
-            window.History.Adapter.bind(window, 'statechange', function (e, args) {
-                var state = window.History.getState().data,
-                    prevState = window.History.savedStates.data;
-                if (manualStateChange == true) {
-                    switch (state.key) {
-                        case "page": grid.igGridPaging("pageIndex", state.value - 1); break;
-                        case "sort": grid.igGridSorting("sortColumn", state.value[0], state.value[1]); break;
-                        case "resize": grid.igGridResizing("resize", state.value[0], state.value[1]); break;
-                        case "move": grid.igGridColumnMoving("groupByColumn", state.value); break;
-                        case "group":
-                            grid.igGridGroupBy("ungroupAll");
-                            if (!grid.igGridGroupBy("checkColumnIsGrouped")) grid.igGridGroupBy("groupByColumn", state.value);
-                            break;
-                        case "hide":
-                            if (state.value.split("_")[1]) {
-                                grid.igGridHiding("hideColumn", state[0]);
-                            } else {
-                                grid.igGridHiding("showColumn", state[0]);
-                            }
-                            break;
-                        case "filter": grid.igGridFiltering("filter", ([{ fieldName: state.value[0], expr: state.value[2], cond: state.value[1] }])); break;
+            if (window.History && window.History.Adapter) {
+                window.History.Adapter.bind(window, 'statechange', function (e, args) {
+                    var state = window.History.getState().data,
+                        prevState = window.History.savedStates.data;
+                    if (manualStateChange == true) {
+                        switch (state.key) {
+                            case "page": grid.igGridPaging("pageIndex", state.value - 1); break;
+                            case "sort": grid.igGridSorting("sortColumn", state.value[0], state.value[1]); break;
+                            case "resize": grid.igGridResizing("resize", state.value[0], state.value[1]); break;
+                            case "move": grid.igGridColumnMoving("groupByColumn", state.value); break;
+                            case "group":
+                                grid.igGridGroupBy("ungroupAll");
+                                if (!grid.igGridGroupBy("checkColumnIsGrouped")) grid.igGridGroupBy("groupByColumn", state.value);
+                                break;
+                            case "hide":
+                                if (state.value.split("_")[1]) {
+                                    grid.igGridHiding("hideColumn", state[0]);
+                                } else {
+                                    grid.igGridHiding("showColumn", state[0]);
+                                }
+                                break;
+                            case "filter": grid.igGridFiltering("filter", ([{ fieldName: state.value[0], expr: state.value[2], cond: state.value[1] }])); break;
+                        }
                     }
-                }
-                manualStateChange = true;
-            });
+                    manualStateChange = true;
+                });
+            }
 
             function loadInitialStateFromUrl() {
                 var params = window.location.search, index, arrKeyValue;
@@ -68,7 +70,7 @@ $(function () {
 
             function pushToBrowserHistory(state, title, url) {
                 manualStateChange = false;
-                window.History.pushState(state, title, url);
+                window.History? window.History.pushState(state, title, url): "";
             }
 
             function formURL(key, value, multiple) {
