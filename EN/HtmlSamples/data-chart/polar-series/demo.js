@@ -5,7 +5,7 @@ $(function () {
                     height: "400px",
                     dataSource: data,
                     title: "Wind Speed vs. Wind Direction",
-                    subTitle: "Los Angeles wind data over twelve hours",
+                    subtitle: "Los Angeles wind data over twelve hours",
                     axes: [{
                         name: "angleAxis",
                         type: "numericAngle"
