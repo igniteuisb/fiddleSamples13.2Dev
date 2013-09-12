@@ -29,27 +29,20 @@ $(function () {
                  
                 formatLabel: function (evt, ui) {
                     ui.label = ui.label + "K";
-                },
-                transitionDuration: 200
+                }
         });
 
             // Orientation
             $("#orientationButton").click(function () {
-                
+                var value = linearGauge.igLinearGauge("option", "orientation") == "vertical" ? "horizontal" : "vertical",
+                    displayValue = value == "horizontal" ? "垂直方向" : "水平方向",
+                    width = linearGauge.igLinearGauge("option", "height"),
+                    height = linearGauge.igLinearGauge("option", "width");
+                linearGauge.igLinearGauge("option", "orientation", value);
+                linearGauge.igLinearGauge("option", "width", width);
+                linearGauge.igLinearGauge("option", "height", height); 
 
-                var orientation = linearGauge.igLinearGauge("option", "orientation") == "vertical" ? "horizontal" : "vertical";
-                linearGauge.igLinearGauge("option", "orientation", orientation);
-
-                if (orientation == "horizontal") {
-                    linearGauge.igLinearGauge("option", "width", "100%");
-                    linearGauge.igLinearGauge("option", "height", 60);
-                }
-                else {
-                    linearGauge.igLinearGauge("option", "width", 60);
-                    linearGauge.igLinearGauge("option", "height", 300);
-                }
-
-                $("#orientationButton").text(orientation == "horizontal" ? "垂直方向" : "水平方向");
+                $("#orientationButton").text(displayValue);
             });
 
             // Scale Inversion

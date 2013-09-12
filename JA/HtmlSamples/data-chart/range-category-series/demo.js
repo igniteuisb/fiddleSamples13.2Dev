@@ -5,7 +5,7 @@ $(function () {
                     height: "400px",
                     dataSource: data,
                     title: "ニューヨーク市 vs. フィラデルフィア",
-                    subtitle: "気温の比較",
+                    subTitle: "気温の比較",
                     axes: [{
                         name: "xAxis",
                         type: "categoryX",
@@ -21,8 +21,6 @@ $(function () {
                         name: "series1",
                         title: "$$(Chart_lbl_testSeries)",
                         type: seriesType,
-                        isHighlightingEnabled: true,
-                        isTransitionInEnabled: true,
                         xAxis: "xAxis",
                         yAxis: "yAxis",
                         lowMemberPath: "NewYorkCityTemp",

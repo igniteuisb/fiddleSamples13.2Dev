@@ -44,7 +44,6 @@ var currData, currDataSource, doGeneration, startTime = null;
 	        $("#chart").igDataChart({
 	            width: "100%",
 	            height: "500px",
-	            title: "ランダムに生成されたデータ",
 	            axes: [{
 	                name: "xAxis",
 	                type: "categoryX",
@@ -61,6 +60,7 @@ var currData, currDataSource, doGeneration, startTime = null;
 	                yAxis: "yAxis",
 	                valueMemberPath: "Value",
 	                showTooltip: true,
+	                tooltipTemplate: "tooltipTemplate"
 	            }],
 	            horizontalZoomable: true,
 	            verticalZoomable: true,

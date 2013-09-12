@@ -5,7 +5,7 @@ $(function () {
                     height: "400px",
                     dataSource: dataSource,
                     title: "年の米国農業生産",
-                    subtitle: "1961 年 - 2007 年のデータ",
+                    subTitle: "1961 年 - 2007 年のデータ",
                     axes: [{
                         name: "xAxis",
                         type: "numericX",
@@ -15,7 +15,6 @@ $(function () {
                         name: "yAxis",
                         type: "numericY",
                         title: "合計農業生産 (USD 10 億単位)",
-                        maximumValue: 200000,
                         formatLabel: function (val) {
                             var bVal = (val / 1000),
                             rounded = Math.round(bVal * 100) / 100;
@@ -42,7 +41,7 @@ $(function () {
                     height: "400px",
                     dataSource: dataSource,
                     title: "年の米国農業生産",
-                    subtitle: "1961 年 - 2007 年のデータ",
+                    subTitle: "1961 年 - 2007 年のデータ",
                     axes: [{
                         name: "xAxis",
                         type: "numericX",
@@ -52,7 +51,6 @@ $(function () {
                         name: "yAxis",
                         type: "numericY",
                         title: "合計農業生産 (USD 10 億単位)",
-                        maximumValue: 200000,
                         formatLabel: function (val) {
                             var bVal = (val / 1000),
                             rounded = Math.round(bVal * 100) / 100;
@@ -88,7 +86,7 @@ $(function () {
                 });
             }
 
-            var dataSource = agriculturalData;
+            var dataSource = data;
             createScatterChart("#chartScatter", "scatter", dataSource);
             createScatterChart("#chartScatterLine", "scatterLine", dataSource);
             createBubbleChart("#chartBubble", dataSource);

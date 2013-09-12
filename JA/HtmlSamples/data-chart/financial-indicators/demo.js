@@ -4,7 +4,7 @@ $(function () {
                 height: "400px",
                 dataSource: data,
                 title: "Microsoft 株 (MSFT)",
-                subtitle: "2 か月間のデータ",
+                subTitle: "2 か月間のデータ",
                 axes: [{
                     type: "categoryX",
                     label: "Date",
@@ -18,7 +18,6 @@ $(function () {
                 }],
                 series: [{
                     type: "financial",
-                    isTransitionInEnabled: true,
                     closeMemberPath: "Close",
                     highMemberPath: "High",
                     lowMemberPath: "Low",
@@ -49,7 +48,6 @@ $(function () {
                 }],
                 series: [{
                     type: "moneyFlowIndexIndicator",
-                    isTransitionInEnabled: true,
                     closeMemberPath: "Close",
                     highMemberPath: "High",
                     lowMemberPath: "Low",

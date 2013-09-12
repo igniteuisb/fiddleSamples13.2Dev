@@ -37,7 +37,7 @@ $(function () {
                 width: "100%",
                 height: "400px",
                 title: "国別人口",
-                subtitle: "2015 年推計人口トップ 5",
+                subTitle: "2015 年推計人口トップ 5",
                 axes: [
                     {
                         name: "NameAxis",
@@ -58,8 +58,6 @@ $(function () {
                     {
                         name: "2015Population",
                         type: "column",
-                        isHighlightingEnabled: true,
-                        isTransitionInEnabled: true,
                         dataSource: ds, //$.ig.DataSource defined above
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",

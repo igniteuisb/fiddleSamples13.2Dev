@@ -12,7 +12,7 @@ $(function () {
                 width: "100%",
                 height: "400px",
                 title: "国別人口",
-                subtitle: "1995 年と 2005 年の人口の比較",
+                subTitle: "1995 年と 2005 年の人口の比較",
                 dataSource: data,
                 axes: [
                     {
@@ -32,7 +32,6 @@ $(function () {
                     {
                         name: "2005Population",
                         type: "column",
-                        isTransitionInEnabled: true,
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
                         valueMemberPath: "Pop2005"
@@ -40,7 +39,6 @@ $(function () {
                     {
                         name: "1995Population",
                         type: "line",
-                        isTransitionInEnabled: true,
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
                         valueMemberPath: "Pop1995"

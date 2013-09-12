@@ -5,7 +5,7 @@ $(function () {
                     height: "400px",
                     dataSource: data,
                     title: "風速 vs. 風向",
-                    subtitle: "ロサンゼルスの風データ (12 時間)",
+                    subTitle: "ロサンゼルスの風データ (12 時間)",
                     axes: [{
                         name: "angleAxis",
                         type: "numericAngle"
