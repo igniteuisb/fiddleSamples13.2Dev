@@ -10,12 +10,10 @@
 <script src="http://dev.igniteui.local/13-2/IgniteUI/js/extensions/infragistics.ui.combo.knockout-extensions.js"></script>
 <link href="http://dev.igniteui.local/13-2/IgniteUI/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://dev.igniteui.local/13-2/IgniteUI/css/structure/infragistics.css" rel="stylesheet"></link>
+<link href="http://dev.igniteui.local/13-2/IgniteUI/css/structure/modules/infragistics.ui.chart.new.css" rel="stylesheet"></link>
 <script src="http://dev.igniteui.local/13-2/IgniteUI/js/i18n/infragistics-ja.js"></script>
 
-<div class="sample-header">
-        <h1>日の経費/売上シミュレーション</h1>
-    </div>
-    <div class="main-container">
+<div class="main-container">
         <div class="combo-container">
             <label for="combo1">現在の項目を選択</label>
             <div class="clear"></div>
@@ -49,12 +47,13 @@
                 dataSource: data,
                 width: chartWidth,
                 height: chartHeight,
+                title: "経費 vs. 売上 (日単位)",
                 legend: { element: "legendLineChart" },
                 axes: [{
                     name: "xAxis",
                     type: "categoryX",
                     label: "label",
-                    interval: 1
+                    interval: 1,
                 }, {
                     name: "yAxis",
                     type: "numericY",
@@ -65,6 +64,8 @@
                 series: [{
                     name: "line1",
                     type: "line",
+                    isHighlightingEnabled: true,
+                    isTransitionInEnabled: true,
                     title: "売上 日ごと (千単位)",
                     thickness: chartThickness,
                     markerType: "circle",
@@ -76,6 +77,8 @@
                 {
                     name: "line2",
                     type: "line",
+                    isHighlightingEnabled: true,
+                    isTransitionInEnabled: true,
                     title: "経費 日ごと (千単位)",
                     thickness: chartThickness,
                     markerType: "circle",
@@ -92,22 +95,24 @@
                 dataSource: data,
                 width: chartWidth,
                 height: chartHeight,
+                title: "経費 vs. 売上 (日単位)",
                 legend: { element: "legendBarColumnChart" },
                 axes: [{
                     name: "xAxis",
                     type: "categoryX",
                     label: "label",
-                    interval: 1
+                    interval: 1,
                 }, {
                     name: "yAxis",
                     type: "numericY",
                     minimumValue: minChartValue,
                     maximumValue: maxChartValue
-
                 }],
                 series: [{
                     name: "column1",
                     type: "column",
+                    isHighlightingEnabled: true,
+                    isTransitionInEnabled: true,
                     title: "売上 日ごと (千単位)",
                     thickness: chartThickness,
                     xAxis: "xAxis",
@@ -118,6 +123,8 @@
                 {
                     name: "column2",
                     type: "column",
+                    isHighlightingEnabled: true,
+                    isTransitionInEnabled: true,
                     title: "経費 日ごと (千単位)",
                     thickness: chartThickness,
                     xAxis: "xAxis",

@@ -6,7 +6,7 @@ $(function () {
                     dataSource: data,
                     legend: hasLegend ? { element: "radialLegend" } : null,
                     title: "ニューヨーク市 vs. フィラデルフィア",
-                    subTitle: "気温の比較",
+                    subtitle: "気温の比較",
                     axes: [{
                         name: "angleAxis",
                         type: "categoryAngle",
@@ -34,6 +34,7 @@ $(function () {
                         name: "series2",
                         title: 'ニューヨーク市',
                         type: seriesType,
+                        isTransitionInEnabled: true,
                         angleAxis: "angleAxis",
                         valueAxis: "radiusAxis",
                         valueMemberPath: "NewYorkCityTemp",
