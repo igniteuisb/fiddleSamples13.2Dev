@@ -34,7 +34,6 @@ $(function () {
                         name: "series2",
                         title: 'ニューヨーク市',
                         type: seriesType,
-                        isTransitionInEnabled: true,
                         angleAxis: "angleAxis",
                         valueAxis: "radiusAxis",
                         valueMemberPath: "NewYorkCityTemp",

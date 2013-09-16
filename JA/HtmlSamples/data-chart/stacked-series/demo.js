@@ -31,7 +31,6 @@ $(function () {
                             name: "China",
                             title: "China",
                             type: "stackedFragment",
-                            isTransitionInEnabled: true,
                             showTooltip: true,
                             tooltipTemplate: "China",
                             valueMemberPath: "China"
@@ -39,7 +38,6 @@ $(function () {
                             name: "United States",
                             title: "United States",
                             type: "stackedFragment",
-                            isTransitionInEnabled: true,
                             showTooltip: true,
                             tooltipTemplate: "United States",
                             valueMemberPath: "UnitedStates"
@@ -49,7 +47,6 @@ $(function () {
                             showTooltip: true,
                             tooltipTemplate: "Russia",
                             type: "stackedFragment",
-                            isTransitionInEnabled: true,
                             valueMemberPath: "Russia"
                         }, {
                             name: "Saudi Arabia",
@@ -57,7 +54,6 @@ $(function () {
                             showTooltip: true,
                             tooltipTemplate: "Saudi Arabia",
                             type: "stackedFragment",
-                            isTransitionInEnabled: true,
                             valueMemberPath: "SaudiArabia"
                         }, {
                             name: "Canada",
@@ -65,7 +61,6 @@ $(function () {
                             showTooltip: true,
                             tooltipTemplate: "Canada",
                             type: "stackedFragment",
-                            isTransitionInEnabled: true,
                             valueMemberPath: "Canada"
                         }]
                     }],
