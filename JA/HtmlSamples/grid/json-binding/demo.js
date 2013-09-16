@@ -7,7 +7,7 @@ $(function () {
                 ];
             
             // temporary use id="grid" instead of id="grid7": wait/undo if igGrid will fix its bug
-				$("#grid").igGrid({				
-				    dataSource: data //JSON Array defined above                     
+            $("#grid").igGrid({
+                dataSource: data //JSON Array defined above                     
             });
         });
