@@ -8,54 +8,21 @@
 <link href="http://dev.igniteui.local/13-2/IgniteUI/css/structure/modules/infragistics.ui.chart.new.css" rel="stylesheet"></link>
 <script src="http://dev.igniteui.local/13-2/IgniteUI/js/i18n/infragistics-ja.js"></script>
 
+<script id="tooltipTemplate1" type="text/x-jquery-tmpl">
+        <div>
+            <span>${item.Pop2005}</span>
+        </div>
+    </script>
+<script id="tooltipTemplate2" type="text/x-jquery-tmpl">
+        <div>
+            <span>${item.Pop1995}</span>
+        </div>
+    </script>
+
 <div id="chart"></div>
     <br/>
     
-    <div>
-        <fieldset id="chartOptions">
-            <legend>カテゴリ項目強調表示オプション</legend>
-            <br />
-            <div class="optionContainer">
-                ブラシ
-                <br />
-                <select id="brush" class="selectBounds">
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="green">Green</option>
-                    <option value="yellow">Yellow</option>
-                    <option value="black" selected="selected">Black</option>
-                </select>
-            </div>
-           
-            <div class="optionContainer">
-                幅
-                <br />
-                <div id="thicknessSlider" class="sliderBounds"></div>
-                <label id="thicknessLabel">1</label>
-            </div>
-            
-            <div class="optionContainer">
-                不透明度
-                <br />
-                <div id="opacitySlider" class="sliderBounds"></div>
-                <label id="opacityLabel">0.5</label>
-            </div>
-            
-            <br />
-
-            <div class="optionContainer">
-                トランジション期間
-                <br />
-                <div id="transitionDurationSlider" class="sliderBounds"></div>
-                <label id="transitionDurationLabel">500</label>
-            </div>
-            
-            <div class="optionContainer">
-                <input type="checkbox" checked="checked" id="useInterpolationCheckBox"></input>補間の使用<br />
-            </div>
-
-        </fieldset>
-    </div>
+    
 
     <br/>
     
