@@ -21,7 +21,36 @@
 <div id="chart"></div>
     <br/>
     
-    
+    <div>
+        <fieldset id="chartOptions">
+            <legend>Category Item Highlight Options</legend>
+            
+
+            <div class="optionContainer">
+                Transition Duration
+                <br />
+                <div id="transitionDurationSlider" class="sliderBounds"></div>
+                <label id="transitionDurationLabel">500</label>
+            </div>
+            
+            <div class="optionContainer">
+                <input type="checkbox" checked="checked" id="useInterpolationCheckBox"></input>Use Interpolation<br />
+            </div>
+            
+            <div class="selectionOptions">
+                $$(Tooltip_Position):
+                <select id="tooltipPos">
+                    <option value="auto" selected="selected">$$(auto)</option>
+                    <option value="outsideEnd">$$(outsideEnd)</option>
+                    <option value="outsideStart">$$(outsideStart)</option>
+                    <option value="insideStart">$$(insideStart)</option>
+                    <option value="insideEnd">$$(insideEnd)</option>
+                </select>
+            </div>
+
+        </fieldset>
+    </div>
+
 
     <br/>
     
