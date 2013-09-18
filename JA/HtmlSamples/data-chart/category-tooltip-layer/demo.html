@@ -22,7 +22,36 @@
 <div id="chart"></div>
     <br/>
     
-    
+    <div>
+        <fieldset id="chartOptions">
+            <legend>カテゴリ項目強調表示オプション</legend>
+            
+
+            <div class="optionContainer">
+                トランジション期間
+                <br />
+                <div id="transitionDurationSlider" class="sliderBounds"></div>
+                <label id="transitionDurationLabel">500</label>
+            </div>
+            
+            <div class="optionContainer">
+                <input type="checkbox" checked="checked" id="useInterpolationCheckBox"></input>補間の使用<br />
+            </div>
+            
+            <div class="selectionOptions">
+                $$(Tooltip_Position):
+                <select id="tooltipPos">
+                    <option value="auto" selected="selected">$$(auto)</option>
+                    <option value="outsideEnd">$$(outsideEnd)</option>
+                    <option value="outsideStart">$$(outsideStart)</option>
+                    <option value="insideStart">$$(insideStart)</option>
+                    <option value="insideEnd">$$(insideEnd)</option>
+                </select>
+            </div>
+
+        </fieldset>
+    </div>
+
 
     <br/>
     
