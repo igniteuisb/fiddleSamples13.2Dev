@@ -71,7 +71,6 @@ $(function () {
             
             $("#tooltipPos").change(function (e) {
                var position = $(this).val();
-                alert(position);
                $("#chart").igDataChart("option", "series", [{ name: "categorySeries", tooltipPosition: position }]);
                 
             });
