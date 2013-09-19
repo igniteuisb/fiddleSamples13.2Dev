@@ -30,7 +30,7 @@ $(function () {
                 formatLabel: function (evt, ui) {
                     ui.label = ui.label + "K";
                 }
-        });
+            });
 
             // Orientation
             $("#orientationButton").click(function () {
