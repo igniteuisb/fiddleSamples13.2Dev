@@ -1,11 +1,7 @@
 $(function () {
             $('#dashboard').igTileManager({
-                layoutConfiguration: {
-                    gridLayout: {
-                        marginLeft: 10,
-                        marginTop: 10
-                    }
-                },
+                marginLeft: 10,
+                marginTop: 10,
                 rightPanelTilesWidth: 200,
                 rightPanelCols: 2,
                 dataSource: dataSource,
