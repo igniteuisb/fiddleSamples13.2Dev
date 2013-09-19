@@ -57,6 +57,7 @@ $(function () {
                 //     labelInterval: 150,
                 value: 555,
                 valueBrush: 'white',
+                valueOutline: 'white',
                 formatLabel: function (evt, ui) {
                     ui.label = ui.value + "K";
                 },
@@ -106,6 +107,7 @@ $(function () {
                 labelInterval: 150,
                 value: 670,
                 valueBrush: 'white',
+                valueOutline: 'white',
                 formatLabel: function (evt, ui) {
                     ui.label = ui.value + "K";
                 },
@@ -164,6 +166,7 @@ $(function () {
                 labelInterval: 100,
                 value: 670,
                 valueBrush: 'white',
+                valueOutline: 'white',
                 formatLabel: function (evt, ui) {
                     ui.label = ui.value + "K";
                 },

@@ -31,7 +31,7 @@ $(function () {
                     ui.label = ui.label + "K";
                 },
                 transitionDuration: 200
-        });
+            });
 
             // Orientation
             $("#orientationButton").click(function () {
