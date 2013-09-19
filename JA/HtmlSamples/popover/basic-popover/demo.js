@@ -11,6 +11,7 @@ $( function ()
                 contentFunction: contentFunction,
                 selectors: "[title]",
                 title: "To display the location of the city is used Google maps",
+				containment: $( '#popoverTooltip' ),
                 showOn: "focus"
             } );
            
