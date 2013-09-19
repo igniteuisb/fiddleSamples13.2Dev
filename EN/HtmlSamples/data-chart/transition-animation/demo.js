@@ -78,14 +78,14 @@ $(function () {
                 if (seriesType == "bar") {
                     $("#chart").igDataChart("option", "axes", [{
                         name: "NameAxis",
-                        type: "numericX",
-                        label: "CountryName"
+                        type: "numericX"
                     }]);
                     $("#chart").igDataChart("option", "axes", [{
                         name: "PopulationAxis",
                         type: "categoryY",
                         minimumValue: 0,
-                        title: "Millions of People",
+                        label: "CountryName",
+                        title: "Millions of People"
                     }]);
                     
                     $("#chart").igDataChart("option", "series", [{
