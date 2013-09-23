@@ -35,8 +35,7 @@ $(function () {
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
                         valueMemberPath: "Pop2005",
-                        showTooltip: true,
-                        tooltipTemplate: "tooltipTemplate1"
+                        showTooltip: true
                     },
                     {
                         name: "1995Population",
@@ -44,8 +43,7 @@ $(function () {
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
                         valueMemberPath: "Pop1995",
-                        showTooltip: true,
-                        tooltipTemplate: "tooltipTemplate2"
+                        showTooltip: true
                     },
                     {
                         name: "itemToolTipLayer",
