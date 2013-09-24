@@ -3,3 +3,6 @@ ul
             list-style-type: none;
             font-family: Verdana;
         }
+        #layout {
+            position: relative;
+        }
