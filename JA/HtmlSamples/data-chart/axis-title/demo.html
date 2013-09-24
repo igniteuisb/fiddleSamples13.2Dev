@@ -9,9 +9,23 @@
 <link href="http://dev.igniteui.local/13-2/IgniteUI/css/structure/modules/infragistics.ui.chart.new.css" rel="stylesheet"></link>
 <script src="http://dev.igniteui.local/13-2/IgniteUI/js/i18n/infragistics-ja.js"></script>
 
-<table><tr><td id="columnChart" class="chartElement"></td><td id="columnLegend" style="float: left"></td></tr></table>
-     
-    <div class="EIA-attribution">
-    エネルギーのデータ ソース:<br />
-    <a href="http://www.eia.gov" target="_blank">U.S. Energy Information Administration (September 2012) </a>
-    </div>
+<table><tr><td id="chart" class="chartElement"></td><td id="columnLegend" style="float: left"></td></tr></table>
+                
+        <div class="EIA-attribution">
+            エネルギーのデータ ソース:<br />
+            <a href="http://www.eia.gov" target="_blank">U.S. Energy Information Administration (September 2012) </a>
+        </div>
+        <br/>
+        <div>
+            <fieldset id="chartOptions">
+                <legend>$$(AxisTitleOptions)</legend>
+            
+
+                <div class="optionContainer">
+                    
+                    <div id="axisAngleSlider" class="sliderBounds"></div>
+                    <label id="axisAngleLabel">-90</label>
+                </div>
+            
+            </fieldset>
+        </div>
