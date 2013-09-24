@@ -47,3 +47,9 @@
         #rightNo {
             float: right;
         }
+
+        @media screen and (max-width: 420px) {
+            #right {
+                float: none;
+            }
+        }
