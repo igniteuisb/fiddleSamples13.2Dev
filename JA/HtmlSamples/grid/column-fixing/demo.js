@@ -1,11 +1,5 @@
 $(function () {
-
-            /*----------------- Instantiation -------------------------*/
-            createGrid();
-        });
-
-        function createGrid() {
-            $("#grid2").igGrid({
+            $("#grid").igGrid({
                 columns: [
                     { headerText: "顧客 ID", key: "ID", dataType: "string", width: "10%" },
                     { headerText: "会社名", key: "CompanyName", dataType: "string", width: "15%" },
@@ -17,7 +11,7 @@ $(function () {
                 ],
                 autoGenerateColumns: false,
                 dataSource: nwCustomersWithOrders,
-                width: '98%',
+                width: '100%',
                 height: "400px",
                 features: [
                     {
@@ -41,4 +35,4 @@ $(function () {
                     }
                 ]
             });
-        }
+        });

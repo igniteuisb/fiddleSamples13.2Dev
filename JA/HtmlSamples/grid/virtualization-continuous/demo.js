@@ -4,6 +4,7 @@ $(function () {
                 renderCheckboxes: true,
                 width: "100%",
                 height: "400px",
+                virtualization: true,
                 virtualizationMode: "continuous",
                 columns: [
                     { headerText: "製品 ID", key: "ProductID", dataType: "number", width: "15%" },
