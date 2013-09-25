@@ -49,7 +49,7 @@ $(function () {
                         { headerText: "名前", key: "Name", dataType: "string" },
                         { headerText: "画像", key: "ImageUrl", dataType: "object" },
                         { headerText: "役職", key: "Title", dataType: "string" },
-                        { headerText: "Languages", key: "Languages", dataType: "object" },
+                        { headerText: "言語", key: "Languages", dataType: "object" },
                         { headerText: "電話", key: "Phone", dataType: "string" },
                         { headerText: "国名", key: "Country", dataType: "string" },
                         { headerText: "生年月日", key: "BirthDate", dataType: "date" }
