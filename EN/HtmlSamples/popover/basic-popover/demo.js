@@ -10,11 +10,11 @@ $( function ()
                 maxWidth: 260,
                 contentFunction: contentFunction,
                 selectors: "[title]",
-                title: "To display the location of the city is used Google maps",
-				containment: $( '#popoverTooltip' ),
+                title: 'To display the location of the city is used Google maps',
+                containment: $( '#popoverTooltip' ),
                 showOn: "focus"
             } );
-           
+
             var tableTemplate = "<table><thead><tr><th>English</th><th>Spanish</th></tr></thead><tbody ><tr><td>${en}</td><td>${es}</td></tr></tbody></table>";
             $( '#bodyParts' ).igPopover( {
                 direction: "auto",
@@ -46,6 +46,6 @@ $( function ()
             var imgTemplate = "<img class='map' alt='${value}' src='http://maps.google.com/maps/api/staticmap?zoom=10&size=250x250&maptype=terrain&sensor=false&center=${value}'>"
 
             var element = $( this );
-            var data = [{ value: element.attr( "value" ) }];
+            var data = [{ value: element[0].value }];
             return $.ig.tmpl( imgTemplate, data );
         }
