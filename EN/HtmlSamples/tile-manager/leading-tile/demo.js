@@ -38,7 +38,7 @@ var activated = [false, false, false, false],
                 activate: function (event, ui) {
                     var index = ui.newTab.index();
                     if (!activated[index]) {
-                        ui.newPanel.igTileManager($.extend(true, {}, options));
+                        ui.newPanel.igTileManager(options);
                         activated[index] = true;
                     } else {
                         ui.newPanel.igTileManager('reflow');
@@ -50,7 +50,7 @@ var activated = [false, false, false, false],
             } else {
                 options = optionsPhone;
             }
-            $('#mercedes').igTileManager($.extend(true, {}, options));
+            $('#mercedes').igTileManager(options);
             activated[0] = true;
         });
 });
