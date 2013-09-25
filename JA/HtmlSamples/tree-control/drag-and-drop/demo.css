@@ -18,3 +18,9 @@
         #firstTree, #secondTree {
             font-size: 14px;
         }
+
+		@media screen and (max-width: 720px) {
+            #right {
+                clear: both;
+            }
+        }
