@@ -36,7 +36,6 @@ $(function () {
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
                         valueMemberPath: "Pop2005",
-                        isTransitionInEnabled: true,
                         isHighlightingEnabled: true,
                         thickness: 5
                     },
@@ -47,7 +46,6 @@ $(function () {
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
                         valueMemberPath: "Pop1995",
-                        isTransitionInEnabled: true,
                         isHighlightingEnabled: true,
                         thickness: 5
                     }
