@@ -4,6 +4,7 @@ $(function () {
             <td>{{>#view.hlp('toFullName')(Name)}}</td>
             <td><img width='100' height='90' src={{>ImageUrl}}></img></td>
             <td>{{>Title}}</td>
+            <td>{{for Languages}}<div>{{:name}}</div>{{/for}}</td>
             <td>{{>Phone}}</td>
             <td><img width='20' height='15' src='http://jp.dev.igniteui.local/13-2/images/samples/nw/countries/{{>Country}}.gif'></img>{{>Country}}</td>
             <td>
@@ -42,11 +43,13 @@ $(function () {
                 height: "600px",
                 rowTemplate: $("#theTmpl").html(),
                 autoGenerateColumns: false,
+                autoCommit:true,
                 columns: [
                         { headerText: "社員 ID", key: "ID", dataType: "number" },
                         { headerText: "名前", key: "Name", dataType: "string" },
                         { headerText: "画像", key: "ImageUrl", dataType: "object" },
                         { headerText: "役職", key: "Title", dataType: "string" },
+                        { headerText: "Languages", key: "Languages", dataType: "object" },
                         { headerText: "電話", key: "Phone", dataType: "string" },
                         { headerText: "国名", key: "Country", dataType: "string" },
                         { headerText: "生年月日", key: "BirthDate", dataType: "date" }
@@ -82,10 +85,25 @@ $(function () {
                         type: "local",
                         mode: "advanced",
                         filterDropDownItemIcons: false,
-                        filterDropDownWidth: 200
+                        filterDropDownWidth: 200,
+                        columnSettings: [
+                            {
+                                columnKey: "Name",
+                                allowFiltering: false
+                            },
+                            {
+                                columnKey: "ImageUrl",
+                                allowFiltering: false
+                            },
+                            {
+                                columnKey: "Languages",
+                                allowFiltering: false
+                            }
+                        ]
                     },
                     {
                         name: "Updating",
+                        enableDataDirtyException: false,
                         enableAddRow: false,
                         editMode: "rowedittemplate",
                         rowEditDialogWidth: 350,
@@ -98,6 +116,10 @@ $(function () {
                         columnSettings: [
                             {
                                 columnKey: "ImageUrl",
+                                readOnly: true
+                            },
+                            {
+                                columnKey: "Languages",
                                 readOnly: true
                             },
                             {
