@@ -100,7 +100,7 @@ $(function () {
                         thickness: thickness,
                         transitionInMode: transMode,
                         transitionInSpeedType: transType,
-                        transitionEasingFunction: transEasingFunc
+                        transitionInEasingFunction: transEasingFunc
                     }]);
                     $("#chart").igDataChart("option", "series", [{
                         type: seriesType,
@@ -114,7 +114,7 @@ $(function () {
                         thickness: thickness,
                         transitionInMode: transMode,
                         transitionInSpeedType: transType,
-                        transitionEasingFunction: transEasingFunc
+                        transitionInEasingFunction: transEasingFunc
                     }]);
                 } else {
                     $("#chart").igDataChart("option", "axes", [{
@@ -143,7 +143,7 @@ $(function () {
                             thickness: thickness,
                             transitionInMode: transMode,
                             transitionInSpeedType: transType,
-                            transitionEasingFunction: transEasingFunc
+                            transitionInEasingFunction: transEasingFunc
                         }]);
 
                     } else {
@@ -159,7 +159,7 @@ $(function () {
                             thickness: thickness,
                             transitionInMode: transMode,
                             transitionInSpeedType: transType,
-                            transitionEasingFunction: transEasingFunc
+                            transitionInEasingFunction: transEasingFunc
                         }]);
                         $("#chart").igDataChart("option", "series", [{
                             type: seriesType,
@@ -173,7 +173,7 @@ $(function () {
                             thickness: thickness,
                             transitionInMode: transMode,
                             transitionInSpeedType: transType,
-                            transitionEasingFunction: transEasingFunc
+                            transitionInEasingFunction: transEasingFunc
                         }]);
                     }
                 }
