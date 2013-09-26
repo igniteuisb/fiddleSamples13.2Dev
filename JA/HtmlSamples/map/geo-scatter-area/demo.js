@@ -1,6 +1,7 @@
 $(function () {
             $("#map").igMap({
                 width: "700px",
+                height: "500px",
                 verticalZoomable: true,
                 horizontalZoomable: true,
                 overviewPlusDetailPaneVisibility: "visible",
