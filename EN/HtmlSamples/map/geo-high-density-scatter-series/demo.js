@@ -1,6 +1,7 @@
 $(function () {
             $("#map").igMap({
                 width: "700px",
+                height: "500px",
                 verticalZoomable: true,
                 horizontalZoomable: true,
                 backgroundContent: {
@@ -14,11 +15,7 @@ $(function () {
                     longitudeMemberPath: "lon",
                     mouseOverEnabled: true,
                     showTooltip: true,
-                    tooltipTemplate: "cityTemplate",
-                    progressiveLoad: true,
-                    progressiveLoadStatusChanged: function (evt, ui) {
-                        alert("here");
-                    }
+                    tooltipTemplate: "cityTemplate"
                 }],
                 windowResponse: "immediate",
                 windowRect: {
@@ -101,16 +98,4 @@ $(function () {
             $("#map").igMap("option", "series", [{ name: "australiaMap", useBruteForce: useBruteForceSeries }]);
         });
 
-        // Progress Bar 
-        $(function () { $("#seriesLoadingProgressBar").progressbar({ value: 37 }); });
-            
-        // Generate Data Button
-        $("#generateDataButton").click(function (e) {
-            $("#map").igMap("option", "series", [{ name: "australiaMap", dataSource: null }]);
-            $("#map").igMap("option", "series", [{ name: "australiaMap", dataSource: placeData }]);
-        });
-
-        // Zoom into Australia 
-        //var zoom = $("#map").igMap("getZoomFromGeographic", { top: (-45), left: (110), width: 50, height: 40 });
-        // $("#map").igMap("option", "windowRect", zoom);
         });
