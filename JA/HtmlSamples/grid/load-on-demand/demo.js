@@ -29,7 +29,7 @@ $(function () {
                     {
                         key: 'Tweets',
                         dataType: 'string',
-                        headerText: 'Infragistics Tweets',
+                        headerText: 'Infragistics ツイート',
                         unbound: true,
                         width: "100%",
                         template: "<div style='float:left'><img src='http://jp.dev.igniteui.local/13-2/images/ig_twitter_logo.png' ></img></div><div class='tweet'><p style='height:20px'><span class='tweet-user'>{{>user.name}}</span><span class='tweet-screen-name'>@{{>user.screen_name}}</span><span class='tweet-date'>{{>#view.hlp('formatDate')(created_at)}}</span></p><p class='tweet-text'>{{>text}}</p></div>"
@@ -58,7 +58,7 @@ $(function () {
                     {
                         key: 'Tweets',
                         dataType: 'string',
-                        headerText: 'Infragistics Tweets',
+                        headerText: 'Infragistics ツイート',
                         unbound: true,
                         width: "100%",
                         template: "<div style='float:left'><img src='http://jp.dev.igniteui.local/13-2/images/ig_twitter_logo.png' ></img></div><div class='tweet'><p style='height:20px'><span class='tweet-user'>{{>user.name}}</span><span class='tweet-screen-name'>@{{>user.screen_name}}</span><span class='tweet-date'>{{>#view.hlp('formatDate')(created_at)}}</span></p><p class='tweet-text'>{{>text}}</p></div>"
