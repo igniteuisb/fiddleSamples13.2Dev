@@ -10,12 +10,12 @@ $( function ()
                 maxWidth: 260,
                 contentFunction: contentFunction,
                 selectors: "[title]",
-                title: 'To display the location of the city is used Google maps',
+                title: 'Google Map を使用して市の位置を表示します。',
                 containment: $( '#popoverTooltip' ),
                 showOn: "focus"
             } );
 
-            var tableTemplate = "<table><thead><tr><th>English</th><th>Spanish</th></tr></thead><tbody ><tr><td>${en}</td><td>${es}</td></tr></tbody></table>";
+            var tableTemplate = "<table><thead><tr><th>英語</th><th>スペイン語</th></tr></thead><tbody ><tr><td>${en}</td><td>${es}</td></tr></tbody></table>";
             $( '#bodyParts' ).igPopover( {
                 direction: "auto",
                 position: "auto",

@@ -3,8 +3,8 @@ $(function () {
             $("#grid").igGrid({
                 height: 500,
                 columns: [
-                    { headerText: "Time", key: "Time", dataType: "string", width: 80 },
-                    { headerText: "Wind Speed(mph)", key: "WindSpeed", dataType: "number", width: 160 },
+                    { headerText: "時間", key: "Time", dataType: "string", width: 80 },
+                    { headerText: "風速 (mph)", key: "WindSpeed", dataType: "number", width: 160 },
                     { headerText: "グラフ", key: "graph", width: 370 }
                 ],
                 rowTemplate: "<tr><td>${Time}</td><td>${WindSpeed}</td><td><div class='linear-gauge' ></div></td></tr>",
@@ -68,6 +68,6 @@ $(function () {
                         }
 
                     }],
-                caption: "Raw Data from NOAA. Wind information from Los Angeles (07\\16\\2013) weather station."
+                caption: "NOAA からの生データ。ロサンゼルス観測所からの風情報 (2013/07/16)。"
             });
         });
