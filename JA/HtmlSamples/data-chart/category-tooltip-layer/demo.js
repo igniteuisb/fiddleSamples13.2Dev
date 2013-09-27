@@ -58,7 +58,7 @@ $(function () {
             $("#transitionDurationSlider").slider({
                 min: 0,
                 max: 1000,
-                value: 500,
+                value: 0,
                 slide: function (event, ui) {
                     $("#chart").igDataChart("option", "series", [{ name: "categorySeries", transitionDuration: ui.value }]);
                     $("#transitionDurationLabel").text(ui.value);

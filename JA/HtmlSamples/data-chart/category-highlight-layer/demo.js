@@ -39,7 +39,7 @@ $(function () {
                     },
                     {
                         name: "1995Population",
-                        type: "line",
+                        type: "column",
                         isTransitionInEnabled: true,
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
@@ -96,8 +96,8 @@ $(function () {
             // Transiton Duration Slider
             $("#transitionDurationSlider").slider({
                 min: 0,
-                max: 100,
-                value: 500,
+                max: 1000,
+                value: 0,
                 slide: function (event, ui) {
                     $("#chart").igDataChart("option", "series", [{ name: "catHighlightLayer", transitionDuration: ui.value }]);
                     $("#transitionDurationLabel").text(ui.value);

@@ -40,7 +40,7 @@ $(function () {
                     },
                     {
                         name: "1995Population",
-                        type: "line",
+                        type: "column",
                         title: "1995 Population",
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
