@@ -10,6 +10,12 @@
 
 <div id="chart"></div>
 	<div id="zoom"></div>
-	<div id="buttonset" style="position: absolute; top: 0px; left: 50px; z-index: 10000;">
-		<button type="button">Day</button><button type="button">Month</button><button type="button">Year</button>
+	<div id="buttonset" class="buttonset">
+		<input type="radio" id="day" name="radio"></input><label for="day">Day</label>
+		<input type="radio" id="week" name="radio"></input><label for="week">Week</label>
+		<input type="radio" id="month" name="radio"></input><label for="month">Month</label>
 	</div>
+	<div id="date">
+	</div>
+	<div id="popoverLeft"></div>
+	<div id="popoverRight"></div>
