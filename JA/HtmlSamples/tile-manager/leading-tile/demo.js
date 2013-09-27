@@ -50,7 +50,7 @@ var activated = [false, false, false, false],
             } else {
                 options = optionsPhone;
             }
-            $('#mercedes').igTileManager(options);
+            $('#magarcedes').igTileManager(options);
             activated[0] = true;
         });
 });
