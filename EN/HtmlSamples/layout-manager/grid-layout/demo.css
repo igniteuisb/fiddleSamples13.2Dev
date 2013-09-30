@@ -6,3 +6,13 @@ ul
         #layout {
             position: relative;
         }
+
+        .ig-layout-item {
+            font-size: 20px;
+        }
+
+        @media all and (max-width: 480px) {
+            .ig-layout-item {
+                font-size: 16px;
+            }
+        }

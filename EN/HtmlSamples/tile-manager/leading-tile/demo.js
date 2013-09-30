@@ -17,10 +17,10 @@ var activated = [false, false, false, false],
                 minimizedState: ':not(ul)'
             },
             optionsPhone = {
-                columnWidth: 160,
+                columnWidth: 125,
                 columnHeight: 160,
-                marginLeft: 10,
-                marginTop: 10,
+                marginLeft: 5,
+                marginTop: 5,
                 items: [
                     { rowIndex: 0, colIndex: 0, rowSpan: 2, colSpan: 2 },
                     { rowIndex: 0, colIndex: 2, rowSpan: 1, colSpan: 1 },
