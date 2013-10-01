@@ -10,8 +10,7 @@ $(function () {
                     name: "xAxis",
                     type: "categoryX",
                     label: "Year",
-                    labelTopMargin: 5,
-                    title: "年"
+                    labelTopMargin: 5
                 }, {
                     name: "yAxis",
                     type: "numericY",
@@ -81,8 +80,7 @@ $(function () {
                 }, {
                     name: "yAxis",
                     type: "categoryY",
-                    label: "Year",
-                    title: "年"
+                    label: "Year"
                 }],
                 series: [{
                     name: "series1",

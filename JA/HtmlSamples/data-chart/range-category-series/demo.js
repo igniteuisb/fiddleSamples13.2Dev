@@ -9,8 +9,7 @@ $(function () {
                     axes: [{
                         name: "xAxis",
                         type: "categoryX",
-                        label: "Time",
-                        title: "時間"
+                        label: "Time"
                     },
                     {
                         name: "yAxis",
