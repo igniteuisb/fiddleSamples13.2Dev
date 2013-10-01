@@ -21,7 +21,6 @@ $(function () {
                     valueMemberPath: "value",
                     triangulationDataSource: "http://dev.igniteui.local/13-2/data-files/shapes/nws_precip_2011091820.itf"
                 }],
-                windowResponse: "deferred",
                 windowRect: {
                     left: 0.31,
                     top: 0.375,

@@ -3,9 +3,8 @@ $(function () {
             mapHelper();
 
             $("#map").igMap({
-                width: "100%",
-                height: "350px",
-                crosshairVisibility: "visible",
+                width: "700px",
+                height: "500px",
                 verticalZoomable: true,
                 horizontalZoomable: true,
                 overviewPlusDetailPaneVisibility: "visible",
@@ -23,7 +22,6 @@ $(function () {
                     shapefileUri: "http://dev.igniteui.local/13-2/data-files/shapes/world.shp",
                     databaseUri: "http://dev.igniteui.local/13-2/data-files/shapes/world.dbf"
                 }],
-                windowResponse: "immediate",
                 windowRect: {
                     left: 0,
                     top: 0,

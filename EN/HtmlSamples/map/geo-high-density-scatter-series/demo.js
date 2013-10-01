@@ -13,11 +13,12 @@ $(function () {
                     dataSource: placeData,
                     latitudeMemberPath: "lat",
                     longitudeMemberPath: "lon",
+                    heatMinimum: 0,
+                    heatMaximum: 5,
                     mouseOverEnabled: true,
                     showTooltip: true,
                     tooltipTemplate: "cityTemplate"
                 }],
-                windowResponse: "immediate",
                 windowRect: {
                     left: 0.7,
                     top: 0.52,
@@ -40,29 +41,29 @@ $(function () {
         // Minimum Heat Value
         $("#minimumHeatValueSlider").slider({
             min: 0,
-            max: 100,
+            max: 5,
             value: 0,
             slide: function (event, ui) {
-                $("#map").igMap("option", "series", [{ name: "australiaMap", minimumHeat: ui.value}]);
+                $("#map").igMap("option", "series", [{ name: "australiaMap", heatMinimum: ui.value }]);
                 $("#minimumHeatValueLabel").text(ui.value);
             }
         });
 
         // Maximum Heat Value
         $("#maximumHeatValueSlider").slider({
-            min: 0,
-            max: 100,
-            value: 50,
+            min: 5,
+            max: 10,
+            value: 10,
             slide: function (event, ui) {
-                $("#map").igMap("option", "series", [{ name: "australiaMap", maximumHeat: ui.value}]);
+                $("#map").igMap("option", "series", [{ name: "australiaMap", heatMaximum: ui.value }]);
                 $("#maximumHeatValueLabel").text(ui.value);
             }
         });
 
         // Point Extent
         $("#pointExtentSlider").slider({
-            min: 0,
-            max: 20,
+            min: 1,
+            max: 5,
             value: 1,
             slide: function (event, ui) {
                 $("#map").igMap("option", "series", [{ name: "australiaMap", pointExtent: ui.value}]);

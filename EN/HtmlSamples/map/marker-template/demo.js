@@ -1,7 +1,7 @@
 $(function () {
             $("#map").igMap({
                 width: "700px",
-                crosshairVisibility: "visible",
+                height: "500px",
                 verticalZoomable: true,
                 horizontalZoomable: true,
                 overviewPlusDetailPaneVisibility: "visible",
@@ -51,7 +51,6 @@ $(function () {
                         }
                     }
                 ],
-                windowResponse: "immediate",
                 //  Specific initial view for the map
                 windowRect: {
                     left: 0.35,
