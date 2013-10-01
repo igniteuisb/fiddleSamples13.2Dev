@@ -321,7 +321,7 @@ $(function () {
                         strip: "rgba(0,0,0,.1)",
                         label: "Genre",
                         interval: 1,
-                        labelExtent: 95,
+                        labelExtent: 115,
                         labelAngle: 75
                     },
                     {
