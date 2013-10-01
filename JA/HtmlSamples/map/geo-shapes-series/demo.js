@@ -2,7 +2,6 @@ $(function () {
             $("#map").igMap({
                 width: "700px",
                 height: "500px",
-                crosshairVisibility: "visible",
                 verticalZoomable: true,
                 horizontalZoomable: true,
                 overviewPlusDetailPaneVisibility: "visible",
@@ -20,7 +19,6 @@ $(function () {
                     brush: "rgba(68,138,223,.6)",
                     outline: "rgba(34,108,200,1)"
                 }],
-                windowResponse: "immediate",
                 windowRect: {
                     left: 0.2470,
                     top: 0.3143,

@@ -2,7 +2,6 @@ $(function () {
             $("#map").igMap({
                 width: "700px",
                 height: "500px",
-                crosshairVisibility: "visible",
                 verticalZoomable: true,
                 horizontalZoomable: true,
                 overviewPlusDetailPaneVisibility: "visible",
@@ -18,7 +17,6 @@ $(function () {
                     databaseSource: "http://jp.dev.igniteui.local/13-2/data-files/shapes/north_america_primary_roads.dbf",
                     outline: "grey"
                 }],
-                windowResponse: "immediate",
                 windowRect: {
                     left: 0.2470,
                     top: 0.3143,

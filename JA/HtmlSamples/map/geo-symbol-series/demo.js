@@ -1,12 +1,11 @@
 $(function () {
              $("#map").igMap({
                  width: "700px",
-                 crosshairVisibility: "visible",
+                 height: "500px",
                  verticalZoomable: true,
                  horizontalZoomable: true,
                  overviewPlusDetailPaneVisibility: "visible",
                  overviewPlusDetailPaneBackgroundImageUri: "http://jp.dev.igniteui.local/13-2/images/samples/maps/world.png",
-                 panModifier: "control",
                  backgroundContent: {
                      type: "openStreet"
                  },
@@ -23,7 +22,6 @@ $(function () {
                      showTooltip: true,
                      tooltipTemplate: "cityTemplate"
                  }],
-                 windowResponse: "immediate",
                  windowRect: {
                      left: 0.27,
                      top: 0.20,
