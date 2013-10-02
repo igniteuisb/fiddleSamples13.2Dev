@@ -8,23 +8,23 @@ $(function () {
                         columnSettings: [
                             {
                                 columnKey: 'EmployeeID',
-                                classes: 'hidden-phone'
+                                classes: 'ui-hidden-phone'
                             },
                             {
                                 columnKey: 'Address',
-                                classes: 'hidden-phone'
+                                classes: 'ui-hidden-phone'
                             },
                             {
                                 columnKey: 'Region',
-                                classes: 'hidden-phone'
+                                classes: 'ui-hidden-phone'
                             },
                             {
                                 columnKey: 'PostalCode',
-                                classes: 'hidden-phone'
+                                classes: 'ui-hidden-phone'
                             },
                             {
                                 columnKey: 'HomePhone',
-                                classes: 'hidden-phone'
+                                classes: 'ui-hidden-phone'
                             }
                         ]
                     },
@@ -53,6 +53,7 @@ $(function () {
                 ],
                 width: "100%",
                 height: "90%",
+                autoCommit:true,
                 initialDataBindDepth: -1,
                 dataSource: northwind,
                 dataSourceType: "json",
@@ -97,11 +98,11 @@ $(function () {
                                 columnSettings: [
                                     {
                                         columnKey: 'OrderID',
-                                        classes: 'hidden-phone'
+                                        classes: 'ui-hidden-phone'
                                     },
                                     {
                                         columnKey: 'ShipName',
-                                        classes: 'hidden-phone'
+                                        classes: 'ui-hidden-phone'
                                     }
                                 ]
                             },
@@ -111,7 +112,7 @@ $(function () {
                             },
                             {
                                 name: "Updating",
-                                enableAddRow: true,
+                                enableAddRow: false,
                                 rowEditDialogContainment: "owner",
                                 editMode: "rowedittemplate",
                                 showReadonlyEditors: false,
