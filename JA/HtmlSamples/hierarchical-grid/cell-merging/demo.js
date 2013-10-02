@@ -1,41 +1,11 @@
 $(function () {
-            // Used to show output in the API Viewer at runtime, 
-            // defined in external script 'apiviewer.js'           
-            var apiViewer = new $.ig.apiViewer();
-
-            /*----------------- Method & Option Examples -------------------------*/
-
-            $("input[name='cellMergingInitialState']").click(function () {
-                $("#grid1").igHierarchicalGrid("destroy");
-                createGrid();
-            });
-
-            /*----------------- Event Examples -------------------------*/
-
-            $(document).on("iggridcellmergingcellsmerged", "#grid1", function (evt, ui) {
-                var message = "cellsMerged イベントのログ有効";
-                apiViewer.log(message);
-                message = "結合グループの開始行インデックス: " + ui.rowIndex;
-                apiViewer.log(message);
-                message = "結合グループの開始行キー: " + ui.rowKey;
-                apiViewer.log(message);
-                message = "結合グループを作成し、繰り返されたセル値: " + ui.value;
-                apiViewer.log(message);
-                message = "結合セルの合計数: " + ui.count;
-                apiViewer.log(message);
-                apiViewer.log('<br/>');
-                return;
-            });
-
             /*----------------- Instantiation -------------------------*/
             createGrid();
         });
        
 
-        function createGrid() {
-            var initialState = $('input:radio[name=cellMergingInitialState]:checked').val();
-            $("#grid1").remove();
-            $("<table id='grid1'></table>").appendTo("#gridContainer").igHierarchicalGrid({
+        function createGrid() {         
+            $( "#grid1" ).igHierarchicalGrid( {
                 height: "100%",
                 width: "100%",
                 autoCommit: true,
@@ -47,10 +17,10 @@ $(function () {
                 columns: [
                    { key: "EmployeeID", headerText: "社員 ID", dataType: "number", width: "10%" },
                    { key: "LastName", headerText: "名前", dataType: "string", width: "15%" },
-                   { key: "FirstName", headerText: "名字", dataType: "string", width: "15%" },
-                   { key: "Title", headerText: "役職", dataType: "string", width: "10%" },
-                   { key: "Address", headerText: "住所", dataType: "string", width: "15%" },
-                   { key: "City", headerText: "市", dataType: "string", width: "15%" },
+                   { key: "FirstName", headerText: "名字", dataType: "string", width: "10%" },
+                   { key: "Title", headerText: "役職", dataType: "string", width: "15%" },
+                   { key: "Address", headerText: "住所", dataType: "string", width: "20%" },
+                   { key: "City", headerText: "市", dataType: "string", width: "10%" },
                    { key: "Region", headerText: "領域", dataType: "string", width: "10%" },
                    { key: "Country", headerText: "国名", dataType: "string", width: "10%" }
                 ],
@@ -61,22 +31,22 @@ $(function () {
                         columnSettings: [
                             {
                                 columnKey: 'EmployeeID',
-                                classes: 'hidden-phone'
+                                classes: 'ui-hidden-phone'
                             },
                             {
                                 columnKey: 'Address',
-                                classes: 'hidden-phone'
+                                classes: 'ui-hidden-phone'
                             },
                             {
                                 columnKey: 'Region',
-                                classes: 'hidden-phone'
+                                classes: 'ui-hidden-phone'
                             }
                         ]
                     },
                     {
                         name: 'CellMerging',
                         inherit: true,
-                        initialState: initialState
+                        initialState: "merged"
                     },
                     {
                         name: 'Sorting',
@@ -110,17 +80,17 @@ $(function () {
                                 columnSettings: [
                                     {
                                         columnKey: 'OrderID',
-                                        classes: 'hidden-phone'
+                                        classes: 'ui-hidden-phone'
                                     },
                                     {
                                         columnKey: 'ShipName',
-                                        classes: 'hidden-phone'
+                                        classes: 'ui-hidden-phone'
                                     }
                                 ]
                             },
                             {
                                 name: "Paging",
-                                pageSize: 10
+                                pageSize: 5
                             }
                         ]
                     }
