@@ -39,7 +39,6 @@ $(function () {
 							pageSize: 10,
 							showPageSizeDropDown: false,
 							pageIndexChanging: function (e, args) {
-								debugger;
 								fillReverseState("page", null, args.currentPageIndex);
 							},
 							pageIndexChanged: function (e, args) {
@@ -53,7 +52,6 @@ $(function () {
 							type: "local",
 							mode: "multi",
 							columnSorting: function (e, args) {
-								debugger;
 								fillReverseState("sort", args.columnKey, args.direction === "ascending" ? "descending" : "ascending");
 							},
 							columnSorted: function (e, args) {
@@ -157,7 +155,6 @@ $(function () {
 				window.History.Adapter.bind(window, 'statechange', function (e, args) {
 					var currState, state, prevState, stateOccurances;
 					if (manualStateChange == true) { // Fired only when called externally from browser buttons
-						debugger;
 						currState = window.History.getState()
 						state = currState.data,
 						isBack,
@@ -185,7 +182,6 @@ $(function () {
 								case "filter": grid.igGridFiltering("filter", ([{ fieldName: state.value[0], expr: state.value[2], cond: state.value[1] }])); break;
 							}
 						} else { // Unload previous state
-							debugger;
 							prevState = window.History.savedStates[window.History.savedStates.length - 2].data;
 							if(prevState.key )
 							switch (prevState.key) {
