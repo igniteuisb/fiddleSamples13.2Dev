@@ -30,7 +30,7 @@ $(function () {
                 dataSource: northwind,
                 dataSourceType: "json",
                 responseDataKey: "results",
-                width: "98%",
+                width: "100%",
                 height: "100%",
                 tabIndex: 1,
                 features: [
@@ -40,15 +40,15 @@ $(function () {
                         columnSettings: [
                             {
                                 columnKey: 'EmployeeID',
-                                classes: 'hidden-phone'
+                                classes: 'ui-hidden-phone'
                             },
                             {
                                 columnKey: 'PostalCode',
-                                classes: 'hidden-phone'
+                                classes: 'ui-hidden-phone'
                             },
                             {
                                 columnKey: 'BirthDate',
-                                classes: 'hidden-phone'
+                                classes: 'ui-hidden-phone'
                             }
                         ]
                     },

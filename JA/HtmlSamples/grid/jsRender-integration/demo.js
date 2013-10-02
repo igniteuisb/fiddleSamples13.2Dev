@@ -18,10 +18,10 @@ $(function () {
         </tr>
      
 
-        $(function () {            
+        $(function () {
 
             var titles = ["Sales Representative", "Sales Manager", "Inside Sales Coordinator", "Vice President, Sales"];
-            var countries = ["UK", "USA"];                      
+            var countries = ["UK", "USA"];
 
             $.views.helpers(
             {
@@ -36,10 +36,10 @@ $(function () {
                     var name = val.split(',').reverse().join(" ");
                     return name;
                 }
-            });            
+            });
 
             $("#grid12").igGrid({
-                width: "98%",
+                width: "100%",
                 height: "600px",
                 rowTemplate: $("#theTmpl").html(),
                 autoGenerateColumns: false,
@@ -55,7 +55,6 @@ $(function () {
                         { headerText: "生年月日", key: "BirthDate", dataType: "date" }
                     ],
                 dataSource: northwindEmployees,
-                dataSourceType: 'json',
                 primaryKey: "ID",
                 templatingEngine: "jsrender",
                 features: [
@@ -65,93 +64,15 @@ $(function () {
                         columnSettings: [
                             {
                                 columnKey: 'ID',
-                                classes: 'hidden-phone'
+                                classes: 'ui-hidden-phone'
                             },
                             {
                                 columnKey: 'Phone',
-                                classes: 'hidden-phone'
+                                classes: 'ui-hidden-phone'
                             },
                             {
                                 columnKey: 'Name',
-                                classes: 'hidden-phone'
-                            }
-                        ]
-                    },
-                    {
-                        name: "Selection"
-                    },
-                    {
-                        name: "Filtering",
-                        type: "local",
-                        mode: "advanced",
-                        filterDropDownItemIcons: false,
-                        filterDropDownWidth: 200,
-                        columnSettings: [
-                            {
-                                columnKey: "Name",
-                                allowFiltering: false
-                            },
-                            {
-                                columnKey: "ImageUrl",
-                                allowFiltering: false
-                            },
-                            {
-                                columnKey: "Languages",
-                                allowFiltering: false
-                            }
-                        ]
-                    },
-                    {
-                        name: "Updating",
-                        enableDataDirtyException: false,
-                        enableAddRow: false,
-                        editMode: "rowedittemplate",
-                        rowEditDialogWidth: 350,
-                        rowEditDialogHeight: '430',
-                        rowEditDialogContentHeight: 300,
-                        rowEditDialogFieldWidth: 150,
-                        rowEditDialogOkCancelButtonWidth: 110,
-                        rowEditDialogContainment: "owner",
-                        showReadonlyEditors: false,
-                        columnSettings: [
-                            {
-                                columnKey: "ImageUrl",
-                                readOnly: true
-                            },
-                            {
-                                columnKey: "Languages",
-                                readOnly: true
-                            },
-                            {
-                                columnKey: "EmployeeID",
-                                readOnly: true
-                            },
-                            {
-                                columnKey: "Title",
-                                editorType: "text",
-                                editorOptions: {
-                                    button: "dropdown",
-                                    listItems: titles,
-                                    readOnly: true,
-                                    dropDownOnReadOnly: true
-                                }
-                            },
-                            {
-                                columnKey: "Country",
-                                editorType: "text",
-                                editorOptions: {
-                                    button: "dropdown",
-                                    listItems: countries,
-                                    readOnly: true,
-                                    dropDownOnReadOnly: true
-                                }
-                            },
-                            {
-                                columnKey: "BirthDate",
-                                editorType: "datepicker",
-                                validation: true,
-                                editorOptions: { minValue: new Date(1955, 1, 19), maxValue: new Date(), required: true },
-                                validatorOptions: { bodyAsParent: false }
+                                classes: 'ui-hidden-phone'
                             }
                         ]
                     }

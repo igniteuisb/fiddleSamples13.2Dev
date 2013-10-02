@@ -19,11 +19,11 @@ $(function () {
                         columnSettings: [
                             {
                                 columnKey: "EmployeeID",
-                                classes: "hidden-phone"
+                                classes: "ui-hidden-phone"
                             },
                             {
                                 columnKey: "PostalCode",
-                                classes: "hidden-phone"
+                                classes: "ui-hidden-phone"
                             }
                         ]
                     },
