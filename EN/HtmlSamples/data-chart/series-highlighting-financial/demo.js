@@ -39,6 +39,7 @@ $(function () {
             if (seriesType == "ohlc" || seriesType == "candlestick") {
                 $("#chart").igDataChart("option", "series", [{
                     type: "financial",
+                    displayType: seriesType,
                     isTransitionInEnabled: true,
                     isHighlightingEnabled: true,
                     closeMemberPath: "Close",
@@ -49,8 +50,7 @@ $(function () {
                     xAxis: "xAxis",
                     yAxis: "yAxis",
                     name: "indicatorSeries",
-                    title: "Financial Indicator Data",
-                    displayType: seriesType
+                    title: "Financial Indicator Data"
                 }]);
             }
                
