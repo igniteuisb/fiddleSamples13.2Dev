@@ -9,21 +9,18 @@
 <link href="http://dev.igniteui.local/13-2/IgniteUI/css/structure/modules/infragistics.ui.chart.new.css" rel="stylesheet"></link>
 <script src="http://dev.igniteui.local/13-2/IgniteUI/js/i18n/infragistics-ja.js"></script>
 
-<table>
-        <tr>
-            <th>ローソク足チャート</th><th>OHLC</th>
-        </tr>
-        <tr>
-            <td>
-                <div id="candlestickChart" class="chartElement"></div>
-            </td>
-            <td>
-                <div id="ohlcChart" class="chartElement"></div>
-            </td>
-        </tr>
-    </table>
+<div id="charts">
+        <div class="chart-container">
+            <h3>ローソク足チャート</h3>
+            <div id="candlestickChart" class="chartElement"></div>
+        </div>
+        <div class="chart-container">
+            <h3>OHLC</h3>
+            <div id="ohlcChart" class="chartElement"></div>
+        </div>
 
-    <div class="Quandldata-attribution">
-    株価のデータ ソース:<br />
-    <a href="http://www.quandl.com/" target="_blank">Quandl</a>
+        <div class="Quandldata-attribution">
+            株価のデータ ソース:<br />
+            <a href="http://www.quandl.com/" target="_blank">Quandl</a>
+        </div>
     </div>
