@@ -198,7 +198,7 @@ $(function () {
                 }],
                 series: [{
                     name: "series1",
-                    title: "$$(Chart_lbl_testSeries)",
+                    title: "テスト系列",
                     type: "radialPie",
                     angleAxis: "angleAxis",
                     valueAxis: "radiusAxis",
@@ -363,7 +363,7 @@ $(function () {
                     }]);
                     $("#chart").igDataChart("option", "series", [{
                         name: "series1",
-                        title: "$$(Chart_lbl_testSeries)",
+                        title: "テスト系列",
                         type: "radialPie",
                         angleAxis: "angleAxis",
                         valueAxis: "radiusAxis",

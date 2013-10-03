@@ -8,7 +8,6 @@ $(function () {
         function createDefaultSelectorsGrid()
         {
             $( "#defaultRowSelectors" ).igHierarchicalGrid( {
-                height: "95%",
                 width: "100%",
                 autoGenerateColumns: false,
                 dataSource: northwind,
@@ -96,7 +95,6 @@ $(function () {
         function createCboxSelectorsGrid()
         {
             $( "#cbRowSelectors" ).igHierarchicalGrid( {
-                height: "95%",
                 width: "100%",
                 autoGenerateColumns: false,
                 dataSource: northwind,
@@ -187,7 +185,6 @@ $(function () {
         function createRowNumberingGrid()
         {
             $( "#rowNumbering" ).igHierarchicalGrid( {
-                height: "95%",
                 width: "100%",
                 autoGenerateColumns: false,
                 dataSource: northwind,

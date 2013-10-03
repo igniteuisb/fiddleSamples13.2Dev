@@ -43,12 +43,6 @@ $(function () {
                         ]
                     },
                     {
-                        name: "Paging",
-                        type: 'local',
-                        pageSize: 5,
-                        inherit: true
-                    },
-                    {
                         name: "Sorting",
                         type: 'local',
                         inherit: true
@@ -65,7 +59,6 @@ $(function () {
                     }
                 ],
                 width: "100%",
-                height: "95%",
                 initialDataBindDepth: -1,
                 loadOnDemand: false,
                 dataSource: northwind,
@@ -74,8 +67,8 @@ $(function () {
                 autoGenerateColumns: false,
                 primaryKey: "EmployeeID",
                 columns: [
-                    { key: "EmployeeID", headerText: "社員 ID", dataType: "number", width: "15%" },
-                    { key: "LastName", headerText: "名字", dataType: "string", width: "10%" },
+                    { key: "EmployeeID", headerText: "社員 ID", dataType: "number", hidden: true },
+                    { key: "LastName", headerText: "名字", dataType: "string", width: "15%" },
                     { key: "FirstName", headerText: "名前", dataType: "string", width: "15%" },
                     { key: "Title", headerText: "役職", dataType: "string", width: "20%" },
                     { key: "City", headerText: "市", dataType: "string", width: "10%" },
@@ -83,7 +76,7 @@ $(function () {
                     { key: "Region", headerText: "領域", dataType: "string", width: "10%" },
                     { key: "Country", headerText: "国名", dataType: "string", hidden: true }
                 ],
-                childrenDataProperty: "Orders",                
+                childrenDataProperty: "Orders",
                 autoGenerateLayouts: false,
                 columnLayouts: [
                     {
@@ -92,7 +85,6 @@ $(function () {
                         autoGenerateColumns: false,
                         primaryKey: "OrderID",
                         width: "100%",
-                        height: "95%",
                         columns: [
                             { key: "OrderID", headerText: "注文 ID", dataType: "number", width: "10%", hidden: true },
                             { key: "CustomerID", headerText: "顧客 ID", dataType: "string", width: "15%" },

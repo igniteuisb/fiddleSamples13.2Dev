@@ -42,7 +42,6 @@ $(function () {
                     }
                 ],
                 width: "100%",
-                height: "90%",
                 autoCommit:true,
                 initialDataBindDepth: -1,
                 dataSource: northwind,
@@ -55,8 +54,8 @@ $(function () {
                     { key: "LastName", headerText: "名字", dataType: "string", width: "10%" },
                     { key: "FirstName", headerText: "名前", dataType: "string", width: "10%" },
                     { key: "Title", headerText: "役職", dataType: "string", width: "20%" },
-                    { headerText: "住所", key: "Address", dataType: "string", width: "20%" },
-                    { headerText: "市", key: "City", dataType: "string", width: "10%" }
+                    { key: "Address", headerText: "住所", dataType: "string", width: "20%" },
+                    { key: "City", headerText: "市", dataType: "string", width: "10%" }
                 ],
                 childrenDataProperty: "Orders",
                 autoGenerateLayouts: false,               

@@ -55,7 +55,7 @@ var currData, currDataSource, doGeneration, startTime = null;
                 }],
 	            series: [{
 	                name: "series1",
-	                title: "$$(Chart_lbl_testSeries)",
+	                title: "テスト系列",
 	                type: "line",
 	                xAxis: "xAxis",
 	                yAxis: "yAxis",
