@@ -91,6 +91,18 @@ $(function () {
                             {
                                 name: "Paging",
                                 pageSize: 10
+                            },
+                            {
+                                name: 'Sorting',
+                                type: 'local',
+                                applySortedColumnCss: false,
+                                columnSettings: [
+                                    {
+                                        columnKey: "ShipCountry",
+                                        allowSorting: true,
+                                        currentSortDirection: "ascending"
+                                    }
+                                ]
                             }
                         ]
                     }
