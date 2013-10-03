@@ -49,8 +49,12 @@ $(function () {
                         name: "catHighlightLayer",
                         title: "categoryHighlight",
                         type: "categoryHighlightLayer",
-                        useInterpolation: false,
-                        transitionDuration: 500
+                        useInterpolation: true,
+                        transitionDuration: 500,
+                        brush: "black",
+                        outline: "black",
+                        thickness: 1,
+                        opacity: 1
                     }]
             });
 
@@ -97,7 +101,7 @@ $(function () {
             $("#transitionDurationSlider").slider({
                 min: 0,
                 max: 1000,
-                value: 0,
+                value: 500,
                 slide: function (event, ui) {
                     $("#chart").igDataChart("option", "series", [{ name: "catHighlightLayer", transitionDuration: ui.value }]);
                     $("#transitionDurationLabel").text(ui.value);
