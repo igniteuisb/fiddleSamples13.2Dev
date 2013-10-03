@@ -61,6 +61,7 @@ var currData, currDataSource, doGeneration, startTime = null;
 	                yAxis: "yAxis",
 	                valueMemberPath: "Value",
 	                showTooltip: true,
+	                tooltipTemplate: "tooltipTemplate"
 	            }],
 	            horizontalZoomable: true,
 	            verticalZoomable: true,

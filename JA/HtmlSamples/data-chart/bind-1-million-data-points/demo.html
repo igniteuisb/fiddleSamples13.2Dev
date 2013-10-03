@@ -8,6 +8,14 @@
 <link href="http://dev.igniteui.local/13-2/IgniteUI/css/structure/modules/infragistics.ui.chart.new.css" rel="stylesheet"></link>
 <script src="http://dev.igniteui.local/13-2/IgniteUI/js/i18n/infragistics-ja.js"></script>
 
+<script id="tooltipTemplate" type="text/x-jquery-tmpl">
+        <table>
+            <tr>
+                <td colspan="2" class="tooltip">$$(Chart_lbl_testSeries): ${item.Value}</td>
+            </tr>
+        </table>
+    </script>
+
 <div>
         <div style="padding: 5px;">
             <button type="button" onclick="refresh()">更新</button>
