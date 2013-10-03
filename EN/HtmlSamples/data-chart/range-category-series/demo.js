@@ -18,7 +18,7 @@ $(function () {
                     }],
                     series: [{
                         name: "series1",
-                        title: "$$(Chart_lbl_testSeries)",
+                        title: "Test Series",
                         type: seriesType,
                         isHighlightingEnabled: true,
                         isTransitionInEnabled: true,
