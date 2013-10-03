@@ -15,6 +15,8 @@ $(function () {
                     longitudeMemberPath: "lon",
                     heatMinimum: 0,
                     heatMaximum: 5,
+                    heatMinimumColor: "black",
+                    heatMaximumColor: "orange",
                     mouseOverEnabled: true,
                     showTooltip: true,
                     tooltipTemplate: "cityTemplate"
@@ -60,6 +62,21 @@ $(function () {
             }
         });
 
+        // Heat Minimum Color
+        $("#minimumHeatColorDropDown").on({
+            change: function (e) {
+                var minColor = $(this).val();
+                $("#map").igMap("option", "series", [{ name: "australiaMap", heatMinimumColor: minColor }]);
+            }
+        });
+
+        // Heat Maximum Color
+        $("#maximumHeatColorDropDown").on({
+            change: function (e) {
+                var maxColor = $(this).val();
+                $("#map").igMap("option", "series", [{ name: "australiaMap", heatMaximumColor: maxColor }]);
+            }
+        });
         // Point Extent
         $("#pointExtentSlider").slider({
             min: 1,
@@ -71,21 +88,6 @@ $(function () {
             }
         });
 
-        // Heat Minimum Color
-        $("#minimumHeatColorDropDown").on({
-            change: function (e) {
-                var minColor = $(this).val();
-                $("#map").igMap("option", "series", [{ name: "australiaMap", heatMinimumColor: minColor}]);
-            }
-        });
-
-        // Heat Maximum Color
-        $("#maximumHeatColorDropDown").on({
-            change: function (e) {
-                var maxColor = $(this).val();
-                $("#map").igMap("option", "series", [{ name: "australiaMap", heatMaximumColor: maxColor}]);
-            }
-        });
 
         // Enable Mouse Over
         $("#enableMouseOverCheckBox").click(function (e) {
