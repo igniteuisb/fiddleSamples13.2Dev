@@ -42,7 +42,6 @@ $(function () {
                     }
                 ],
                 width: "100%",
-                height: "90%",
                 autoCommit:true,
                 initialDataBindDepth: -1,
                 dataSource: northwind,
@@ -55,8 +54,8 @@ $(function () {
                     { key: "LastName", headerText: "Last Name", dataType: "string", width: "10%" },
                     { key: "FirstName", headerText: "First Name", dataType: "string", width: "10%" },
                     { key: "Title", headerText: "Title", dataType: "string", width: "20%" },
-                    { headerText: "Address", key: "Address", dataType: "string", width: "20%" },
-                    { headerText: "City", key: "City", dataType: "string", width: "10%" }
+                    { key: "Address", headerText: "Address", dataType: "string", width: "20%" },
+                    { key: "City", headerText: "City", dataType: "string", width: "10%" }
                 ],
                 childrenDataProperty: "Orders",
                 autoGenerateLayouts: false,               

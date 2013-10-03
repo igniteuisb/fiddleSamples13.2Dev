@@ -6,7 +6,6 @@ $(function () {
 
         function createGrid() {         
             $( "#grid1" ).igHierarchicalGrid( {
-                height: "95%",
                 width: "100%",
                 autoCommit: true,
                 autoGenerateColumns: false,

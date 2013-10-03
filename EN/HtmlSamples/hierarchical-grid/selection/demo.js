@@ -1,4 +1,4 @@
-$(function () {           
+$(function () {
             /*----------------- Instantiation -------------------------*/
             createCellSelectionGrid();
             createRowSelectionGrid();
@@ -6,7 +6,6 @@ $(function () {
 
         function createCellSelectionGrid() {  
             $( "#cellSelectionGrid" ).igHierarchicalGrid( {
-                height: "95%",
                 width: "100%",
                 autoGenerateColumns: false,
                 dataSource: northwind,
@@ -16,16 +15,16 @@ $(function () {
                 dataSourceType: "json",
                 features: [
                         {
-                            name: 'Responsive',
+                            name: "Responsive",
                             enableVerticalRendering: false,
                             columnSettings: [
                                 {
-                                    columnKey: 'Title',
-                                    classes: 'ui-hidden-phone'
+                                    columnKey: "Title",
+                                    classes: "ui-hidden-tablet"
                                 },
                                 {
-                                    columnKey: 'Address',
-                                    classes: 'ui-hidden-phone'
+                                    columnKey: "Address",
+                                    classes: "ui-hidden-tablet"
                                 }
                             ]
                         }
@@ -35,10 +34,10 @@ $(function () {
                   { key: "LastName", headerText: "Last Name", dataType: "string", width: "10%" },
                   { key: "FirstName", headerText: "First Name", dataType: "string", width: "10%" },
                   { key: "Title", headerText: "Title", dataType: "string", width: "20%" },
-                  { headerText: "Address", key: "Address", dataType: "string", width: "25%" },
-                  { headerText: "City", key: "City", dataType: "string", width: "10%" }
+                  { key: "Address", headerText: "Address", dataType: "string", width: "20%" },
+                  { key: "City", headerText: "City", dataType: "string", width: "10%" }
                 ],
-                childrenDataProperty: "Orders",                
+                childrenDataProperty: "Orders",
                 autoGenerateLayouts: false,
                 columnLayouts: [
                     {
@@ -59,16 +58,16 @@ $(function () {
                 ],
                 features: [
                     {
-                        name: 'Responsive',
+                        name: "Responsive",
                         enableVerticalRendering: false,
                         columnSettings: [
                             {
-                                columnKey: 'ShipAddress',
-                                classes: 'ui-hidden-phone'
+                                columnKey: "ShipAddress",
+                                classes: "ui-hidden-tablet"
                             },
                             {
-                                columnKey: 'ShipName',
-                                classes: 'ui-hidden-phone'
+                                columnKey: "ShipName",
+                                classes: "ui-hidden-tablet"
                             }
                         ]
                     },
@@ -92,7 +91,6 @@ $(function () {
         function createRowSelectionGrid()
         {
             $( "#rowSelectionGrid" ).igHierarchicalGrid( {
-                height: "95%",
                 width: "100%",
                 autoGenerateColumns: false,
                 dataSource: northwind,
@@ -102,16 +100,16 @@ $(function () {
                 dataSourceType: "json",
                 features: [
                     {
-                        name: 'Responsive',
+                        name: "Responsive",
                         enableVerticalRendering: false,
                         columnSettings: [
                             {
-                                columnKey: 'Title',
-                                classes: 'ui-hidden-phone'
+                                columnKey: "Title",
+                                classes: "ui-hidden-tablet"
                             },
                             {
-                                columnKey: 'Address',
-                                classes: 'ui-hidden-phone'
+                                columnKey: "Address",
+                                classes: "ui-hidden-tablet"
                             }
                         ]
                     },
@@ -121,8 +119,8 @@ $(function () {
                   { key: "LastName", headerText: "Last Name", dataType: "string", width: "10%" },
                   { key: "FirstName", headerText: "First Name", dataType: "string", width: "10%" },
                   { key: "Title", headerText: "Title", dataType: "string", width: "20%" },
-                  { headerText: "Address", key: "Address", dataType: "string", width: "25%" },
-                  { headerText: "City", key: "City", dataType: "string", width: "10%" }
+                  { key: "Address", headerText: "Address", dataType: "string", width: "20%" },
+                  { key: "City", headerText: "City", dataType: "string", width: "10%" }
                 ],
                 childrenDataProperty: "Orders",
                 autoGenerateLayouts: false,
@@ -145,16 +143,16 @@ $(function () {
                 ],
                 features: [
                     {
-                        name: 'Responsive',
+                        name: "Responsive",
                         enableVerticalRendering: false,
                         columnSettings: [
                             {
-                                columnKey: 'ShipAddress',
-                                classes: 'ui-hidden-phone'
+                                columnKey: "ShipAddress",
+                                classes: "ui-hidden-tablet"
                             },
                             {
-                                columnKey: 'ShipName',
-                                classes: 'ui-hidden-phone'
+                                columnKey: "ShipName",
+                                classes: "ui-hidden-tablet"
                             }
                         ]
                     },

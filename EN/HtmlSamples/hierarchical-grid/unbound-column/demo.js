@@ -43,12 +43,6 @@ $(function () {
                         ]
                     },
                     {
-                        name: "Paging",
-                        type: 'local',
-                        pageSize: 5,
-                        inherit: true
-                    },
-                    {
                         name: "Sorting",
                         type: 'local',
                         inherit: true
@@ -65,7 +59,6 @@ $(function () {
                     }
                 ],
                 width: "100%",
-                height: "95%",
                 initialDataBindDepth: -1,
                 loadOnDemand: false,
                 dataSource: northwind,
@@ -74,8 +67,8 @@ $(function () {
                 autoGenerateColumns: false,
                 primaryKey: "EmployeeID",
                 columns: [
-                    { key: "EmployeeID", headerText: "Employee ID", dataType: "number", width: "15%" },
-                    { key: "LastName", headerText: "Last Name", dataType: "string", width: "10%" },
+                    { key: "EmployeeID", headerText: "Employee ID", dataType: "number", hidden: true },
+                    { key: "LastName", headerText: "Last Name", dataType: "string", width: "15%" },
                     { key: "FirstName", headerText: "First Name", dataType: "string", width: "15%" },
                     { key: "Title", headerText: "Title", dataType: "string", width: "20%" },
                     { key: "City", headerText: "City", dataType: "string", width: "10%" },
@@ -83,7 +76,7 @@ $(function () {
                     { key: "Region", headerText: "Region", dataType: "string", width: "10%" },
                     { key: "Country", headerText: "Country", dataType: "string", hidden: true }
                 ],
-                childrenDataProperty: "Orders",                
+                childrenDataProperty: "Orders",
                 autoGenerateLayouts: false,
                 columnLayouts: [
                     {
@@ -92,7 +85,6 @@ $(function () {
                         autoGenerateColumns: false,
                         primaryKey: "OrderID",
                         width: "100%",
-                        height: "95%",
                         columns: [
                             { key: "OrderID", headerText: "Order ID", dataType: "number", width: "10%", hidden: true },
                             { key: "CustomerID", headerText: "Customer ID", dataType: "string", width: "15%" },
