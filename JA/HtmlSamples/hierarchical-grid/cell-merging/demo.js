@@ -6,7 +6,7 @@ $(function () {
 
         function createGrid() {         
             $( "#grid1" ).igHierarchicalGrid( {
-                height: "100%",
+                height: "95%",
                 width: "100%",
                 autoCommit: true,
                 autoGenerateColumns: false,
@@ -15,7 +15,7 @@ $(function () {
                 responseDataKey: "results",
                 dataSourceType: "json",
                 columns: [
-                   { key: "EmployeeID", headerText: "社員 ID", dataType: "number", width: "10%" },
+                   { key: "EmployeeID", headerText: "社員 ID", dataType: "number", width: "10%", hidden:true },
                    { key: "LastName", headerText: "名前", dataType: "string", width: "15%" },
                    { key: "FirstName", headerText: "名字", dataType: "string", width: "10%" },
                    { key: "Title", headerText: "役職", dataType: "string", width: "15%" },
@@ -30,7 +30,7 @@ $(function () {
                         enableVerticalRendering: false,
                         columnSettings: [
                             {
-                                columnKey: 'EmployeeID',
+                                columnKey: 'Title',
                                 classes: 'ui-hidden-phone'
                             },
                             {
@@ -66,7 +66,7 @@ $(function () {
                         primaryKey: "OrderID",
                         width: "100%",
                         columns: [
-                            { key: "OrderID", headerText: "注文 ID", dataType: "number", width: "10%" },
+                            { key: "OrderID", headerText: "注文 ID", dataType: "number", width: "10%", hidden:true },
                             { key: "Freight", headerText: "輸送", dataType: "string", width: "15%" },
                             { key: "ShipName", headerText: "出荷名", dataType: "string", width: "20%" },
                             { key: "ShipAddress", headerText: "配送先住所", dataType: "string", width: "25%" },
@@ -79,7 +79,7 @@ $(function () {
                                 enableVerticalRendering: false,
                                 columnSettings: [
                                     {
-                                        columnKey: 'OrderID',
+                                        columnKey: 'ShipAddress',
                                         classes: 'ui-hidden-phone'
                                     },
                                     {
@@ -90,7 +90,7 @@ $(function () {
                             },
                             {
                                 name: "Paging",
-                                pageSize: 5
+                                pageSize: 10
                             }
                         ]
                     }

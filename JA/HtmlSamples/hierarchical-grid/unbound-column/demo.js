@@ -33,7 +33,7 @@ $(function () {
                         enableVerticalRendering: false,
                         columnSettings: [
                             {
-                                columnKey: 'EmployeeID',
+                                columnKey: 'Title',
                                 classes: 'ui-hidden-phone'
                             },
                             {
@@ -41,9 +41,6 @@ $(function () {
                                 classes: 'ui-hidden-phone'
                             }
                         ]
-                    },
-                    {
-                        name: 'Hiding'
                     },
                     {
                         name: "Paging",
@@ -97,10 +94,10 @@ $(function () {
                         width: "100%",
                         height: "95%",
                         columns: [
-                            { key: "OrderID", headerText: "注文 ID", dataType: "number", width: "10%" },
+                            { key: "OrderID", headerText: "注文 ID", dataType: "number", width: "10%", hidden: true },
                             { key: "CustomerID", headerText: "顧客 ID", dataType: "string", width: "15%" },
-                            { key: "Freight", headerText: "輸送", dataType: "string", width: "15%" },
-                            { key: "FreightExpence", headerText: "輸送費", unbound: true, dataType: "number", width: "20%", formula: "CalculateFreightExpence" },
+                            { key: "Freight", headerText: "輸送", dataType: "number", format:"0.00", width: "15%" },
+                            { key: "FreightExpence", headerText: "輸送費", unbound: true, dataType: "number", format: "0.00", width: "20%", formula: "CalculateFreightExpence" },
                             { key: "ShipName", headerText: "出荷名", dataType: "string", width: "25%" },
                             { key: "ShipCity", headerText: "配送先市町村", dataType: "string", width: "15%" },
                         ],
@@ -110,7 +107,7 @@ $(function () {
                                 enableVerticalRendering: false,
                                 columnSettings: [
                                     {
-                                        columnKey: 'OrderID',
+                                        columnKey: 'Freight',
                                         classes: 'ui-hidden-phone'
                                     },
                                     {

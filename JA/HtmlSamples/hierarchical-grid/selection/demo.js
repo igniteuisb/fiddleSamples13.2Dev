@@ -15,23 +15,23 @@ $(function () {
                 responseDataKey: "results",
                 dataSourceType: "json",
                 features: [
-                    {
-                        name: 'Responsive',
-                        enableVerticalRendering: false,
-                        columnSettings: [
-                            {
-                                columnKey: 'EmployeeID',
-                                classes: 'ui-hidden-phone'
-                            },
-                            {
-                                columnKey: 'Address',
-                                classes: 'ui-hidden-phone'
-                            }
-                        ]
-                    },
+                        {
+                            name: 'Responsive',
+                            enableVerticalRendering: false,
+                            columnSettings: [
+                                {
+                                    columnKey: 'Title',
+                                    classes: 'ui-hidden-phone'
+                                },
+                                {
+                                    columnKey: 'Address',
+                                    classes: 'ui-hidden-phone'
+                                }
+                            ]
+                        }
                     ],
                 columns: [
-                  { key: "EmployeeID", headerText: "社員 ID", dataType: "number", width: "5%" },
+                  { key: "EmployeeID", headerText: "社員 ID", dataType: "number", width: "5%", hidden: true },
                   { key: "LastName", headerText: "名字", dataType: "string", width: "10%" },
                   { key: "FirstName", headerText: "名前", dataType: "string", width: "10%" },
                   { key: "Title", headerText: "役職", dataType: "string", width: "20%" },
@@ -48,7 +48,7 @@ $(function () {
                         width: "100%",
                         primaryKey: "OrderID",
                         columns: [
-                            { key: "OrderID", headerText: "注文 ID", dataType: "number", width: "5%" },
+                            { key: "OrderID", headerText: "注文 ID", dataType: "number", width: "5%", hidden: true },
                             { key: "Freight", headerText: "輸送", dataType: "string", width: "15%" },
                             { key: "ShipName", headerText: "出荷名", dataType: "string", width: "20%" },
                             { key: "ShipAddress", headerText: "配送先住所", dataType: "string", width: "20%" },
@@ -63,7 +63,7 @@ $(function () {
                         enableVerticalRendering: false,
                         columnSettings: [
                             {
-                                columnKey: 'OrderID',
+                                columnKey: 'ShipAddress',
                                 classes: 'ui-hidden-phone'
                             },
                             {
@@ -106,7 +106,7 @@ $(function () {
                         enableVerticalRendering: false,
                         columnSettings: [
                             {
-                                columnKey: 'EmployeeID',
+                                columnKey: 'Title',
                                 classes: 'ui-hidden-phone'
                             },
                             {
@@ -117,7 +117,7 @@ $(function () {
                     },
                 ],
                 columns: [
-                  { key: "EmployeeID", headerText: "社員 ID", dataType: "number", width: "5%" },
+                  { key: "EmployeeID", headerText: "社員 ID", dataType: "number", width: "5%", hidden: true },
                   { key: "LastName", headerText: "名字", dataType: "string", width: "10%" },
                   { key: "FirstName", headerText: "名前", dataType: "string", width: "10%" },
                   { key: "Title", headerText: "役職", dataType: "string", width: "20%" },
@@ -134,7 +134,7 @@ $(function () {
                         width: "100%",
                         primaryKey: "OrderID",
                         columns: [
-                            { key: "OrderID", headerText: "注文 ID", dataType: "number", width: "5%" },
+                            { key: "OrderID", headerText: "注文 ID", dataType: "number", width: "5%", hidden: true },
                             { key: "Freight", headerText: "輸送", dataType: "string", width: "15%" },
                             { key: "ShipName", headerText: "出荷名", dataType: "string", width: "20%" },
                             { key: "ShipAddress", headerText: "配送先住所", dataType: "string", width: "20%" },
@@ -149,7 +149,7 @@ $(function () {
                         enableVerticalRendering: false,
                         columnSettings: [
                             {
-                                columnKey: 'OrderID',
+                                columnKey: 'ShipAddress',
                                 classes: 'ui-hidden-phone'
                             },
                             {
