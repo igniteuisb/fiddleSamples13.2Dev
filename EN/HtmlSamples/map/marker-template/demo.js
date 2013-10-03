@@ -31,17 +31,26 @@ $(function () {
                                 } else {
                                     var data = renderInfo.data;
                                     var name = data.item()["Name"];
+                                    var type = data.item()["Type"];
                                     //  Draw text
                                     ctx.textBaseline = "top";
                                     ctx.font = '8pt Verdana';
                                     ctx.fillStyle = "black";
                                     ctx.textBaseline = "middle";
-                                    wrapText(ctx, name, x + 7, y, 120, 12);
+                                    wrapText(ctx, name, x + 3, y + 6, 80, 12);
 
                                     //  Draw marker
                                     ctx.beginPath();
                                     ctx.arc(x, y, 4, 0, 2 * Math.PI, false);
-                                    ctx.fillStyle = "#2372D1";
+                                    if (type == "Marketing")
+                                        ctx.fillStyle = "#2372D1";
+                                    else if (type == "Support")
+                                        ctx.fillStyle = "#4d4949";
+                                    else if (type == "Development Lab")
+                                        ctx.fillStyle = "#d13521";
+                                    else
+                                        ctx.fillStyle = "#36a815";
+
                                     ctx.fill();
                                     ctx.lineWidth = 1;
                                     ctx.strokeStyle = "black";
@@ -52,12 +61,8 @@ $(function () {
                     }
                 ],
                 //  Specific initial view for the map
-                windowRect: {
-                    left: 0.35,
-                    top: 0.25,
-                    height: 0.45,
-                    width: 0.45
-                }
+                windowRect: { left: 0.4, top: 0.2, height: 0.6, width: 0.6 },
+
             });
         });
 
@@ -129,7 +134,7 @@ $(function () {
             //  Output lines of text
             context.fillStyle = "black";
             for (var n = 0; n < lines.length; n++) {
-                context.fillText(lines[n], x, yCurrent);
+                context.fillText(" " + lines[n], x, yCurrent);
                 yCurrent += lineHeight;
             }
         }

@@ -1,32 +1,33 @@
 $(function () {
+            
+            mapHelper();
 
             $("#map").igMap({
                 width: "700px",
                 height: "500px",
+                windowRect: { left: 0.1, top: 0.1, height: 0.7, width: 0.7 },
                 verticalZoomable: true,
                 horizontalZoomable: true,
-                overviewPlusDetailPaneVisibility: "visible",
-                overviewPlusDetailPaneBackgroundImageUri: "http://dev.igniteui.local/13-2/images/samples/maps/world.png",
-                panModifier: "control",
                 backgroundContent: {
                     type: "cloudMade",
                     key: cloudmadeData,
                     parameter: 2
                 },
                 series: [{
-                    type: "geographicShape",
-                    name: "worldCountries",
+                    type: "geographicSymbol",
+                    name: "worldCities",
+                    dataSource: data,
+                    latitudeMemberPath: "Latitude",
+                    longitudeMemberPath: "Longitude",
                     markerType: "automatic",
-                    shapeMemberPath: "points",
-                    shapefileUri: "http://dev.igniteui.local/13-2/data-files/shapes/world.shp",
-                    databaseUri: "http://dev.igniteui.local/13-2/data-files/shapes/world.dbf"
+                    markerCollisionAvoidance: "fade",
+                    markerOutline: "#b51c1c",
+                    markerBrush: "#b51c1c",
+                    showTooltip: true,
+                    tooltipTemplate: "tooltipTemplate"
                 }],
-                windowRect: {
-                    left: 0,
-                    top: 0,
-                    height: 0.7,
-                    width: 0.7
-                }
+                
+                
             });
 
         });

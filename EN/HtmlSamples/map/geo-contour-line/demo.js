@@ -11,7 +11,9 @@ $(function () {
                     name: "precipitation",
                     fillScale: {
                         type: "value",
-                        brushes: ["#3300CC", "#4775FF", "#0099CC", "#00CC99", "#33CC00", "#99CC00", "#CC9900", "#FFC20A", "#CC3300"]
+                        brushes: [
+                            "#3300CC", "#4775FF", "#0099CC", "#00CC99",
+                            "#33CC00", "#99CC00", "#CC9900", "#FFC20A", "#CC3300"]
                     },
                     triangleVertexMemberPath1: "v1",
                     triangleVertexMemberPath2: "v2",
@@ -19,7 +21,7 @@ $(function () {
                     longitudeMemberPath: "pointX",
                     latitudeMemberPath: "pointY",
                     valueMemberPath: "value",
-                    triangulationDataSource: "http://dev.igniteui.local/13-2/data-files/shapes/nws_precip_2011091820.itf"
+                    triangulationDataSource: "http://dev.igniteui.local/13-2/data-files/shapes/nws_precip_2011091820.itf",
                 }],
                 windowRect: {
                     left: 0.31,
