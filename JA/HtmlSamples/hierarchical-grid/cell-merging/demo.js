@@ -4,8 +4,8 @@ $(function () {
         });
        
 
-        function createGrid() {         
-            $( "#grid1" ).igHierarchicalGrid( {
+        function createGrid() {
+            $( "#grid1" ).igGrid({
                 width: "100%",
                 autoCommit: true,
                 autoGenerateColumns: false,
@@ -13,10 +13,12 @@ $(function () {
                 initialDataBindDepth: -1,
                 responseDataKey: "results",
                 dataSourceType: "json",
+                autofitLastColumn: false,
+                expandColWidth: "5%",
                 columns: [
-                   { key: "EmployeeID", headerText: "社員 ID", dataType: "number", width: "10%", hidden:true },
+                   { key: "EmployeeID", headerText: "社員 ID", dataType: "number", hidden:true },
                    { key: "LastName", headerText: "名前", dataType: "string", width: "15%" },
-                   { key: "FirstName", headerText: "名字", dataType: "string", width: "10%" },
+                   { key: "FirstName", headerText: "名字", dataType: "string", width: "15%" },
                    { key: "Title", headerText: "役職", dataType: "string", width: "15%" },
                    { key: "Address", headerText: "住所", dataType: "string", width: "20%" },
                    { key: "City", headerText: "市", dataType: "string", width: "10%" },
@@ -25,31 +27,31 @@ $(function () {
                 ],
                 features: [
                     {
-                        name: 'Responsive',
+                        name: "Responsive",
                         enableVerticalRendering: false,
                         columnSettings: [
                             {
-                                columnKey: 'Title',
-                                classes: 'ui-hidden-phone'
+                                columnKey: "Title",
+                                classes: "ui-hidden-phone ui-hidden-tablet"
                             },
                             {
-                                columnKey: 'Address',
-                                classes: 'ui-hidden-phone'
+                                columnKey: "Address",
+                                classes: "ui-hidden-phone"
                             },
                             {
-                                columnKey: 'Region',
-                                classes: 'ui-hidden-phone'
+                                columnKey: "Region",
+                                classes: "ui-hidden-phone"
                             }
                         ]
                     },
                     {
-                        name: 'CellMerging',
+                        name: "CellMerging",
                         inherit: true,
                         initialState: "merged"
                     },
                     {
-                        name: 'Sorting',
-                        type: 'local',
+                        name: "Sorting",
+                        type: "local",
                         inherit: true,
                         applySortedColumnCss: false
                     }
@@ -74,16 +76,16 @@ $(function () {
                         ],
                         features: [
                             {
-                                name: 'Responsive',
+                                name: "Responsive",
                                 enableVerticalRendering: false,
                                 columnSettings: [
                                     {
-                                        columnKey: 'ShipAddress',
-                                        classes: 'ui-hidden-phone'
+                                        columnKey: "ShipAddress",
+                                        classes: "ui-hidden-phone"
                                     },
                                     {
-                                        columnKey: 'ShipName',
-                                        classes: 'ui-hidden-phone'
+                                        columnKey: "ShipCity",
+                                        classes: "ui-hidden-phone"
                                     }
                                 ]
                             },
@@ -92,8 +94,8 @@ $(function () {
                                 pageSize: 10
                             },
                             {
-                                name: 'Sorting',
-                                type: 'local',
+                                name: "Sorting",
+                                type: "local",
                                 applySortedColumnCss: false,
                                 columnSettings: [
                                     {
