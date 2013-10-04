@@ -1,5 +1,5 @@
 $(function () {
-
+            
             mapHelper();
 
             $("#map").igMap({
@@ -8,11 +8,9 @@ $(function () {
                 windowRect: { left: 0.1, top: 0.1, height: 0.7, width: 0.7 },
                 verticalZoomable: true,
                 horizontalZoomable: true,
-                // specifies imagery tiles from BingMaps
+                // specifies imagery tiles from OpenStreetMap
                 backgroundContent: {
-                    type: "bing",
-                    key: bingData,
-                    imagerySet: "AerialWithLabels", // alternative: "Road" | "Aerial"
+                    type: "openStreet"
                 },
                 series: [{
                     type: "geographicSymbol",
@@ -22,11 +20,12 @@ $(function () {
                     longitudeMemberPath: "Longitude",
                     markerType: "automatic",
                     markerCollisionAvoidance: "fade",
-                    markerOutline: "#269bc9",
-                    markerBrush: "#269bc9",
+                    markerOutline: "#b51c1c",
+                    markerBrush: "#b51c1c",
                     showTooltip: true,
                     tooltipTemplate: "tooltipTemplate"
                 }],
+                
                 
             });
 

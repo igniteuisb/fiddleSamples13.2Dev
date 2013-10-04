@@ -8,6 +8,7 @@ $(function () {
                 windowRect: { left: 0.1, top: 0.1, height: 0.7, width: 0.7 },
                 verticalZoomable: true,
                 horizontalZoomable: true,
+                // specifies imagery tiles from CloudMadeMaps
                 backgroundContent: {
                     type: "cloudMade",
                     key: cloudmadeData,
