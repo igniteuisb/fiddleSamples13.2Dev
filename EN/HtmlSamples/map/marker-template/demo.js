@@ -19,6 +19,7 @@ $(function () {
                         longitudeMemberPath: "Longitude",
                         showTooltip: true,
                         tooltipTemplate: "customTooltip",
+                        markerCollisionAvoidance: "fade",
                         //  Defines marker template rendering function
                         markerTemplate: {
                             measure: function (measureInfo) {
@@ -26,48 +27,7 @@ $(function () {
                                 measureInfo.height = 10;
                             },
                             render: function (renderInfo) {
-                                var ctx = renderInfo.context;
-                                var x = renderInfo.xPosition;
-                                var y = renderInfo.yPosition;
-                                var size = 10;
-                                var heightHalf = size / 2.0;
-                                var widthHalf = size / 2.0;
-
-                                if (renderInfo.isHitTestRender) {
-                                    //  This is called for tooltip hit test only
-                                    //  Rough marker rectangle size calculation
-                                    //ctx.fillStyle = "red";
-                                    //ctx.fillRect(x, y, renderInfo.availableWidth, renderInfo.availableHeight);
-                                    ctx.fillStyle = renderInfo.data.actualItemBrush().fill();
-                                    ctx.fillRect(x - widthHalf, y - heightHalf, size, size);
-                                } else {
-                                    var data = renderInfo.data;
-                                    var name = data.item()["Name"];
-                                    var type = data.item()["ID"];
-                                    //  Draw text
-                                    ctx.textBaseline = "top";
-                                    ctx.font = '8pt Verdana';
-                                    ctx.fillStyle = "black";
-                                    ctx.textBaseline = "middle";
-                                    wrapText(ctx, name, x + 3, y + 6, 80, 12);
-
-                                    //  Draw marker
-                                    ctx.beginPath();
-                                    ctx.arc(x, y, 4, 0, 2 * Math.PI, false);
-                                    if (type == "Marketing")
-                                        ctx.fillStyle = "#2372D1";
-                                    else if (type == "Support")
-                                        ctx.fillStyle = "#4d4949";
-                                    else if (type == "Development Lab")
-                                        ctx.fillStyle = "#d13521";
-                                    else
-                                        ctx.fillStyle = "#36a815";
-
-                                    ctx.fill();
-                                    ctx.lineWidth = 1;
-                                    ctx.strokeStyle = "black";
-                                    ctx.stroke();
-                                }
+                                createMarker(renderInfo);
                             }
                         }
                     }
@@ -75,6 +35,49 @@ $(function () {
                
             });
         });
+        
+        function createMarker(renderInfo) {
+            var ctx = renderInfo.context;
+            var x = renderInfo.xPosition;
+            var y = renderInfo.yPosition;
+            var size = 10;
+            var heightHalf = size / 2.0;
+            var widthHalf = size / 2.0;
+
+            if (renderInfo.isHitTestRender) {
+                //  This is called for tooltip hit test only
+                //  Rough marker rectangle size calculation
+                ctx.fillStyle = renderInfo.data.actualItemBrush().fill();
+                ctx.fillRect(x - widthHalf, y - heightHalf, size, size);
+            } else {
+                var data = renderInfo.data;
+                var name = data.item()["Name"];
+                var type = data.item()["ID"];
+                //  Draw text
+                ctx.textBaseline = "top";
+                ctx.font = '8pt Verdana';
+                ctx.fillStyle = "black";
+                ctx.textBaseline = "middle";
+                wrapText(ctx, name, x + 3, y + 6, 80, 12);
+
+                //  Draw marker
+                ctx.beginPath();
+                ctx.arc(x, y, 4, 0, 2 * Math.PI, false);
+                if (type == "Marketing")
+                    ctx.fillStyle = "#2372D1";
+                else if (type == "Support")
+                    ctx.fillStyle = "#4d4949";
+                else if (type == "Development Lab")
+                    ctx.fillStyle = "#d13521";
+                else
+                    ctx.fillStyle = "#36a815";
+
+                ctx.fill();
+                ctx.lineWidth = 1;
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+            }
+        }
 
         //  Plots a rectangle with rounded corners with a semi-transparent frame
         function plotTextBackground(context, left, top, width, height) {
@@ -94,7 +97,7 @@ $(function () {
             context.lineTo(left, top + cornerRadius);
             context.arcTo(left, top, left + cornerRadius, top, cornerRadius);
             //  Fill white with 75% opacity
-            context.globalAlpha = 0.75;
+            context.globalAlpha = 1;
             context.fillStyle = "white";
             context.fill();
             context.globalAlpha = 1;
