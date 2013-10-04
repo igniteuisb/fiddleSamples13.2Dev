@@ -8,7 +8,7 @@ $(function () {
                     { headerText: "名字", key: "LastName", dataType: "string", width: "20%" },
                     { headerText: "生年月日", key: "BirthDate", dataType: "date", width: "15%" },
                     { headerText: "市", key: "City", dataType: "string", width: "15%" },
-                    { headerText: "郵便番号", key: "PostalCode", dataType: "number", width: "15%" }
+                    { headerText: "郵便番号", key: "PostalCode", dataType: "string", width: "15%" }
                 ],
                 dataSource: northwind,
                 responseDataKey: "results",
