@@ -6,6 +6,7 @@ $(function () {
                 horizontalZoomable: true,
                 overviewPlusDetailPaneVisibility: "visible",
                 overviewPlusDetailPaneBackgroundImageUri: "http://dev.igniteui.local/13-2/images/samples/maps/world.png",
+                windowRect: { left: 0.4, top: 0.2, height: 0.6, width: 0.6 },
                 backgroundContent: {
                     type: "openStreet"
                 },
@@ -16,22 +17,33 @@ $(function () {
                         dataSource: igOffices,
                         latitudeMemberPath: "Latitude",
                         longitudeMemberPath: "Longitude",
+                        showTooltip: true,
+                        tooltipTemplate: "customTooltip",
                         //  Defines marker template rendering function
                         markerTemplate: {
+                            measure: function (measureInfo) {
+                                measureInfo.width = 10;
+                                measureInfo.height = 10;
+                            },
                             render: function (renderInfo) {
                                 var ctx = renderInfo.context;
                                 var x = renderInfo.xPosition;
                                 var y = renderInfo.yPosition;
+                                var size = 10;
+                                var heightHalf = size / 2.0;
+                                var widthHalf = size / 2.0;
 
                                 if (renderInfo.isHitTestRender) {
                                     //  This is called for tooltip hit test only
                                     //  Rough marker rectangle size calculation
-                                    ctx.fillStyle = "red";
-                                    ctx.fillRect(x, y, renderInfo.availableWidth, renderInfo.availableHeight);
+                                    //ctx.fillStyle = "red";
+                                    //ctx.fillRect(x, y, renderInfo.availableWidth, renderInfo.availableHeight);
+                                    ctx.fillStyle = renderInfo.data.actualItemBrush().fill();
+                                    ctx.fillRect(x - widthHalf, y - heightHalf, size, size);
                                 } else {
                                     var data = renderInfo.data;
                                     var name = data.item()["Name"];
-                                    var type = data.item()["Type"];
+                                    var type = data.item()["ID"];
                                     //  Draw text
                                     ctx.textBaseline = "top";
                                     ctx.font = '8pt Verdana';
@@ -60,15 +72,13 @@ $(function () {
                         }
                     }
                 ],
-                //  Specific initial view for the map
-                windowRect: { left: 0.4, top: 0.2, height: 0.6, width: 0.6 },
-
+               
             });
         });
 
         //  Plots a rectangle with rounded corners with a semi-transparent frame
         function plotTextBackground(context, left, top, width, height) {
-            var cornerRadius = 3
+            var cornerRadius = 3;
             context.beginPath();
             //  Upper side and upper right corner
             context.moveTo(left + cornerRadius, top);
@@ -102,8 +112,8 @@ $(function () {
             var lines = [], currentLine = 0;
 
             //  Find the longest word in the text and update the max width if the longest word cannot fit
-            for (var n = 0; n < words.length; n++) {
-                var testWidth = context.measureText(words[n]);
+            for (var i = 0; n < words.length; i++) {
+                var testWidth = context.measureText(words[i]);
                 if (testWidth > maxWidth)
                     maxWidth = metrics.width;
             }

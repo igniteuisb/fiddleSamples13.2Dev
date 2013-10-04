@@ -26,7 +26,7 @@ $(function () {
                     outline: "rgba(45,130,200,0.6)",
                     outlineThickness: 0.25,
                     showTooltip: true,
-                    tooltipTemplate: "tooltipTemplate"
+                    tooltipTemplate: "geoShapeTooltip"
                 }],
 
             });
