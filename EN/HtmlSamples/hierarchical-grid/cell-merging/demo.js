@@ -5,7 +5,7 @@ $(function () {
        
 
         function createGrid() {
-            $( "#grid1" ).igGrid({
+            $( "#grid1" ).igHierarchicalGrid({
                 width: "100%",
                 autoCommit: true,
                 autoGenerateColumns: false,
