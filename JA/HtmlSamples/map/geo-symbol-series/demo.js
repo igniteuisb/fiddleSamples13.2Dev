@@ -1,6 +1,6 @@
 $(function () {
          
-            // load geo-locations from shapefile and simplify it
+            // load geo-locations from shapefile and simplify data structure
             var worldCities = [];
             var points = [];
             var shapeDataSource = new $.ig.ShapeDataSource({
@@ -12,7 +12,7 @@ $(function () {
                     var city = rec.fields.item("NAME");
                     var country = rec.fields.item("COUNTRY");
                     var population = rec.fields.item("POPULATION");
-                    if (population > 0) {
+                    if (population > 7000) {
                         points.push({
                             Latitude: pointY, Longitude: pointX,
                             City: city, Country: country,
@@ -21,12 +21,20 @@ $(function () {
                     }
                 },
                 callback: function () {
-                    worldCities = points;
+                    worldCities = points.sort(compareCities);;
                     createMap();
                 }
             });
-        shapeDataSource.dataBind();
+            shapeDataSource.dataBind();
 
+            function compareCities(a, b) {
+                if (a.Population > b.Population)
+                    return -1;
+                if (a.Population < b.Population)
+                    return 1;
+                return 0;
+            }
+            
         function createMap() {
 
             mapHelper();
@@ -51,7 +59,7 @@ $(function () {
                     longitudeMemberPath: "Longitude",
                     latitudeMemberPath: "Latitude",
                     showTooltip: true,
-                    tooltipTemplate: "tooltipTemplate",
+                    tooltipTemplate: "geoSymbolTooltip",
                     // using custom template
                     markerType: "none",
                     markerTemplate: {

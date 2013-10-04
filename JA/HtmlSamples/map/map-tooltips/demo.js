@@ -19,7 +19,7 @@ $(function () {
                     markerOutline: "#1142a6",
                     markerBrush: "#7197e5",
                     showTooltip: true,
-                    tooltipTemplate: "tooltipTemplate"
+                    tooltipTemplate: "customTooltip"
                 }],
                 
             });
