@@ -54,7 +54,7 @@ $(function () {
                         brush: "black",
                         outline: "black",
                         thickness: 1,
-                        opacity: 1
+                        opacity: 0.3
                     }]
             });
 
@@ -89,7 +89,7 @@ $(function () {
             $("#opacitySlider").slider({
                 min: 0,
                 max: 1,
-                value: 1,
+                value: 0.3,
                 step: 0.01,
                 slide: function (event, ui) {
                     $("#chart").igDataChart("option", "series", [{ name: "catHighlightLayer", opacity: ui.value }]);
