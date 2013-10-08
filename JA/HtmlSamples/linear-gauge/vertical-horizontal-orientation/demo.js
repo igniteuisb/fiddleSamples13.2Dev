@@ -27,10 +27,10 @@ $(function () {
                         endValue: 30
                     }],
                  
-                formatLabel: function (evt, ui) {
-                    ui.label = ui.label + "K";
-                },
-                transitionDuration: 200
+                //formatLabel: function (evt, ui) {
+                //    ui.label = ui.label + "K";
+                //},
+                //transitionDuration: 200
             });
 
             // Orientation
