@@ -50,7 +50,7 @@ $(function () {
                         title: "categoryHighlight",
                         type: "categoryHighlightLayer",
                         useInterpolation: true,
-                        transitionDuration: 500,
+                        transitionDuration: 250,
                         brush: "black",
                         outline: "black",
                         thickness: 1,
@@ -76,9 +76,10 @@ $(function () {
 
             // Thickness 
             $("#thicknessSlider").slider({
-                min: 0,
-                max: 10,
+                min: 1,
+                max: 4,
                 value: 1,
+                step: 1,
                 slide: function (event, ui) {
                     $("#chart").igDataChart("option", "series", [{ name: "catHighlightLayer", thickness: ui.value }]);
                     $("#thicknessLabel").text(ui.value);
@@ -97,11 +98,12 @@ $(function () {
                 }
             });
 
-            // Transiton Duration Slider
+            // Transition Duration Slider
             $("#transitionDurationSlider").slider({
                 min: 0,
                 max: 1000,
-                value: 500,
+                value: 150,
+                step: 50,
                 slide: function (event, ui) {
                     $("#chart").igDataChart("option", "series", [{ name: "catHighlightLayer", transitionDuration: ui.value }]);
                     $("#transitionDurationLabel").text(ui.value);

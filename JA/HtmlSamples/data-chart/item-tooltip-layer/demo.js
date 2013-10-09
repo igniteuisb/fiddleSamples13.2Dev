@@ -13,6 +13,8 @@ $(function () {
                 height: "400px",
                 title: "国別人口",
                 subtitle: "1995 年と 2005 年の人口の比較",
+                horizontalZoomable: true,
+                verticalZoomable: true,
                 dataSource: data,
                 axes: [
                     {
@@ -36,6 +38,8 @@ $(function () {
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
                         valueMemberPath: "Pop2005",
+                        isHighlightingEnabled: true,
+                        isTransitionInEnabled: true,
                         showTooltip: true
                     },
                     {
@@ -45,6 +49,8 @@ $(function () {
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
                         valueMemberPath: "Pop1995",
+                        isHighlightingEnabled: true,
+                        isTransitionInEnabled: true,
                         showTooltip: true
                     },
                     {
