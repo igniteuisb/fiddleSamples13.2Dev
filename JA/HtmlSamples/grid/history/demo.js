@@ -1,5 +1,5 @@
 $(function () {
-            var grid = $("#grid"),
+            var grid = $("#gridHistoryJS"),
                 manualStateChange = false, // true: fired by history go() and back() methods; false: fired when state is added to the history object.
                 reverseState = [],
                 stateCount = window.History.storedStates.length;
