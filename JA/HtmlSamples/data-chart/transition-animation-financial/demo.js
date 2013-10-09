@@ -3,7 +3,7 @@ $(function () {
                 width: "100%",
                 height: "400px",
                 dataSource: data,
-                title: "Financial Chart",
+                title: "財務チャート",
                 axes: [{
                     type: "categoryX",
                     label: "Date",
