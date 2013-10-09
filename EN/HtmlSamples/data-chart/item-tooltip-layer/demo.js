@@ -13,6 +13,8 @@ $(function () {
                 height: "400px",
                 title: "Population per Country",
                 subtitle: "A comparison of population in 1995 and 2005",
+                horizontalZoomable: true,
+                verticalZoomable: true,
                 dataSource: data,
                 axes: [
                     {
@@ -36,6 +38,8 @@ $(function () {
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
                         valueMemberPath: "Pop2005",
+                        isHighlightingEnabled: true,
+                        isTransitionInEnabled: true,
                         showTooltip: true
                     },
                     {
@@ -45,6 +49,8 @@ $(function () {
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
                         valueMemberPath: "Pop1995",
+                        isHighlightingEnabled: true,
+                        isTransitionInEnabled: true,
                         showTooltip: true
                     },
                     {
