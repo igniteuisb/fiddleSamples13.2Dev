@@ -51,8 +51,6 @@ $(function () {
                         type: "categoryHighlightLayer",
                         useInterpolation: true,
                         transitionDuration: 250,
-                        brush: "black",
-                        outline: "black",
                         thickness: 1,
                         opacity: 0.3
                     }]

@@ -49,8 +49,6 @@ $(function () {
                         name: "catItemHighlightLayer",
                         title: "categoryItemHighlight",
                         type: "categoryItemHighlightLayer",
-                        brush: "black",
-                        outline: "black",
                         opacity: 0.5,
                         thickness: 1,
                         useInterpolation: true,
