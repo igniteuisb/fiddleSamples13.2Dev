@@ -121,7 +121,7 @@ $(function () {
             })();
 
             function fillReverseState(feature, column, oldValue) {
-                var index = window.History.savedStates.length, pos;
+            	var index = window.History.savedStates.length, pos;
                 if (reverseState.length === 0) for (index = 0; index < window.History.savedStates.length; index++) reverseState[index] = null;
                 pos = previousPosition(feature, column);
                 if (pos < 0) {
@@ -137,18 +137,18 @@ $(function () {
                 var states = window.History.savedStates,
                     length = states.length,
                     index;
+                debugger;
                 for (index = length - 1; index >= 0; index--) {
                     if (states[index].data.key === feature &&
-                        (column === null || column !== null && states[index].value.indexOf(column) > -1)) {
-                        if (index = length - 1) {
+                        (column === null || column !== null && states[index].data.value.indexOf(column) > -1)) {
+                        if (index === length - 1) {
                             return 0;
                         } else {
                             return states[index];
                         }
-                    } else {
-                        return -1;
                     }
                 }
+                return -1;
             }
             //<-- Save igGrid state in the browser history object
 
