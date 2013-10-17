@@ -115,6 +115,19 @@ $(function () {
                         args.owner.element.find("tr td").css("text-align", "center");
                         args.owner.element.find("tr td:first-child").css("text-align", "left");
                         args.owner.element.find("tr td:last-child").css("text-align", "right");
+
+                        setTimeout(function () {
+                        	// By default "goals" and "assists" columns are sorted
+                        	args.owner.element.igGridSorting("sortColumn", "goals", "descending");
+                        	pushToBrowserHistory({ key: "sort", value: ["goals", "descending"] }, null, formURL("sort", ["goals", "descending"]));
+                        	args.owner.element.igGridSorting("sortColumn", "assists", "descending");
+                        	pushToBrowserHistory({ key: "sort", value: ["assists", "descending"] }, null, formURL("sort", ["assists", "descending"]));
+
+                        	// If the browser URL contains grid parameters, then this state is loaded.
+                        	if ((tempParams = window.location.search) !== "") {
+                        		loadInitialStateFromUrl();
+                        	}
+                        }, 500);
                     }
             	});
             	return grid;
@@ -137,7 +150,6 @@ $(function () {
                 var states = window.History.savedStates,
                     length = states.length,
                     index;
-                debugger;
                 for (index = length - 1; index >= 0; index--) {
                     if (states[index].data.key === feature &&
                         (column === null || column !== null && states[index].data.value.indexOf(column) > -1)) {
@@ -152,12 +164,15 @@ $(function () {
             }
             //<-- Save igGrid state in the browser history object
 
-            //--> Recover igGrid state from the browser history object
+        	//--> Recover igGrid state from the browser history object
             if (window.History && window.History.Adapter && notBound) {
             	notBound = false;
-                window.History.Adapter.bind(window, 'statechange', function (e, args) {
+            	window.History.Adapter.bind(window, 'statechange', function (e, args) {
                 	var currState, state, prevState, stateOccurances, isBack;
 
+                	if ($("#sample-title")[0].textContent.toLowerCase() !== "history.js integration") {
+                		return;
+                	}
                     if (manualStateChange == true) { // Fired only when called externally from browser buttons
                         currState = window.History.getState()
                         state = currState.data,
@@ -331,8 +346,4 @@ $(function () {
                          + "&body=" + escape("プレーヤーのカスタム リストはこちら: " + window.location);
                 window.location.href = link;
             });
-
-            if ((tempParams = window.location.search) !== "") {
-                loadInitialStateFromUrl();
-            }
         });
