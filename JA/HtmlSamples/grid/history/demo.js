@@ -1,9 +1,7 @@
 $(function () {
-            var gridHistoryJS,
+        	var gridHistoryJS,
                 manualStateChange = false, // true: fired by history go() and back() methods; false: fired when state is added to the history object.
-                reverseState = [],
-                tempParams = "",
-                notBound = true;
+                reverseState = [];
 
 
             //--> Save igGrid state in the browser history object
@@ -117,15 +115,14 @@ $(function () {
                         args.owner.element.find("tr td:last-child").css("text-align", "right");
 
                         setTimeout(function () {
-                        	// By default "goals" and "assists" columns are sorted
-                        	args.owner.element.igGridSorting("sortColumn", "goals", "descending");
-                        	pushToBrowserHistory({ key: "sort", value: ["goals", "descending"] }, null, formURL("sort", ["goals", "descending"]));
-                        	args.owner.element.igGridSorting("sortColumn", "assists", "descending");
-                        	pushToBrowserHistory({ key: "sort", value: ["assists", "descending"] }, null, formURL("sort", ["assists", "descending"]));
-
-                        	// If the browser URL contains grid parameters, then this state is loaded.
-                        	if ((tempParams = window.location.search) !== "") {
-                        		loadInitialStateFromUrl();
+                        	// Load Grid state from URL
+                        	loadInitialStateFromUrl();
+                        	if (window.location.search === "") {
+                        		// By default "goals" and "assists" columns are sorted
+                        		args.owner.element.igGridSorting("sortColumn", "goals", "descending");
+                        		pushToBrowserHistory({ key: "sort", value: ["goals", "descending"] }, null, formURL("sort", ["goals", "descending"]));
+                        		args.owner.element.igGridSorting("sortColumn", "assists", "descending");
+                        		pushToBrowserHistory({ key: "sort", value: ["assists", "descending"] }, null, formURL("sort", ["assists", "descending"]));
                         	}
                         }, 500);
                     }
@@ -165,12 +162,11 @@ $(function () {
             //<-- Save igGrid state in the browser history object
 
         	//--> Recover igGrid state from the browser history object
-            if (window.History && window.History.Adapter && notBound) {
-            	notBound = false;
+            if (window.History && window.History.Adapter) {
             	window.History.Adapter.bind(window, 'statechange', function (e, args) {
                 	var currState, state, prevState, stateOccurances, isBack;
 
-                	if ($("#sample-title")[0].textContent.toLowerCase() !== "history.js integration") {
+                	if ($("#sample-title")[0] !== undefined && $("#sample-title")[0].textContent.toLowerCase() !== "history.js integration") {
                 		return;
                 	}
                     if (manualStateChange == true) { // Fired only when called externally from browser buttons
@@ -208,11 +204,6 @@ $(function () {
                         }
                     }
                     manualStateChange = true;
-
-                    if (window.location.search === "" & tempParams !== "") {
-                        window.History.pushState(null, null, tempParams);
-                        tempParams = "";
-                    }
                 });
             }
 
