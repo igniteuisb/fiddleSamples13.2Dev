@@ -7,11 +7,11 @@ $(function () {
 
 
         	//--> Save igGrid state in the browser history object
-        	function addUndoState(feature, column, possibleUndo, oldValue, newValue) {
+        	function addUndoState(feature, column, possibleUndo, oldValue) {
         		var currState = window.History.getState(), data, undo = false;
         		pos = previousPosition(feature, column);
         		if (pos < 0) {
-        			data = { key: feature, value: column === null ? oldValue : [column, oldValue] };
+        			data = { key: feature, value: column === null ? oldValue : (!oldValue) ? column : [column, oldValue] };
         			undo = possibleUndo;
         		} else if (pos === 0) {
         			data = null;
@@ -139,8 +139,8 @@ $(function () {
 							},
 						    groupedColumnsChanged: function (e, args) {
 						        var columnKey = args.key;
-						        state = { key: "group", value: columnKey };
-						        pushToBrowserHistory(state, null, formURL("group", columnKey));
+						        state = { key: "groupby", value: columnKey };
+						        pushToBrowserHistory(state, null, formURL("groupby", columnKey));
 						    }
 						}
                     ],
@@ -279,15 +279,15 @@ $(function () {
             }
             function loadGroupState(key, value, undo) {
             	if (undo) {
-            		gridHistoryJS.igGridGroupBy("ungroupByColumn", value[0]);
+            		gridHistoryJS.igGridGroupBy("ungroupByColumn", value);
             	} else {
-            		if (!gridHistoryJS.igGridGroupBy("checkColumnIsGrouped")) gridHistoryJS.igGridGroupBy("groupByColumn", value[0]);
+            		if (!gridHistoryJS.igGridGroupBy("checkColumnIsGrouped", value)) gridHistoryJS.igGridGroupBy("groupByColumn", value);
             	} 
             }
             function loadGroupStateArray(key, value) {
             	var columns = value.split(";"), i;
             	for (i = 0; i < columns.length; i++) {
-            		gridHistoryJS.igGridGroupBy("groupby", columns[i]);
+            		gridHistoryJS.igGridGroupBy("groupByColumn", columns[i]);
             	}
             }
             //<-- Load individual igGrid features
