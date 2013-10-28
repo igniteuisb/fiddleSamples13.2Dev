@@ -93,6 +93,7 @@ $(document).ready(function () {
 			});
 			$("#zoom").igZoombar({
 				target: "#chart",
+				zoomWindowMinWidth: 1.2,
 				windowResized: function (evt, ui) {
 					var target = $(evt.originalEvent.target),
 						handle = target.hasClass("ui-igzoombar-window-handle") ?
