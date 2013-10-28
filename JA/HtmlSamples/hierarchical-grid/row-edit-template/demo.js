@@ -42,7 +42,7 @@ $(function () {
                     { key: "LastName", headerText: "名字", dataType: "string", width: "15%" },
                     { key: "Title", headerText: "役職", dataType: "string", width: "25%" },
                     { key: "Address", headerText: "住所", dataType: "string", width: "25%" },
-                    { key: "City", headerText: "市", dataType: "string", width: "15%" }
+                    { key: "City", headerText: "市", dataType: "string", width: "20%" }
                 ],
                 childrenDataProperty: "Orders",
                 autoGenerateLayouts: false,

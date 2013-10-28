@@ -56,10 +56,10 @@ $(function () {
                 primaryKey: "EmployeeID",
                 columns: [
                     { key: "EmployeeID", headerText: "社員 ID", dataType: "number", width: "0%", hidden: true },
-                    { key: "LastName", headerText: "名字", dataType: "string", width: "15%" },
-                    { key: "FirstName", headerText: "名前", dataType: "string", width: "15%" },
+                    { key: "LastName", headerText: "名字", dataType: "string", width: "20%" },
+                    { key: "FirstName", headerText: "名前", dataType: "string", width: "20%" },
                     { key: "Title", headerText: "役職", dataType: "string", width: "20%" },
-                    { key: "City", headerText: "市", dataType: "string", width: "10%" },
+                    { key: "City", headerText: "市", dataType: "string", width: "15%" },
                     { key: "IsUSA", headerText: "米国内", unbound: true, dataType: "bool", width: "15%", format: "checkbox" },
                     { key: "Region", headerText: "領域", dataType: "string", width: "10%" },
                     { key: "Country", headerText: "国名", dataType: "string", width: "0%", hidden: true }
