@@ -56,10 +56,10 @@ $(function () {
                 primaryKey: "EmployeeID",
                 columns: [
                     { key: "EmployeeID", headerText: "Employee ID", dataType: "number", width: "0%", hidden: true },
-                    { key: "LastName", headerText: "Last Name", dataType: "string", width: "15%" },
-                    { key: "FirstName", headerText: "First Name", dataType: "string", width: "15%" },
+                    { key: "LastName", headerText: "Last Name", dataType: "string", width: "20%" },
+                    { key: "FirstName", headerText: "First Name", dataType: "string", width: "20%" },
                     { key: "Title", headerText: "Title", dataType: "string", width: "20%" },
-                    { key: "City", headerText: "City", dataType: "string", width: "10%" },
+                    { key: "City", headerText: "City", dataType: "string", width: "15%" },
                     { key: "IsUSA", headerText: "In USA", unbound: true, dataType: "bool", width: "15%", format: "checkbox" },
                     { key: "Region", headerText: "Region", dataType: "string", width: "10%" },
                     { key: "Country", headerText: "Country", dataType: "string", width: "0%", hidden: true }

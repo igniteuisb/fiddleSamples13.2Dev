@@ -42,7 +42,7 @@ $(function () {
                     { key: "LastName", headerText: "Last Name", dataType: "string", width: "15%" },
                     { key: "Title", headerText: "Title", dataType: "string", width: "25%" },
                     { key: "Address", headerText: "Address", dataType: "string", width: "25%" },
-                    { key: "City", headerText: "City", dataType: "string", width: "15%" }
+                    { key: "City", headerText: "City", dataType: "string", width: "20%" }
                 ],
                 childrenDataProperty: "Orders",
                 autoGenerateLayouts: false,
