@@ -17,10 +17,7 @@ $(function () {
                     minimumValue: 0,
                     maximumValue: 200,
                     targetValueBrush: "white",
-                    valueBrush: "white",
-                    majorTickmarkBrush: "white",
-                    tickBrush: "#C1C1C1",
-                    fontBrush: "#C1C1C1"
+                    valueBrush: "white", 
                 });
 
                 $linearGauge.igLinearGauge("option", "ranges", [{ name: "range1", remove: true }]);
