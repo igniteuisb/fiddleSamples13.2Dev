@@ -3,7 +3,7 @@ $(function () {
 
             $bulletGraph.igBulletGraph({
                 width: "100%",
-                height: "90px",
+                height: "80px",
                 targetValueOutline: "transparent",
                 valueOutline: "transparent",
                 transitionDuration: 1000
@@ -17,10 +17,7 @@ $(function () {
                     minimumValue: 0,
                     maximumValue: 200,
                     targetValueBrush: "white",
-                    valueBrush: "white",
-                    majorTickmarkBrush: "white",
-                    tickBrush: "#C1C1C1",
-                    fontBrush: "#C1C1C1"
+                    valueBrush: "white"
                 });
 
                 $bulletGraph.igBulletGraph("option", "ranges", [{ name: "range1", remove: true }]);
