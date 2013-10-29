@@ -5,19 +5,19 @@ $(function () {
                 showToolTip: true, 
                 ranges: [
                     {
-                        name: 'Low',
+                        name: '低',
                         startValue: 0,
                         endValue: 40,
                         brush: "#F66656"
                     },
                     {
-                        name: 'Medium',
+                        name: '中',
                         startValue: 40,
                         endValue: 70,
                         brush: "#FFDA30"
                     },
                     {
-                        name: 'High',
+                        name: '高',
                         startValue: 70,
                         endValue: 100,
                         brush: "#72CA70"
@@ -40,19 +40,19 @@ $(function () {
                 targetValueToolTipTemplate: 'targetValueToolTipTemplateNew',
                 ranges: [
                      {
-                         name: 'Low',
+                         name: '低',
                          startValue: 0,
                          endValue: 20,
                          brush: "#F66656"
                      },
                      {
-                         name: 'Medium',
+                         name: '中',
                          startValue: 20,
                          endValue: 35,
                          brush: "#FFDA30"
                      },
                      {
-                         name: 'High',
+                         name: '高',
                          startValue: 35,
                          endValue: 50,
                          brush: "#72CA70"
@@ -61,7 +61,7 @@ $(function () {
                 formatLabel: function (evt, ui) {
                     ui.label = ui.value + "h";
                 },
-                valueName: "Spent Time",
+                valueName: "消費時間",
                 maximumValue: 50,
                 value: 23,
                 targetValue: 40, 

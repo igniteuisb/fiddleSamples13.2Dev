@@ -13,8 +13,8 @@
             <font color='${itemBrush}' >
                 <b>
                     ${item.name} <br />
-                    Starts: ${item.startValue}<br />
-                    Ends: ${item.endValue}
+                    開始日付: ${item.startValue}<br />
+                    終了日付: ${item.endValue}
                 </b>
             </font>
 		</div>
@@ -32,26 +32,26 @@
         <div  style="background-color:#3E3E3E; border: 1px solid black; color:red; font-size:120%; padding:5px 10px; border-radius: 0em 1em 0em 1em;">
             <font color='${itemBrush}' >
                 <b>
-                    Planned Time: ${item.value}
+                    予定期間: ${item.value}
                 </b>
             </font>
 		</div>
     </script>
 
 <div>
-        <h3 style="height:100px">Task Implementation Progress</h3>
+        <h3 style="height:100px">タスク実装の進行状況</h3>
         <div style="height:200px">
             <div style="width:30%">
-               Development Task
+               開発タスク
             </div>
             <div style="width:70%" id="bulletgraph_task1"></div>
         </div>
          
         <div style="height:200px">
             <div style="width:30%">
-               Quality Assurance Task
+               品質保証タスク
             </div>
             <div style="width:70%" id="bulletgraph_task2"></div>
         </div>
-        <div style="float:left">Even though these tasks are executed simultaneously at the course of three weeks, initially more time has been spent on development. This is demonstrated by the progress bars’ placement amongst the three different ranges (“Low, “Medium” and “High”), that represent the level of confidence for delivering the needed results.</div>
+        <div style="float:left">このタスクは 3 週間で同時に実行されますが、開発に他のタスク以上の時間が費やされました。進行状況バーは、タスク完了の可能性を表す状態範囲 (「高」、「中」、「低」) を表します。</div>
     </div>

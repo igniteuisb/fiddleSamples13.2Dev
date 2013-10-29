@@ -12,9 +12,9 @@ var data = [
                 //width: 400,
                 columns: [
                     { headerText: "月", key: "month", dataType: "string", width: 100 },
-                    { headerText: "Consumption (TWh)", key: "consumption", dataType: "number", width: 130 },
-                    { headerText: "Production (TWh)", key: "production", dataType: "number", width: 120 },
-                    { headerText: "Consumption Graph (TWh)", key: "graph", width: 470 }
+                    { headerText: "消費 (TWh)", key: "consumption", dataType: "number", width: 130 },
+                    { headerText: "生産 (TWh)", key: "production", dataType: "number", width: 120 },
+                    { headerText: "消費チャート (TWh)", key: "graph", width: 470 }
                 ],
                 rowTemplate: "<tr><td>${month}</td><td>${consumption}</td><td>${production}</td><td><div class='bullet-graph'></div></td></tr>",
                 dataSource: data,
@@ -40,7 +40,7 @@ var data = [
                                     endValue: el.end
                                 };
                             }),
-                            font: "8px Georgia",  
+                            font: "10px Georgia",  
                             scaleEndExtent: 0.9 
                         });
                     });

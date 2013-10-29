@@ -5,7 +5,7 @@ $(function () {
                 columns: [
                     { headerText: "時間", key: "Time", dataType: "string", width: 80 },
                     { headerText: "風速 (mph)", key: "WindSpeed", dataType: "number", width: 160 },
-                    { headerText: "グラフ", key: "graph", width: 370 }
+                    { headerText: "風速ゲージ (mph)", key: "gauge", width: 370 }
                 ],
                 rowTemplate: "<tr><td>${Time}</td><td>${WindSpeed}</td><td><div class='linear-gauge' ></div></td></tr>",
                 dataSource: data,
@@ -33,10 +33,7 @@ $(function () {
                             transitionDuration: 1200, 
                             labelInterval: 2,
                             interval: 1,
-                            font: "8px Georgia",
-                            formatLabel: function (evt, ui) {
-                                ui.label += "mph";
-                            },
+                            font: "10px Georgia"
                         });
                     });
                 },
@@ -60,7 +57,7 @@ $(function () {
                                 readOnly: true
                             },
                             {
-                                columnKey: "graph",
+                                columnKey: "gauge",
                                 readOnly: true
                             }
                         ],
