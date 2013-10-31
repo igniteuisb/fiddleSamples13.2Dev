@@ -40,8 +40,7 @@ var data = [
                                     endValue: el.end
                                 };
                             }), 
-                            scaleEndExtent: 0.9,
-                            font:"8px Arial"
+                            scaleEndExtent: 0.9
                         });
                     });
                 },
