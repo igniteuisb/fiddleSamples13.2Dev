@@ -14,7 +14,7 @@ $(function () {
                     $(".linear-gauge").each(function (i) {
                         var item = data[i];
                         $(this).igLinearGauge({
-                            height: "80px", 
+                            height: "60px", 
                             backingBrush: "transparent",
                             backingOutline: "transparent",
                             minimumValue: 0,
@@ -32,8 +32,7 @@ $(function () {
                             ],
                             transitionDuration: 1200, 
                             labelInterval: 2,
-                            interval: 1,
-                            font: "10px Georgia"
+                            interval: 1
                         });
                     });
                 },

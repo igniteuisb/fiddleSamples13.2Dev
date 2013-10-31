@@ -37,7 +37,7 @@ $(function () {
                 interval:500,
                 formatLabel: function (evt, ui)
                 {
-                    ui.label = ui.value + "$";
+                    ui.label = "$" + ui.value;
                 }
             });
 

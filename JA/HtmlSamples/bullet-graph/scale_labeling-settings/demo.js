@@ -71,9 +71,9 @@ $(function () {
                     labelsPreTerminal: 4000000,
                     //// Gets or sets the brush to use for the label font.
                     //fontBrush: "aqua",
-                    font: "20px Georgia",
+                    font: "14px Georgia",
                     fontBrush: "white",
-                    labelExtent: .39,
+                    labelExtent: .38,
                     formatLabel: function (evt, ui) {
                         ui.label = "$" + ui.label; 
                     }, 
@@ -121,8 +121,8 @@ $(function () {
                     labelsPreTerminal: 4000000,
                     // Gets or sets the brush to use for the label font.
                     fontBrush: "white",
-                    font: "20px Georgia",
-                    labelExtent: .39,
+                    font: "14px Arial",
+                    labelExtent: .38,
                     formatLabel: function (evt, ui) {
                         ui.label = "$" + ui.label;
                         if (ui.value != 45000000) {

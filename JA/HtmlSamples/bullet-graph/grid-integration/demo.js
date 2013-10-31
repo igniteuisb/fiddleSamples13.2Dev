@@ -23,7 +23,7 @@ var data = [
                     $(".bullet-graph").each(function (i) {
                         var item = data[i];
                         $(this).igBulletGraph({
-                            height: "80px",
+                            height: "60px",
                             width: "450px",
                             backingBrush: 'transparent',
                             backingOutline: 'transparent',
@@ -39,9 +39,9 @@ var data = [
                                     startValue: el.start,
                                     endValue: el.end
                                 };
-                            }),
-                            font: "10px Georgia",  
-                            scaleEndExtent: 0.9 
+                            }), 
+                            scaleEndExtent: 0.9,
+                            font:"8px Arial"
                         });
                     });
                 },
