@@ -6,7 +6,7 @@ $(function () {
                 urlParams = window.location.search;
 
         	if (window.History === undefined || window.History.getState === undefined) {
-        		alert("Please include the history.js library, by uncommenting the script reference");
+        		alert("history.js ライブラリのスクリプト参照をコメント インしてください。");
         		return;
         	}
 
