@@ -5,6 +5,10 @@ $(function () {
                 // historyLength = window.History.storedStates.length,
                 urlParams = window.location.search;
 
+        	if (window.History === undefined || window.History.getState === undefined) {
+        		alert("Please include the history.js library, by uncommenting the script reference");
+        		return;
+        	}
 
         	//--> Save igGrid state in the browser history object
         	function addUndoState(feature, column, possibleUndo, oldValue) {
