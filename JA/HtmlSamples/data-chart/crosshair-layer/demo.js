@@ -13,6 +13,7 @@ $(function () {
                 height: "400px",
                 title: "国別人口",
                 subtitle: "1995 年と 2005 年の人口の比較",
+                legend: { element: "columnLegend" },
                 horizontalZoomable: true,
                 verticalZoomable: true,
                 windowResponse: "immediate",
@@ -55,7 +56,10 @@ $(function () {
                         title: "crosshair",
                         type: "crosshairLayer",
                         useInterpolation: false,
-                        transitionDuration: 500
+                        transitionDuration: 500,
+                        useLegend: "true",
+                        cursorPosition: { x: 0.5, y: 0.5 }
+
                     }]
             });
 
