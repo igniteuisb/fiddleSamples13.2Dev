@@ -28,6 +28,7 @@ $(function () {
                 },
                 value: 60,
                 targetValue: 80,
+                targetValueBreadth: 6,
                 transitionDuration: 500
             });
 
@@ -65,6 +66,7 @@ $(function () {
                 maximumValue: 50,
                 value: 23,
                 targetValue: 40,
+                targetValueBreadth: 6,
                 transitionDuration: 500
             });
         });
