@@ -31,7 +31,7 @@ $(function () {
                                 { name: "calm", startValue: 0, endValue: 1 },
                                 { name: "lightAir", startValue: 1, endValue: 4 },
                                 { name: "lightBreeze", startValue: 4, endValue: 7 },
-                                { name: "gentleBreeze", startValue: 7, endValue: 9, brush: "gray" }
+                                { name: "gentleBreeze", startValue: 7, endValue: 9 }
                             ],
                             transitionDuration: 1200, 
                             labelInterval: 2,
