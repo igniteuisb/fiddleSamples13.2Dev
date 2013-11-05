@@ -56,10 +56,7 @@ $(function () {
                         title: "crosshair",
                         type: "crosshairLayer",
                         useInterpolation: false,
-                        transitionDuration: 500,
-                        useLegend: "true",
-                        cursorPosition: { x: 0.5, y: 0.5 }
-
+                        transitionDuration: 500
                     }]
             });
 
