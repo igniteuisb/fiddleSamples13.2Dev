@@ -13,7 +13,6 @@ $(function () {
                 height: "400px",
                 title: "Population per Country",
                 subtitle: "A comparison of population in 1995 and 2005",
-                legend: { element: "columnLegend" },
                 horizontalZoomable: true,
                 verticalZoomable: true,
                 windowResponse: "immediate",
