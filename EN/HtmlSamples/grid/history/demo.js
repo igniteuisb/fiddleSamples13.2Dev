@@ -181,7 +181,7 @@ $(function () {
                     	// Load/Unload previous state
                         if (undoState) {
                         	switch (undoState.key) {
-                        		case "page": loadPagingState(undoState.key, undoState.value);
+                        		case "page": loadPagingState(undoState.key, undoState.value); break;
                         		case "sort": loadSortingState(undoState.key, undoState.value, undoState.undo); break;
                         		case "filter": loadFilteringState(undoState.key, undoState.value, undoState.undo); break;
                         		case "resize": loadResizingState(undoState.key, undoState.value); break;
