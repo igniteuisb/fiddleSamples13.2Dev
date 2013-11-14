@@ -90,6 +90,7 @@ $(function () {
                             name: "Sorting",
                             type: "local",
                             mode: "multi",
+                        	modalDialogSortOnClick: true,
                             columnSorting: function (e, args) {
                             	addUndoState("sort", args.columnKey, true, args.direction === "ascending" ? "descending" : "ascending");
                             },
