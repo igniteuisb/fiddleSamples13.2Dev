@@ -21,7 +21,7 @@ $(function () {
                             dataSource: data,
                             legend: { element: "legend" },
                             formatLabel: function(context) {
-                                return context.itemLabel + " (" + context.item.Pop1990 + ")";
+                                return context.itemLabel + " (" + context.item.Pop1990 + "M)";
                             }
                         },
                         {
@@ -30,7 +30,7 @@ $(function () {
                             valueMemberPath: "Pop2008",
                             dataSource: data,
                             formatLabel: function(context) {
-                                return context.itemLabel + " (" + context.item.Pop2008 + ")";
+                                return context.itemLabel + " (" + context.item.Pop2008 + "M)";
                             }
                         }
                     ],
