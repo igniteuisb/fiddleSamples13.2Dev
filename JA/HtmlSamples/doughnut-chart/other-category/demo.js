@@ -12,10 +12,10 @@ $(function () {
                             othersCategoryType: "number",
                             othersCategoryThreshold: 15,
                             labelsPosition: "bestFit",
-                            othersCategoryText: "Players with less than 15 goals",
+                            othersCategoryText: "15 得点未満のプレーヤー",
                             formatLabel: function (context) {
                                 if (context.isOthersSlice) 
-                                    return "Players with less than 15 goals";
+                                    return "15 得点未満のプレーヤー";
                                 return context.item.name + " (" + context.item.goals + ")";
                             }
                         }
